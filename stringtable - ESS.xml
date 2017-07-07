@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project name="DayZMission">
+	<Package name="ESS">
+		<Key ID="STR_ESS_GROUP">
+			<English>By my group</English>
+			<German>Von meiner Gruppe</German>
+			<Russian>Около группы</Russian>
+		</Key>
+		<Key ID="STR_ESS_PLOT">
+			<English>By my plot</English>
+			<German>Von meinem Grundstück</German>
+			<Russian>Около базы</Russian>
+		</Key>
+		<Key ID="STR_ESS_BLOCKED">
+			<English>Note: some spawns were blocked due to a body of yours within %1m</English>
+			<German>Anmerkung: Einige Spawnpunkte wurden wegen einer Leiche von dir im Umkreis von %1m blockiert</German>
+			<Russian>Некоторые точки спавна заблокированы, т.к. они ближе %1м от вашего тела.</Russian>
+		</Key>
+		<Key ID="STR_ESS_HUMANITY_TOO_HIGH">
+			<English>Your humanity must be less than %1 for this.</English>
+			<German>Deine Menschlichkeit muss dafür unter %1 sein.</German>
+			<Russian>Ваша человечность должна быть меньше %1.</Russian>
+		</Key>
+		<Key ID="STR_ESS_HUMANITY_TOO_LOW">
+			<English>Your humanity must be greater than %1 for this.</English>
+			<German>Deine Menschlichkeit muss dafür über %1 sein.</German>
+			<Russian>Ваша человечность должна быть больше %1.</Russian>
+		</Key>
+		<Key ID="STR_ESS_NEED_CVIP">
+			<English>You need VIP class level %1 for this.</English>
+			<German>Du brauchst VIP-Klassen-Level %1 dafür.</German>
+<!--			<Russian>У вас должен быть уровень %1 для VIP-класса.</Russian>	-->
+		</Key>
+		<Key ID="STR_ESS_NEED_SVIP">
+			<English>You need VIP spawn level %1 for this.</English>
+			<German>Du brauchst VIP-Spawn-Level %1 dafür.</German>
+<!--			<Russian>У вас должен быть уровень %1 для VIP-спавна.</Russian>	-->
+		</Key>
+		<Key ID="STR_ESS_NOTHING_SELECTED">
+			<English>Nothing selected!</English>
+			<German>Nichts ausgewählt!</German>
+			<Russian>Ничего не выбрано!</Russian>
+		</Key>
+		<Key ID="STR_ESS_CLASS_SELECT">
+			<English>Class Selection</English>
+			<German>Klassenauswahl</German>
+			<Russian>Выбор класса</Russian>
+		</Key>
+		<Key ID="STR_ESS_HALO_SELECT">
+			<English>Spawn Type Selection</English>
+			<German>Spawntypauwahl</German>
+			<Russian>Выбор типа спавна</Russian>
+		</Key>
+		<Key ID="STR_ESS_SPAWN_SELECT">
+			<English>Spawn Selection</English>
+			<German>Spawnauswahl</German>
+			<Russian>Выбор точки спавна</Russian>
+		</Key>
+		<Key ID="STR_ESS_GROUND">
+			<English>Ground</English>
+			<German>Boden</German>
+			<Russian>ЗЕМЛЯ</Russian>
+		</Key>
+		<Key ID="STR_ESS_AIR">
+			<English>HALO</English>
+			<German>Fallschirm</German>
+			<Russian>ПАРАШЮТ</Russian>
+		</Key>
+	</Package>
+
+	<Package name="VG">
+		<Key ID="STR_VG_NEED_HELIPAD">
+			<English>You need a helipad to spawn air vehicles.</English>
+			<German>Du benötigst ein Helipad, um Flugzeuge spawnen zu können</German>
+			<Russian>Нужна вертолетная площадка для спавна авиа.техники</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_IN_INVENTORY">
+			<English>%1 is already in your inventory!</English>
+			<German>%1 ist bereits in Deinem Inventar</German>
+			<Russian>%1 уже у вас в инвентаре!</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_IN_BACKPACK">
+			<English>%1 is already in your backpack!</English>
+			<German>%1 ist bereits in Deinem Rucksack!</German>
+			<Russian>%1 уже у вас в рюкзаке!</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_ADDED_INVENTORY">
+			<English>%1 has been added to your inventory!</English>
+			<German>%1 wurde Deinem Inventar hinzugefügt!</German>
+			<Russian>%1 был добавлен в ваш инвентарь!</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_VEHICLE_SPAWNED">
+			<English>Your vehicle has been spawned.</English>
+			<German>Dein Fahrzeug ist gespawnt.</German>
+			<Russian>Вы забрали технику из гаража</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_BLACKLISTED">
+			<English>You are unable to store this vehicle in your garage.</English>
+			<German>Du kannst dieses Fahrzeug nicht in Deiner Garage parken.</German>
+			<Russian>Вы не можете поставить эту технику в ваш гараж</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_LIMIT_ARRAY">
+			<English>You can't store any more of this kind of vehicle in your garage.</English>
+			<German>Du kannst keine weiteren Fahrzeuge dieses Typs in Deiner Garage parken.</German>
+			<Russian>Вы больше не можете ставить этот тип техники в гараж.</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_LIMIT_NUMBER">
+			<English>You can't store any more vehicles in your garage.</English>
+			<German>Du kannst keine weiteren Fahrzeuge in Deiner Garage parken.</German>
+			<Russian>Вы не можете поставить в гараж больше техники.</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_STORE_MISSION">
+			<English>You can't store a mission or deployable vehicle.</English>
+			<German>Du kannst keine Erzeugten oder Missions Fahrzeuge einparken</German>
+			<Russian>Вы не можете ставить в гараж технику с миссий или скрафченную технику</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_REQUIRE_KEY">
+			<English>You must have the key for the vehicle you're trying to store.</English>
+			<German>Du benötigst den Schlüssel für das Fahrzeug, dass Du einparken willst.</German>
+			<Russian>У вас должен быть ключ от техники, которую вы пытаетесь поставить в гараж</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_VEHICLE_STORED">
+			<English>Your %1 has been stored in your garage.</English>
+			<German>Dein %1 wurde in der Garage geparkt.</German>
+			<Russian>Ваш %1 поставлен в гараж.</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_NEED_COINS">
+			<English>You need %1 %2 to store your %3.</English>
+			<German>Du benötigst %1 %2 um %3 einparken zu können</German>
+			<Russian>Вам нужно %1 %2 что бы поставить в гараж %3</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_NEED_BRIEFCASES">
+			<English>You need %1 to store your %2.</English>
+			<German>Du benötigst %1 um %2 einparken zu können</German>
+			<Russian>Вам нужен %1 что бы поствить в гараж %2</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_PRICE">
+			<English>Price to store</English>
+			<German>Einpark-preis</German>
+			<Russian>Стоимость хранения</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_NO_VEHICLES">
+			<English>There are no vehicles in your garage or nearby.</English>
+			<German>Es befinden sich keine Fahrzeuge in oder um Deiner Garage</German>
+			<Russian>В гараж и поблизости отсутствует техника.</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_VIRTUAL_GARAGE">
+			<English>Virtual Garage</English>
+			<German>Virtuelle Garage</German>
+			<Russian>Виртуальный гараж</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_YOUR_VEHICLES">
+			<English>Your Vehicles</English>
+			<German>Deine Fahrzeuge</German>
+			<Russian>Ваша техника</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_VEHICLE_INFO">
+			<English>Vehicle Info</English>
+			<German>Fahrzeuginfo</German>
+			<Russian>Информация</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_STORE_VEHICLE">
+			<English>Store Vehicle</English>
+			<German>Fahrzeug einparken</German>
+			<Russian>Поставить технику</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_STORE_VEHICLE_GEAR">
+			<English>Store Vehicle with Gear</English>
+			<German>Fahrzeug mit Ladung einparken</German>
+			<Russian>Поставить технику с инвентарем</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_GET_VEHICLE">
+			<English>Get Vehicle</English>
+			<German>Fahrzeug ausparken</German>
+			<Russian>Забрать технику</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_SEARCH_VEHICLES">
+			<English>Searching for vehicles...</English>
+			<German>Suche nach Fahrzeugen...</German>
+			<Russian>Поиск теники...</Russian>
+			<French></French>
+		</Key>
+		<Key ID="STR_VG_REMOVE_PAD">
+			<English>Remove HeliPad</English>
+			<German>HeliPad entfernen</German>
+			<Russian>Удалить площадку</Russian>
+			<French></French>
+		</Key>
+	</Package>
+</Project>
