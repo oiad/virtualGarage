@@ -20,10 +20,10 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 * [Mission folder install](https://github.com/oiad/virtualGarage#mission-folder-install)
 * [dayz_server folder install](https://github.com/oiad/virtualGarage#dayz_server-folder-install)
-* [extDB install](https://github.com/oiad/virtualGarage#extDB-install)
+* [extDB install](https://github.com/oiad/virtualGarage#extdb-install)
 * [mysql database setup fresh install](https://github.com/oiad/virtualGarage#mysql-database-setup-fresh-install)
-* [mysql database update from previous virtual garage](https://github.com/oiad/virtualGarage#extDB-install)
-* [mysql database update from previous virtual garage](https://github.com/oiad/virtualGarage#extDB-install)
+* [mysql database update from previous virtual garage](https://github.com/oiad/virtualGarage#mysql-database-update-from-previous-virtual-garage)
+* [mysql database update from previous virtual garage](https://github.com/oiad/virtualGarage#infistar-setup)
 * [Battleye filter install](https://github.com/oiad/virtualGarage#battleye-filter-install)
 
 # Install:
@@ -102,4 +102,16 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	_ALLOWED_Dialogs = _ALLOWED_Dialogs + [81000,88890,20001,20002,20003,20004,20005,20006,55510,55511,55514,55515,55516,55517,55518,55519,555120,118338,118339,571113,2800]; // adding some others from community addons
 	```
 
-# mysql install:
+# Battleye filter install:
+
+1. This assumes you are running the DEFAULT epoch filters.
+
+2. On line 2 of <code>createVehicle.txt</code> add <code>!="HeliHCivil"</code> to the end of the line so it looks like this:
+	```sqf
+	5 !(^DZ_|^z_|^pz_|^WeaponHolder|Box|dog|PZombie_VB|^Smoke|^Chem|^._40mm|_DZ$|^Trap) <REMOVED SOME FILTERS TO MAKE SMALLER> !="Fin" !="Pastor" !="HeliHCivil"
+	```
+
+3. On line 2 of <code>publicVariable.txt</code> add <code>!="PVDZE_(query|store|spawn)Vehicle"</code> to the end of the line so it looks like this:
+	```sqf
+	5 !=(remExField|remExFP) <REMOVED SOME FILTERS TO MAKE SMALLER> !="PVDZE_(query|store|spawn)Vehicle"
+	```
