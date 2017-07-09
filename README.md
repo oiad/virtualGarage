@@ -210,7 +210,20 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	player_storeVehicle = 			compile preprocessFileLineNumbers "scripts\garage\player_storeVehicle.sqf";
 	vehicle_info = compile preprocessFileLineNumbers "scripts\garage\vehicle_info.sqf";
 	```
-	And the following functions if no other scripts require them (SC_fnc_removeCoins and SC_fnc_addCoins):
+	
+4a. Remove this function from your custom <code>compiles.sqf</code>:
+	```sqf
+	vehicle_gear_count = {
+		private["_counter"];
+		_counter = 0;
+		{
+			_counter = _counter + _x;
+		} count _this;
+		_counter
+	};
+	```
+	
+4b. (OPTIONAL) And the following functions if no other scripts require them (SC_fnc_removeCoins and SC_fnc_addCoins):
 	```sqf
 	SC_fnc_removeCoins=
 	{
@@ -248,15 +261,6 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 		_newwealth = _player getVariable[Z_MoneyVariable,0];		
 		if (_newwealth >= _wealth) then { _result = true; };			
 		_result
-	};
-
-	vehicle_gear_count = {
-		private["_counter"];
-		_counter = 0;
-		{
-			_counter = _counter + _x;
-		} count _this;
-		_counter
 	};
 	```
 
