@@ -214,6 +214,8 @@ class vg_RscStructuredText {
 class virtualGarage {
 	idd = 2800;
 	name="virtualGarage";
+	onload = "player setVariable['isBusy',true,true];"; 
+	onUnload = "player setVariable['isBusy',false,true];";
 	movingEnabled = 0;
 	enableSimulation = 1;
 
