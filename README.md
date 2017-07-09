@@ -54,13 +54,13 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 5. Replace your modified <code>dayz_code\compiles\fn_selfActions.sqf</code> with the one provided or merge the contents if you have modified your own version.
 
-6. If you run ESSv3 spawn script (by @ebayShopper) copy the supplied <code>stringTable - ESS.xml</code> to your mission file directory and rename it to <code>stringTable.xml</code>
+6. If you run ESSv3 spawn script (by [@ebayShopper](https://github.com/ebayShopper/ESSV3)) copy the supplied <code>stringTable - ESS.xml</code> to your mission file directory and rename it to <code>stringTable.xml</code>
 
 7. If you are not running ESSv3 spawn script copy the supplied <code>stringTable.xml</code> to your mission file directory
 
 # click Actions config install:
 
-1. If you want to use HeliPads at bases, in your deployable config file, find this line:
+1. If you want to use HeliPads at bases, in your deployable config file (<code>addons\bike\config.sqf</code>), find this line:
 	```sqf
 	["ItemToolbox",[0,6,1],5,0.1,false,false,false,false,false,true,true,["MMT_Civ"],[],["ItemToolbox"],"true"],
 	```
