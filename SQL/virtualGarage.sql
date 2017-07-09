@@ -1,6 +1,6 @@
 /*
 	Use this sql ONLY if you are creating a NEW database.
-	Use 'garageUpdate.sql' if you are updating from the previous version.
+	Use 'SQL\virtualGarageUpdate.sql' if you are updating from the previous version.
 
 	Uncomment the next 2 lines if you want to use an external database away from your epoch database.
 	i.e you have multiple servers sharing the same virtual garage database.
