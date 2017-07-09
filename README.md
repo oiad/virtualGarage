@@ -7,7 +7,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 * This adds support for briefcases, gems and coins.
 * Supports dynamic pricing and vehicle limits
 * More secure than the original scripts
-* Requires [click Actions] (https://github.com/mudzereli/DayZEpochDeployableBike) or [Advanced Alchemical Crafting v3.3] (https://epochmod.com/forum/topic/43460-release-advanced-alchemical-crafting-v33-updated-for-1061/) to deploy / build the HeliHCivil for the heli pad.
+* Requires [click Actions](https://github.com/mudzereli/DayZEpochDeployableBike) or [Advanced Alchemical Crafting v3.3](https://epochmod.com/forum/topic/43460-release-advanced-alchemical-crafting-v33-updated-for-1061/) to deploy / build the HeliHCivil for the heli pad.
 
 # REPORTING ERRORS/PROBLEMS
 
