@@ -23,7 +23,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 * [extDB install](https://github.com/oiad/virtualGarage#extdb-install)
 * [mysql database setup fresh install](https://github.com/oiad/virtualGarage#mysql-database-setup-fresh-install)
 * [mysql database update from previous virtual garage](https://github.com/oiad/virtualGarage#mysql-database-update-from-previous-virtual-garage)
-* [mysql database update from previous virtual garage](https://github.com/oiad/virtualGarage#infistar-setup)
+* [infistar setup](https://github.com/oiad/virtualGarage#infistar-setup)
 * [Battleye filter install](https://github.com/oiad/virtualGarage#battleye-filter-install)
 
 # Install:
@@ -58,15 +58,15 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 # dayz_server folder install:
 
-1. Replace or merge the contents of <code>init\server_functions.sqf</code> provided with your original copy.
+1. Replace or merge the contents of <code>dayz_server\init\server_functions.sqf</code> provided with your original copy.
 
-2. Copy the <code>dayz_server\compile\garage</code> folder to your dayz_server directory
+2. Copy the <code>dayz_server\compile\garage</code> folder to your dayz_server directory so it becomes <code>dayz_server\compile\garage</code>
 
 # extDB install:
 
-1. Copy the @extDB folder to your main Arma 2 Operation Arrowhead folder (or where you host your server)
+1. Copy the <code>@extDB</code> folder to your main <code>Arma 2 Operation Arrowhead</code> folder (or where you host your server)
 
-2. Edit @extDB\extdb-conf.ini to suit your database settings, mainly the database name, username and password.
+2. Edit <code>@extDB\extdb-conf.ini<code> to suit your database settings, mainly the database name, username and password.
 
 3. Edit your server batch file or whatever loads your server to include <code>@extDB</code> in the -mod line, i.e for epoch:
 	```sqf
@@ -87,7 +87,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	-- USE `extdb`;
 	```
 
-	This will create a seperate database called extDB (useful if you have a couple of servers using the same virtual garage database)
+	This will create a seperate database called extDB (useful if you have a couple of servers using the same virtual garage database) I had to run this import twice for it to work correctly, it only created the external database the first time, the second time I had to run it to create the table.
 
 3. You will need to edit your <code>@extDB\extdb-conf.ini</code> to suit your database settings!
 
