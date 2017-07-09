@@ -38,6 +38,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 * [mysql database update from previous virtual garage](https://github.com/oiad/virtualGarage#mysql-database-update-from-previous-virtual-garage)
 * [infistar setup](https://github.com/oiad/virtualGarage#infistar-setup)
 * [Battleye filter install](https://github.com/oiad/virtualGarage#battleye-filter-install)
+* [Remove old version](https://github.com/oiad/virtualGarage#removing-the-older-version-and-starting-fresh)
 
 # Install:
 
