@@ -95,9 +95,9 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 # mysql database setup fresh install:
 
-1. If you are only allowed access to your main epoch database from your hosting provider, you can import the <code>virtualGarage.sql</code> file without editing it.
+1. If you are only allowed access to your main epoch database from your hosting provider, you can import the <code>SQL\virtualGarage.sql</code> file without editing it.
 
-2. If you want to have an external virtual garage database you will need to edit <code>virtualGarage.sql</code> and uncomment the following lines:
+2. If you want to have an external virtual garage database you will need to edit <code>SQL\virtualGarage.sql</code> and uncomment the following lines:
 	```sql
 	-- CREATE DATABASE IF NOT EXISTS `extdb` /*!40100 DEFAULT CHARACTER SET latin1 */;
 	-- USE `extdb`;
@@ -109,7 +109,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 # mysql database update from previous virtual garage:
 
-1. Import the <code>virtualGarageUpdate.sql</code> file overtop of your garage database, this will update it to the latest version.
+1. Import the <code>SQL\virtualGarageUpdate.sql</code> file overtop of your garage database, this will update it to the latest version.
 
 # Infistar setup:
 
