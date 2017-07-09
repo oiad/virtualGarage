@@ -9,6 +9,15 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 * More secure than the original scripts
 * Requires [click Actions](https://github.com/mudzereli/DayZEpochDeployableBike) or [Advanced Alchemical Crafting v3.3](https://epochmod.com/forum/topic/43460-release-advanced-alchemical-crafting-v33-updated-for-1061/) to deploy / build the HeliHCivil for the heli pad.
 
+# Credits:
+* [GZA] David for the original version of the script
+* Epoch Mod for code relating to Advanced Trading
+* TheDuke for updating this script to 1.0.6+
+* DAmNRelentless for german translations
+* Dscha for german translations
+* Snowman for russian translations
+* Ghostis for russian translations
+
 # REPORTING ERRORS/PROBLEMS
 
 1. Please, if you report issues can you please attach (on pastebin or similar) your CLIENT rpt log file as this helps find out the errors very quickly. To find this logfile:
@@ -176,7 +185,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	player_storeVehicle = 			compile preprocessFileLineNumbers "scripts\garage\player_storeVehicle.sqf";
 	vehicle_info = compile preprocessFileLineNumbers "scripts\garage\vehicle_info.sqf";
 	```
-	And the following functions:
+	And the following functions if no other scripts require them (SC_fnc_removeCoins and SC_fnc_addCoins):
 	```sqf
 	SC_fnc_removeCoins=
 	{
