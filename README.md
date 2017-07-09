@@ -158,7 +158,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	5 !=(remExField|remExFP) <REMOVED SOME FILTERS TO MAKE SMALLER> !="PVDZE_(query|store|spawn)Vehicle"
 	```
 
-4. On line 10 of <code>config\<yourServerName>\Battleye\scripts.txt</code>: <code>5 createDialog</code> add this to the end of it:
+4. On line 12 of <code>config\<yourServerName>\Battleye\scripts.txt</code>: <code>5 createDialog</code> add this to the end of it:
 	```sqf
 	!="createDialog \"virtualGarage\";"
 	```
