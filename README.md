@@ -66,7 +66,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 1. Copy the <code>@extDB</code> folder to your main <code>Arma 2 Operation Arrowhead</code> folder (or where you host your server)
 
-2. Edit <code>@extDB\extdb-conf.ini<code> to suit your database settings, mainly the database name, username and password.
+2. Edit <code>@extDB\extdb-conf.ini</code> to suit your database settings, mainly the database name, username and password.
 
 3. Edit your server batch file or whatever loads your server to include <code>@extDB</code> in the -mod line, i.e for epoch:
 	```sqf
