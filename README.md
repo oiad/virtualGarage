@@ -1,7 +1,7 @@
 # Virtual Garage
 Virtual Garage script rewritten by salival (https://github.com/oiad)
 
-* Discussion URL: 
+* Discussion URL: https://epochmod.com/forum/topic/44280-release-virtual-garage-for-1061/
 	
 * Tested as working on a blank Epoch 1.0.6.1
 * This adds support for briefcases, gems and coins.
@@ -11,6 +11,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 # Credits:
 * [GZA] David for the original version of the script
+* Torndeco for extDB
 * Epoch Mod for code relating to Advanced Trading
 * TheDuke for updating this script to 1.0.6+
 * DAmNRelentless for german translations
@@ -70,7 +71,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 7. If you are not running ESSv3 spawn script copy the supplied <code>stringTable.xml</code> to your mission file directory
 
-# click Actions config install:
+# Click Actions config install:
 
 1. If you want to use HeliPads at bases, in your deployable config file (<code>addons\bike\config.sqf</code>), find this line:
 	```sqf
