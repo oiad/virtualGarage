@@ -20,6 +20,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 # Index:
 
 * [Mission folder install](https://github.com/oiad/virtualGarage#mission-folder-install)
+* [click Actions config install](https://github.com/oiad/virtualGarage#click-actions-config-install)
 * [dayz_server folder install](https://github.com/oiad/virtualGarage#dayz_server-folder-install)
 * [extDB install](https://github.com/oiad/virtualGarage#extdb-install)
 * [mysql database setup fresh install](https://github.com/oiad/virtualGarage#mysql-database-setup-fresh-install)
@@ -56,6 +57,20 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 6. If you run ESSv3 spawn script (by @ebayShopper) copy the supplied <code>stringTable - ESS.xml</code> to your mission file directory and rename it to <code>stringTable.xml</code>
 
 7. If you are not running ESSv3 spawn script copy the supplied <code>stringTable.xml</code> to your mission file directory
+
+# click Actions config install:
+
+1. If you want to use HeliPads at bases, in your deployable config file, find this line:
+	```sqf
+	["ItemToolbox",[0,6,1],5,0.1,false,false,false,false,false,true,true,["MMT_Civ"],[],["ItemToolbox"],"true"],
+	```
+	Add this line after it:
+	```sqf
+	["ItemToolbox",[0,9,2],5,0.9,true,true,false,true,true,false,true,["HeliHCivil"],[],[],"true"],
+	```
+	
+	You can substitute <code>ItemToolBox</code> for whatever you would like the player to be able to deploy it with, i.e <code>ItemEtool</code>
+	Otherwise if you are using garages at traders, this step is not needed.
 
 # dayz_server folder install:
 
