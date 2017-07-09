@@ -7,6 +7,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 * This adds support for briefcases, gems and coins.
 * Supports dynamic pricing and vehicle limits
 * More secure than the original scripts
+* Requires [click Actions] (https://github.com/mudzereli/DayZEpochDeployableBike) or [Advanced Alchemical Crafting v3.3] (https://epochmod.com/forum/topic/43460-release-advanced-alchemical-crafting-v33-updated-for-1061/) to deploy / build the HeliHCivil for the heli pad.
 
 # REPORTING ERRORS/PROBLEMS
 
@@ -87,7 +88,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	-- USE `extdb`;
 	```
 
-	This will create a seperate database called extDB (useful if you have a couple of servers using the same virtual garage database) I had to run this import twice for it to work correctly, it only created the external database the first time, the second time I had to run it to create the table.
+	This will create a seperate database called extDB (useful if you have a couple of servers using the same virtual garage database) FWIW: I had to run this import twice for it to work correctly, it only created the external database the first time, the second time I had to run it to create the table.
 
 3. You will need to edit your <code>@extDB\extdb-conf.ini</code> to suit your database settings!
 
