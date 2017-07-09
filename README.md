@@ -37,6 +37,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 * [mysql database setup fresh install](https://github.com/oiad/virtualGarage#mysql-database-setup-fresh-install)
 * [mysql database update from previous virtual garage](https://github.com/oiad/virtualGarage#mysql-database-update-from-previous-virtual-garage)
 * [infistar setup](https://github.com/oiad/virtualGarage#infistar-setup)
+* [Adding HeliPad to maintaining array](https://github.com/oiad/virtualGarage#adding-helipad-to-maintaining-array)
 * [Battleye filter install](https://github.com/oiad/virtualGarage#battleye-filter-install)
 * [Remove old version](https://github.com/oiad/virtualGarage#removing-the-older-version-and-starting-fresh)
 
@@ -132,18 +133,40 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	_ALLOWED_Dialogs = _ALLOWED_Dialogs + [81000,88890,20001,20002,20003,20004,20005,20006,55510,55511,55514,55515,55516,55517,55518,55519,555120,118338,118339,571113,2800]; // adding some others from community addons
 	```
 
+# Adding HeliPad to Maintaining array:
+
+1. If you are running heli pads at players bases, you will need to add the heli pad to your maintain array so players can maintain it and the server wont remove it. In your custom <code>variables.sqf</code> find this line:
+	```sqf
+	//Player self-action handles
+	```
+	Add this line before it:
+	```sqf
+	DZE_maintainClasses = DZE_maintainClasses + ["HeliHCivil"];
+	```
+	
 # Battleye filter install:
 
 1. This assumes you are running the DEFAULT epoch filters.
 
-2. On line 2 of <code>createVehicle.txt</code> add <code>!="HeliHCivil"</code> to the end of the line so it looks like this:
+2. On line 2 of <code>config\<yourServerName>\Battleye\createVehicle.txt</code> add <code>!="HeliHCivil"</code> to the end of the line so it looks like this:
 	```sqf
 	5 !(^DZ_|^z_|^pz_|^WeaponHolder|Box|dog|PZombie_VB|^Smoke|^Chem|^._40mm|_DZ$|^Trap) <REMOVED SOME FILTERS TO MAKE SMALLER> !="Fin" !="Pastor" !="HeliHCivil"
 	```
 
-3. On line 2 of <code>publicVariable.txt</code> add <code>!="PVDZE_(query|store|spawn)Vehicle"</code> to the end of the line so it looks like this:
+3. On line 2 of <code>config\<yourServerName>\Battleye\publicVariable.txt</code> add <code>!="PVDZE_(query|store|spawn)Vehicle"</code> to the end of the line so it looks like this:
 	```sqf
 	5 !=(remExField|remExFP) <REMOVED SOME FILTERS TO MAKE SMALLER> !="PVDZE_(query|store|spawn)Vehicle"
+	```
+
+4. On line 10 of <code>config\<yourServerName>\Battleye\scripts.txt</code>: <code>5 createDialog</code> add this to the end of it:
+	```sqf
+	!="createDialog \"virtualGarage\";"
+	```
+	
+	So it will then look like this for example:
+
+	```sqf
+	5 createDialog <CUT> !="createDialog \"virtualGarage\";"
 	```
 
 # Removing the older version and starting fresh:
