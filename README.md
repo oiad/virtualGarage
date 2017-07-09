@@ -19,6 +19,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	
 # Index:
 
+* [Remove old version](https://github.com/oiad/virtualGarage#removing-the-older-version-and-starting-fresh)
 * [Mission folder install](https://github.com/oiad/virtualGarage#mission-folder-install)
 * [click Actions config install](https://github.com/oiad/virtualGarage#click-actions-config-install)
 * [dayz_server folder install](https://github.com/oiad/virtualGarage#dayz_server-folder-install)
@@ -31,6 +32,8 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 # Install:
 
 * This install basically assumes you have NO custom variables.sqf or compiles.sqf or fn_selfActions.sqf, I would recommend diffmerging where possible.
+
+**IMPORTANT** If you are upgrading from the OLD version (i.e the one TheDuke77 released) I encourage you to uninstall it completely: [Remove Old version](https://github.com/oiad/virtualGarage#removing-the-older-version-and-starting-fresh)
 
 **[>> Download <<](https://github.com/oiad/virtualGarage/archive/master.zip)**
 
@@ -142,7 +145,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 2. Remove these lines from your <code>fn_selfActions.sqf</code>:
 	```sqf
-	   	if((_typeOfCursorTarget in DZE_garagist) && (player distance _cursorTarget < 5)) then {
+	if((_typeOfCursorTarget in DZE_garagist) && (player distance _cursorTarget < 5)) then {
 		if (s_garage_dialog2 < 0) then {
 			s_garage_dialog2 = player addAction ["Vehicle Garage", "scripts\garage\vehicle_dialog.sqf",_cursorTarget, 3, true, true, "", ""];
 		};
@@ -175,7 +178,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	```
 	And the following functions:
 	```sqf
-		SC_fnc_removeCoins=
+	SC_fnc_removeCoins=
 	{
 		private ["_player","_amount","_wealth","_newwealth", "_result"];
 		_player = _this select 0;
