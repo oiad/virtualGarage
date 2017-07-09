@@ -33,7 +33,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 * This install basically assumes you have NO custom variables.sqf or compiles.sqf or fn_selfActions.sqf, I would recommend diffmerging where possible.
 
-**IMPORTANT** If you are upgrading from the OLD version (i.e the one TheDuke77 released) I encourage you to uninstall it completely: [Remove Old version](https://github.com/oiad/virtualGarage#removing-the-older-version-and-starting-fresh)
+# IMPORTANT!! If you are upgrading from the OLD version (i.e the one TheDuke77 released) I encourage you to uninstall it completely: [Remove Old version](https://github.com/oiad/virtualGarage#removing-the-older-version-and-starting-fresh)
 
 **[>> Download <<](https://github.com/oiad/virtualGarage/archive/master.zip)**
 
