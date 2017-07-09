@@ -211,7 +211,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	vehicle_info = compile preprocessFileLineNumbers "scripts\garage\vehicle_info.sqf";
 	```
 	
-4a. Remove this function from your custom <code>compiles.sqf</code>:
+	Remove this function from your custom <code>compiles.sqf</code>:
 	```sqf
 	vehicle_gear_count = {
 		private["_counter"];
@@ -223,7 +223,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	};
 	```
 	
-4b. (OPTIONAL) And the following functions if no other scripts require them (SC_fnc_removeCoins and SC_fnc_addCoins):
+	(OPTIONAL) And the following functions if no other scripts require them (SC_fnc_removeCoins and SC_fnc_addCoins):
 	```sqf
 	SC_fnc_removeCoins=
 	{
