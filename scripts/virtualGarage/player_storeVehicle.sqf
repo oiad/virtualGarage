@@ -107,7 +107,6 @@ _amount = if (_woGear) then {
 } else {
 	(_weaponsCount + _magazineCount + _backPackCount) * vg_pricePer
 };
-_amount = if (z_singleCurrency) then {_amount * 10} else {_amount};
 
 _enoughMoney = false;
 _moneyInfo = [false,[],[],[],0];
@@ -138,7 +137,7 @@ if (_enoughMoney) then {
 		publicVariableServer "PVDZE_storeVehicle";
 		waitUntil {!isNil "PVDZE_storeVehicleResult"};
 
-		PVDZ_obj_Destroy = [_vehicleID,_vehicleUID,player];
+		PVDZ_obj_Destroy = [_vehicleID,_vehicleUID,player,_typeOf];
 		publicVariableServer "PVDZ_obj_Destroy";
 
 		deleteVehicle _vehicle;
