@@ -1,11 +1,22 @@
 // Developed by [GZA] David for German Zombie Apocalypse Servers (https://zombieapo.eu/)
 // Rewritten by salival (https://github.com/oiad)
 
-private ["_backPack","_charID","_dir","_heliPad","_inventory","_keyID","_keyName","_location","_sign","_vehicle"];
+private ["_backPack","_charID","_dir","_heliPad","_inventory","_isOK","_keyID","_keyName","_location","_sign","_totalTools","_vehicle"];
 
 closeDialog 0;
 _vehicle = lbData[2802,(lbCurSel 2802)];
 _vehicle = (call compile format["%1",_vehicle]);
+_isOK = true;
+
+if (_vehicle select 3 != 0) then {
+	_totalTools = 0;
+	{
+		if (getNumber (configFile >> "CfgWeapons" >> _x >> "type") == 131072) then {_totalTools = _totalTools + 1;};
+	} count (weapons player);
+	if (_totalTools == 12) then {_isOK = false};
+};
+
+if (!_isOK) exitWith {localize "str_epoch_player_107" call dayz_rollingMessages;};
 
 _dir = round(random 360);
 _backPack = [];
