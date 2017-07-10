@@ -54,6 +54,7 @@ if (PVDZE_spawnVehicleResult != "0") then {
 		} else {
 			player addWeapon _keyID;
 			format[localize "STR_VG_ADDED_INVENTORY",_keyName] call dayz_rollingMessages;
+			localize "STR_VG_VEHICLE_SPAWNED" call dayz_rollingMessages;
 		};
 	} else {
 		localize "str_epoch_player_107" call dayz_rollingMessages;
@@ -63,5 +64,3 @@ if (PVDZE_spawnVehicleResult != "0") then {
 PVDZE_spawnVehicle = nil;
 PVDZE_spawnVehicleResult = nil;
 vg_vehicleList = nil;
-
-localize "STR_VG_VEHICLE_SPAWNED" call dayz_rollingMessages;
