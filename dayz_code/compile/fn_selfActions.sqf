@@ -839,7 +839,7 @@ if (!isNull _cursorTarget && !_inVehicle && !_isPZombie && (player distance _cur
 
    if ((_typeOfCursorTarget in vg_List) && (player distance _cursorTarget < 5)) then {
 		_hasAccess = [player,_cursorTarget] call FNC_check_access;
-   		if (s_garage_dialog < 0 && ((_hasAccess select 0) or (_hasAccess select 2) or (_hasAccess select 3) or (_hasAccess select 4) or (_isMan && _typeOfCursorTarget in vg_list))) then {
+   		if (s_garage_dialog < 0 && ((_hasAccess select 0) or (_hasAccess select 2) or (_hasAccess select 3) or (_hasAccess select 4) or (_isMan && {!(isPlayer _cursorTarget)}  && {_typeOfCursorTarget in vg_list}))) then {
 			s_garage_dialog = player addAction [localize "STR_VG_VIRTUAL_GARAGE","scripts\virtualGarage\virtualGarage.sqf",_cursorTarget,3,false,true];
 		};
 	} else {
