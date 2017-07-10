@@ -3,91 +3,91 @@
 	<Package name="VG">
 		<Key ID="STR_VG_NEED_HELIPAD">
 			<English>You need a helipad to spawn air vehicles.</English>
-			<German>Du benötigst ein Helipad, um Flugzeuge spawnen zu können</German>
+			<German>Du benötigst ein Helipad, um Luftfahrzeuge auszuparken.</German>
 			<Russian>Нужна вертолетная площадка для спавна авиа.техники</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_IN_INVENTORY">
 			<English>%1 is already in your inventory!</English>
-			<German>%1 ist bereits in Deinem Inventar</German>
+			<German>%1 ist bereits in deinem Inventar!</German>
 			<Russian>%1 уже у вас в инвентаре!</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_IN_BACKPACK">
 			<English>%1 is already in your backpack!</English>
-			<German>%1 ist bereits in Deinem Rucksack!</German>
+			<German>%1 ist bereits in deinem Rucksack!</German>
 			<Russian>%1 уже у вас в рюкзаке!</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_ADDED_INVENTORY">
 			<English>%1 has been added to your inventory!</English>
-			<German>%1 wurde Deinem Inventar hinzugefügt!</German>
+			<German>%1 wurde zu deinem Inventar hinzugefügt!</German>
 			<Russian>%1 был добавлен в ваш инвентарь!</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_VEHICLE_SPAWNED">
 			<English>Your vehicle has been spawned.</English>
-			<German>Dein Fahrzeug ist gespawnt.</German>
+			<German>Dein Fahrzeug wurde ausgeparkt.</German>
 			<Russian>Вы забрали технику из гаража</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_BLACKLISTED">
 			<English>You are unable to store this vehicle in your garage.</English>
-			<German>Du kannst dieses Fahrzeug nicht in Deiner Garage parken.</German>
+			<German>Es ist nicht möglich dieses Fahrzeug in deiner Garage zu parken.</German>
 			<Russian>Вы не можете поставить эту технику в ваш гараж</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_LIMIT_ARRAY">
 			<English>You can't store any more of this kind of vehicle in your garage.</English>
-			<German>Du kannst keine weiteren Fahrzeuge dieses Typs in Deiner Garage parken.</German>
+			<German>Es ist nicht möglich noch weitere Fahrzeuge dieses Typs in deiner Garage zu parken.</German>
 			<Russian>Вы больше не можете ставить этот тип техники в гараж.</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_LIMIT_NUMBER">
 			<English>You can't store any more vehicles in your garage.</English>
-			<German>Du kannst keine weiteren Fahrzeuge in Deiner Garage parken.</German>
+			<German>Du kannst keine weiteren Fahrzeuge in deiner Garage parken.</German>
 			<Russian>Вы не можете поставить в гараж больше техники.</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_STORE_MISSION">
 			<English>You can't store a mission or deployable vehicle.</English>
-			<German>Du kannst keine Erzeugten oder Missions Fahrzeuge einparken</German>
+			<German>Du kannst kein temporäres Fahrzeug in deiner Garage parken.</German>
 			<Russian>Вы не можете ставить в гараж технику с миссий или скрафченную технику</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_REQUIRE_KEY">
 			<English>You must have the key for the vehicle you're trying to store.</English>
-			<German>Du benötigst den Schlüssel für das Fahrzeug, dass Du einparken willst.</German>
+			<German>Du musst den Schlüssel für das Fahrzeug besitzen, welches du parken möchtest.</German>
 			<Russian>У вас должен быть ключ от техники, которую вы пытаетесь поставить в гараж</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_VEHICLE_STORED">
 			<English>Your %1 has been stored in your garage.</English>
-			<German>Dein %1 wurde in der Garage geparkt.</German>
+			<German>Dein %1 wurde in deiner Garage geparkt.</German>
 			<Russian>Ваш %1 поставлен в гараж.</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_NEED_COINS">
 			<English>You need %1 %2 to store your %3.</English>
-			<German>Du benötigst %1 %2 um %3 einparken zu können</German>
+			<German>Du benötigst %1 %2 um dein %3 zu parken.</German>
 			<Russian>Вам нужно %1 %2 что бы поставить в гараж %3</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_NEED_BRIEFCASES">
 			<English>You need %1 to store your %2.</English>
-			<German>Du benötigst %1 um %2 einparken zu können</German>
+			<German>Du benötigst %1 um dein %2 zu parken.</German>
 			<Russian>Вам нужен %1 что бы поствить в гараж %2</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_PRICE">
 			<English>Price to store</English>
-			<German>Einpark-preis</German>
+			<German>Parkgebühr</German>
 			<Russian>Стоимость хранения</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_NO_VEHICLES">
 			<English>There are no vehicles in your garage or nearby.</English>
-			<German>Es befinden sich keine Fahrzeuge in oder um Deiner Garage</German>
+			<German>Es befinden sich keine Fahrzeuge in deiner Garage oder der Umgebung.</German>
 			<Russian>В гараж и поблизости отсутствует техника.</Russian>
 			<French></French>
 		</Key>
@@ -105,19 +105,19 @@
 		</Key>
 		<Key ID="STR_VG_VEHICLE_INFO">
 			<English>Vehicle Info</English>
-			<German>Fahrzeuginfo</German>
+			<German>Fahrzeug-Informationen</German>
 			<Russian>Информация</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_STORE_VEHICLE">
 			<English>Store Vehicle</English>
-			<German>Fahrzeug einparken</German>
+			<German>Fahrzeug parken</German>
 			<Russian>Поставить технику</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_STORE_VEHICLE_GEAR">
 			<English>Store Vehicle with Gear</English>
-			<German>Fahrzeug mit Ladung einparken</German>
+			<German>Fahrzeug mit Ausrüstung parken</German>
 			<Russian>Поставить технику с инвентарем</Russian>
 			<French></French>
 		</Key>
@@ -135,7 +135,7 @@
 		</Key>
 		<Key ID="STR_VG_REMOVE_PAD">
 			<English>Remove HeliPad</English>
-			<German>HeliPad entfernen</German>
+			<German>Helipad entfernen</German>
 			<Russian>Удалить площадку</Russian>
 			<French></French>
 		</Key>
