@@ -1,7 +1,7 @@
 // Developed by [GZA] David for German Zombie Apocalypse Servers (https://zombieapo.eu/)
 // Rewritten by salival (https://github.com/oiad)
 
-private ["_amount","_backPackCount","_backPackGear","_charID","_control","_counter","_display","_enoughMoney","_gearCount","_hasKey","_isLimitArray","_itemText","_items","_keyColor","_keyName","_limit","_magazineCount","_matchedCount","_moneyInfo","_name","_overLimit","_storedVehicles","_success","_typeName","_typeOf","_vehicle","_vehicleID","_vehicleUID","_wealth","_weaponsCount","_woGear"];
+private ["_amount","_backPackCount","_backPackGear","_cargoAmount","_charID","_control","_counter","_display","_enoughMoney","_gearCount","_hasKey","_isLimitArray","_itemText","_items","_keyColor","_keyName","_limit","_magazineCount","_matchedCount","_moneyInfo","_name","_overLimit","_storedVehicles","_success","_typeName","_typeOf","_vehicle","_vehicleID","_vehicleUID","_wealth","_weaponsCount","_woGear"];
 
 disableSerialization;
 
@@ -68,6 +68,7 @@ _vehicleUID	= _vehicle getVariable ["ObjectUID","0"];
 _weaponsCount = ((getWeaponCargo _vehicle) select 1) call _gearCount;
 _magazineCount = ((getMagazineCargo _vehicle) select 1) call _gearCount;
 _backPackCount = ((getBackpackCargo _vehicle) select 1) call _gearCount;
+_cargoAmount = (_weaponsCount + _magazineCount + _backPackCount);
 
 if (_vehicleID == "1" || _vehicleUID == "1") exitWith {localize "STR_VG_STORE_MISSION" call dayz_rollingMessages;};
 if (isNull DZE_myVehicle || !local DZE_myVehicle) exitWith {systemChat localize "STR_EPOCH_PLAYER_245";};
@@ -100,13 +101,11 @@ if (vg_requireKey && {!_hasKey}) exitWith {localize "STR_VG_REQUIRE_KEY" call da
 
 _name = getText(configFile >> "cfgVehicles" >> _typeOf >> "displayName");
 
-_amount = if (_woGear) then {
-	{
-		if (_typeOf isKindOf (_x select 0)) exitWith {_x select 1};
-	} forEach vg_price;
-} else {
-	(_weaponsCount + _magazineCount + _backPackCount) * vg_pricePer
-};
+{
+	if (_typeOf isKindOf (_x select 0)) exitWith {_amount = _x select 1};
+} forEach vg_price;
+
+if (_cargoAmount > 0) then {_amount = _amount + (_cargoAmount * vg_pricePer);};
 
 _enoughMoney = false;
 _moneyInfo = [false,[],[],[],0];
