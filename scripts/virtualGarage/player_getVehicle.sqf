@@ -47,12 +47,16 @@ if (PVDZE_spawnVehicleResult != "0") then {
 	_inventory = weapons player;
 	dayz_myBackpack = unitBackpack player;
 	if (!isNull dayz_myBackpack) then {_backPack = (getWeaponCargo dayz_myBackpack) select 0;};
-	if (_keyID in (_inventory+_backPack)) then {
-		if (_keyID in _inventory) then {format[localize "STR_VG_IN_INVENTORY",_keyName] call dayz_rollingMessages;};
-		if (_keyID in _backPack) then {format[localize "STR_VG_IN_BACKPACK",_keyName] call dayz_rollingMessages;};
+	if !(isClass(configFile >> "CfgWeapons" >> _keyID)) then {
+		if (_keyID in (_inventory+_backPack)) then {
+			if (_keyID in _inventory) then {format[localize "STR_VG_IN_INVENTORY",_keyName] call dayz_rollingMessages;};
+			if (_keyID in _backPack) then {format[localize "STR_VG_IN_BACKPACK",_keyName] call dayz_rollingMessages;};
+		} else {
+			player addWeapon _keyID;
+			format[localize "STR_VG_ADDED_INVENTORY",_keyName] call dayz_rollingMessages;
+		};
 	} else {
-		player addWeapon _keyID;
-		format[localize "STR_VG_ADDED_INVENTORY",_keyName] call dayz_rollingMessages;
+		localize "str_epoch_player_107" call dayz_rollingMessages;
 	};
 };
 
