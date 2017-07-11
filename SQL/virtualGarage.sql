@@ -6,7 +6,7 @@
 	i.e you have multiple servers sharing the same virtual garage database.
 	If your hosting provider only allows you access to 1 database (i.e your main epoch one) then leave these commented out as they are.
 */
--- CREATE DATABASE IF NOT EXISTS `extdb` /*!40100 DEFAULT CHARACTER SET latin1 */;
+-- CREATE DATABASE IF NOT EXISTS `extdb` /*!40100 DEFAULT CHARACTER SET utf8 */;
 -- USE `extdb`;
 
 CREATE TABLE IF NOT EXISTS `garage` (
@@ -24,4 +24,4 @@ CREATE TABLE IF NOT EXISTS `garage` (
   `Colour` varchar(50) NOT NULL,
   `Colour2` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
