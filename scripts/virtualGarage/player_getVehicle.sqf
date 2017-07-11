@@ -55,15 +55,17 @@ if (PVDZE_spawnVehicleResult != "0") then {
 	if ((_charID > 10000) && (_charID <= 12500)) then {_keyID = format["ItemKeyBlack%1",_charID-10000];};
 	_keyName = getText(configFile >> "CfgWeapons" >> _keyID >> "displayName");
 
-	_inventory = weapons player;
-	dayz_myBackpack = unitBackpack player;
-	if (!isNull dayz_myBackpack) then {_backPack = (getWeaponCargo dayz_myBackpack) select 0;};
-	if (_keyID in (_inventory+_backPack)) then {
-		if (_keyID in _inventory) then {format[localize "STR_VG_IN_INVENTORY",_keyName] call dayz_rollingMessages;};
-		if (_keyID in _backPack) then {format[localize "STR_VG_IN_BACKPACK",_keyName] call dayz_rollingMessages;};
-	} else {
-		player addWeapon _keyID;
-		format[localize "STR_VG_ADDED_INVENTORY",_keyName] call dayz_rollingMessages;
+	if (vg_removeKey) then {
+		_inventory = weapons player;
+		dayz_myBackpack = unitBackpack player;
+		if (!isNull dayz_myBackpack) then {_backPack = (getWeaponCargo dayz_myBackpack) select 0;};
+		if (_keyID in (_inventory+_backPack)) then {
+			if (_keyID in _inventory) then {format[localize "STR_VG_IN_INVENTORY",_keyName] call dayz_rollingMessages;};
+			if (_keyID in _backPack) then {format[localize "STR_VG_IN_BACKPACK",_keyName] call dayz_rollingMessages;};
+		} else {
+			player addWeapon _keyID;
+			format[localize "STR_VG_ADDED_INVENTORY",_keyName] call dayz_rollingMessages;
+		};
 	};
 };
 
