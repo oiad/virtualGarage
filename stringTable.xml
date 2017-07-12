@@ -4,7 +4,7 @@
 		<Key ID="STR_VG_NEED_HELIPAD">
 			<English>You need a helipad to spawn air vehicles.</English>
 			<German>Du benötigst ein Helipad, um Luftfahrzeuge auszuparken.</German>
-			<Russian>Нужна вертолетная площадка для спавна авиа.техники</Russian>
+			<Russian>Нужна вертолетная площадка для спавна авиатехники</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_IN_INVENTORY">
@@ -28,13 +28,13 @@
 		<Key ID="STR_VG_VEHICLE_SPAWNED">
 			<English>Your vehicle has been spawned.</English>
 			<German>Dein Fahrzeug wurde ausgeparkt.</German>
-			<Russian>Вы забрали технику из гаража</Russian>
+			<Russian>Вы забрали технику из гаража.</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_BLACKLISTED">
 			<English>You are unable to store this vehicle in your garage.</English>
 			<German>Es ist nicht möglich dieses Fahrzeug in deiner Garage zu parken.</German>
-			<Russian>Вы не можете поставить эту технику в ваш гараж</Russian>
+			<Russian>Вы не можете поставить эту технику в ваш гараж.</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_LIMIT_ARRAY">
@@ -52,13 +52,13 @@
 		<Key ID="STR_VG_STORE_MISSION">
 			<English>You can't store a mission or deployable vehicle.</English>
 			<German>Du kannst kein temporäres Fahrzeug in deiner Garage parken.</German>
-			<Russian>Вы не можете ставить в гараж технику с миссий или скрафченную технику</Russian>
+			<Russian>Вы не можете ставить в гараж технику с миссий или скрафченную технику.</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_REQUIRE_KEY">
 			<English>You must have the key for the vehicle you're trying to store.</English>
 			<German>Du musst den Schlüssel für das Fahrzeug besitzen, welches du parken möchtest.</German>
-			<Russian>У вас должен быть ключ от техники, которую вы пытаетесь поставить в гараж</Russian>
+			<Russian>У вас должен быть ключ от техники, которую вы пытаетесь поставить в гараж.</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_VEHICLE_STORED">
@@ -88,7 +88,7 @@
 		<Key ID="STR_VG_NO_VEHICLES">
 			<English>There are no vehicles in your garage or nearby.</English>
 			<German>Es befinden sich keine Fahrzeuge in deiner Garage oder der Umgebung.</German>
-			<Russian>В гараж и поблизости отсутствует техника.</Russian>
+			<Russian>В гараже и поблизости отсутствует техника.</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_VIRTUAL_GARAGE">
@@ -130,7 +130,7 @@
 		<Key ID="STR_VG_SEARCH_VEHICLES">
 			<English>Searching for vehicles...</English>
 			<German>Suche nach Fahrzeugen...</German>
-			<Russian>Поиск теники...</Russian>
+			<Russian>Поиск техники...</Russian>
 			<French></French>
 		</Key>
 		<Key ID="STR_VG_REMOVE_PAD">
