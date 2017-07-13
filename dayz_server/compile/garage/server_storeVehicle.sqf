@@ -39,4 +39,4 @@ PVDZE_storeVehicleResult = true;
 
 if (!isNull _player) then {_clientID publicVariableClient "PVDZE_storeVehicleResult";};
 
-diag_log format["GARAGE: %1 (%2) stored %3 @%4 %5",if (alive _player) then {name _player} else {"DeadPlayer"},_playerUID,_class,mapGridPosition (getPosATL _player),getPosATL _player];
+diag_log format["GARAGE: %1 (%2) stored %3 @%4 %5",_name,_playerUID,_class,mapGridPosition (getPosATL _player),getPosATL _player];
