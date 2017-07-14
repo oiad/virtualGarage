@@ -87,6 +87,12 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	You can substitute <code>ItemToolBox</code> for whatever you would like the player to be able to deploy it with, i.e <code>ItemEtool</code>
 	Otherwise if you are using garages at traders, this step is not needed.
 
+2. (optional) Add a consumable cost to the deploying of the heli pad:
+	```sqf
+	["ItemToolbox",[0,9,2],5,0.9,true,true,false,true,true,false,true,["HeliHCivil"],[],["ItemRuby"],"true"],
+	```
+	This will force the player to spend an "ItemRuby" for as a cost for deploying the heli pad, Obviously you can subsitute it for anything (VaultStorage, ItemBriefcase100oz etc)
+
 # dayz_server folder install:
 
 1. Replace or merge the contents of <code>dayz_server\init\server_functions.sqf</code> provided with your original copy.
