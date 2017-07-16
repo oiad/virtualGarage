@@ -1,4 +1,4 @@
-private ["_vehicle","_player","_clientID","_playerUID","_name","_class","_charID","_damage","_fuel","_hit","_inventory","_query","_array","_hit","_selection","_colour","_colour2","_displayName"];
+private ["_vehicle","_player","_clientID","_playerUID","_name","_nameArray","_class","_charID","_damage","_fuel","_hit","_inventory","_query","_array","_hit","_selection","_colour","_colour2","_displayName"];
 
 _vehicle = _this select 0;
 _player = _this select 1;
@@ -9,6 +9,8 @@ _name = if (alive _player) then {name _player;} else {"unknown player";};
 
 _class = typeOf _vehicle;
 _displayName = getText(configFile >> "cfgVehicles" >> _class >> "displayName");
+_nameArray = (toArray _displayName) - [39];
+_displayName = toString _nameArray;
 _charID = _vehicle getVariable ["CharacterID","0"];
 _damage = damage _vehicle;
 _fuel = fuel _vehicle;
