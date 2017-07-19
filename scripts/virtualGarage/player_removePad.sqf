@@ -1,5 +1,8 @@
-private ["_hasAccess","_heliPad","_objectID","_objectUID","_plotCheck","_typeOf"];
 // Written by salival (https://github.com/oiad)
+
+private ["_hasAccess","_heliPad","_objectID","_objectUID","_plotCheck","_typeOf"];
+
+closeDialog 0;
 
 _plotCheck = [player, false] call FNC_find_plots;
 _hasAccess = [player,_plotCheck select 2] call FNC_check_access;
