@@ -247,15 +247,6 @@ class virtualGarage {
 			h = (1 / 25);
 		};
 
-		class VehicleTitleBox : vg_RscText {
-			idc = -1;
-			text = $STR_VG_YOUR_VEHICLES;
-			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
-			x = 0.11; y = 0.26;
-			w = 0.35;
-			h = (1 / 25);
-		};
-
 		class VehicleInfoHeader : vg_RscText {
 			idc = 2830;
 			text = $STR_VG_VEHICLE_INFO;
@@ -285,6 +276,15 @@ class virtualGarage {
 			onLBSelChanged = "[_this] call vehicleInfo;";
 			x = 0.11; y = 0.302;
 			w = 0.35; h = 0.49;
+		};
+
+		class VehicleTitleBox : vg_RscText {
+			idc = 2804;
+			text = "";
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
+			x = 0.11; y = 0.26;
+			w = 0.35;
+			h = (1 / 25);
 		};
 
 		class storeVehicle : vg_RscButtonMenu {
