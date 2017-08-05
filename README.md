@@ -107,7 +107,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 3. Edit your server batch file or whatever loads your server to include <code>@extDB</code> in the -mod line, i.e for epoch:
 	```sqf
-	"-mod=@extDB;DayZ_Epoch;@DayZ_Epoch_Server"
+	"-mod=@extDB;@DayZ_Epoch;@DayZ_Epoch_Server"
 	```
 	for overwatch:
 	```sqf
