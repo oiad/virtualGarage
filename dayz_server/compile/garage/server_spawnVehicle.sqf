@@ -170,8 +170,4 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 	if (!isNull _player) then {_clientID publicVariableClient "PVDZE_spawnVehicleResult";};
 	
 	diag_log format["GARAGE: %1 (%2) retrieved %3 @%4 %5",if (alive _player) then {name _player} else {"DeadPlayer"},getPlayerUID _player,_class,mapGridPosition (getPosATL _player),getPosATL _player];
-
-	uiSleep 10;
-
-	_object addEventHandler ["HandleDamage", {true}];
 };
