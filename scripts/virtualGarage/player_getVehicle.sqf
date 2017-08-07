@@ -16,9 +16,9 @@ if (vg_removeKey) then {
 		} count (weapons player);
 		if (_totalTools == 12) then {_isOK = false};
 	};
-
-	if (!_isOK) exitWith {localize "str_epoch_player_107" call dayz_rollingMessages;};
 };
+
+if (!_isOK) exitWith {localize "str_epoch_player_107" call dayz_rollingMessages;};
 
 _dir = round(random 360);
 _backPack = [];
