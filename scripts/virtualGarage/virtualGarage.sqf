@@ -13,6 +13,8 @@ private ["_class","_control","_displayName","_heliPad","_localVehicles","_plotCh
 
 disableSerialization;
 
+vg_hasRun = false;
+
 createDialog "virtualGarage";
 
 {ctrlShow [_x,false]} count [2803,2830,2850,2851,2852,2853];

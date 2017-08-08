@@ -290,7 +290,7 @@ class virtualGarage {
 		class storeVehicle : vg_RscButtonMenu {
 			idc = 2850;
 			text = $STR_VG_STORE_VEHICLE;
-			onButtonClick = "[true] spawn player_storeVehicle;";
+			onButtonClick = "if (!vg_hasRun) then {vg_hasRun = true;[true] spawn player_storeVehicle;};";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.9 - (1 / 25);
 			w = (6.25 / 36);
@@ -300,7 +300,7 @@ class virtualGarage {
 		class storeVehicleGear : vg_RscButtonMenu {
 			idc = 2851;
 			text = $STR_VG_STORE_VEHICLE_GEAR;
-			onButtonClick = "[false] spawn player_storeVehicle;";
+			onButtonClick = "if (!vg_hasRun) then {vg_hasRun = true;[false] spawn player_storeVehicle;};";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.9 - (1 / 25);
 			w = (6.25 / 20);
@@ -310,7 +310,7 @@ class virtualGarage {
 		class getVehicle : vg_RscButtonMenu {
 			idc = 2852;
 			text = $STR_VG_GET_VEHICLE;
-			onButtonClick = "[] spawn player_getVehicle;";
+			onButtonClick = "if (!vg_hasRun) then {vg_hasRun = true;[] spawn player_getVehicle;};";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.9 - (1 / 25);
 			w = (6.25 / 40);
