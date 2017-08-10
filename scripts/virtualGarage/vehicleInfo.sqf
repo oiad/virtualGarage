@@ -60,6 +60,7 @@ if (_localVehicle) then {
 		ctrlShow[2851,false];
 	};
 	_price = if (_price == 0) then {localize "strwffree"} else {
+		if (!isNil "sk_dualCurrency") then {_price = if (z_singleCurrency) then {_price * 10} else {_price};};
 		if (z_singleCurrency) then {
 			format ["%1 %2",[_price] call BIS_fnc_numberText,currencyName]
 		} else {

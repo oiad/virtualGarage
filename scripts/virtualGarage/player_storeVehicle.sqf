@@ -107,6 +107,8 @@ _name = getText(configFile >> "cfgVehicles" >> _typeOf >> "displayName");
 
 if (_cargoAmount > 0) then {_amount = _amount + (_cargoAmount * vg_pricePer);};
 
+if (!isNil "sk_dualCurrency") then {_amount = if (z_singleCurrency) then {_amount * 10} else {_amount};};
+
 _enoughMoney = false;
 _moneyInfo = [false,[],[],[],0];
 _wealth = player getVariable[Z_MoneyVariable,0];
