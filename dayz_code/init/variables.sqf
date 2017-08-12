@@ -10,7 +10,7 @@ vg_pricePer = 100; // Price in worth to store a vehicle per gear item, use 0 if 
 vg_price = [["Land",500],["Air",500],["Boat",500]];
 /*
 	vg_price can be an array of vehicle config classes as well as vehicle classnames, you need to put these in order of what you prefer to get checked first.
-	Price is in worth for briefcases or coins for gold based servers (10,000 worth is considered 100,000 briefcases)
+	Price is in worth for briefcases or coins for gold based servers (10,000 worth is considered 1 briefcase, 100,000 coins is considered 1 briefcase)
 
 	i.e:
 	vg_price = [["Land",500],["Air",300],["Boat",100]];
