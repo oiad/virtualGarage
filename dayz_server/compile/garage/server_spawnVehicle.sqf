@@ -144,7 +144,9 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 		_clrinit2 = format ["#(argb,8,8,3)color(%1)",_colour2];
 		_object setVehicleInit "this setObjectTexture [1,"+str _clrinit2+"];";
 	};
-	
+
+	processInitCommands;
+
 	_characterID = str(_characterID);
 	_object setVariable ["CharacterID", _characterID, true];
 
