@@ -1,16 +1,30 @@
-private ["_vehicle","_player","_clientID","_playerUID","_name","_nameArray","_class","_charID","_damage","_fuel","_hit","_inventory","_query","_array","_hit","_selection","_colour","_colour2","_displayName"];
+private ["_vehicle","_player","_clientID","_playerUID","_name","_fnc_sanitizeInput","_class","_charID","_damage","_fuel","_hit","_inventory","_query","_array","_hit","_selection","_colour","_colour2","_displayName"];
 
 _vehicle = _this select 0;
 _player = _this select 1;
 _woGear = _this select 2;
 _clientID = owner _player;
 _playerUID = getPlayerUID _player;
-_name = if (alive _player) then {name _player;} else {"unknown player";};
+
+_fnc_sanitizeInput = {
+	private ["_input","_badChars"];
+
+	_input = _this;
+	_input = toArray (_input);
+	_badChars = [60,62,38,123,125,91,93,59,58,39,96,126,44,46,47,63,124,92,34];
+
+	{
+		_input = _input - [_x];
+	} forEach _badChars;
+	
+	_input = toString (_input);
+	_input
+};
 
 _class = typeOf _vehicle;
-_displayName = getText(configFile >> "cfgVehicles" >> _class >> "displayName");
-_nameArray = (toArray _displayName) - [39];
-_displayName = toString _nameArray;
+_displayName = (getText(configFile >> "cfgVehicles" >> _class >> "displayName")) call _fnc_sanitizeInput;
+_name = if (alive _player) then {(name _player) call _fnc_sanitizeInput;} else {"unknown player";};
+
 _charID = _vehicle getVariable ["CharacterID","0"];
 _damage = damage _vehicle;
 _fuel = fuel _vehicle;
