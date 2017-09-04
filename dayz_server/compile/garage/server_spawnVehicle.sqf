@@ -65,7 +65,6 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 		_outcome = _result select 0;
 		if (_outcome == "PASS") then {
 			_oid = _result select 1;
-			//_object setVariable ["ObjectID", _oid, true];
 			#ifdef OBJECT_DEBUG
 			diag_log("CUSTOM: Selected " + str(_oid));
 			#endif
@@ -87,22 +86,21 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 		//createVehicle "NONE" is especially inaccurate in water
 		_object setPos _location;
 	};
-	
-	_object addEventHandler ["HandleDamage",{false}];
-	//_object setposATL _location;
 
-	clearWeaponCargoGlobal  _object;
-	clearMagazineCargoGlobal  _object;
+	_object addEventHandler ["HandleDamage",{false}];
+
+	clearWeaponCargoGlobal _object;
+	clearMagazineCargoGlobal _object;
 	// _object setVehicleAmmo DZE_vehicleAmmo;
 
 	_object setFuel _fuel;
 	_object setDamage _damage;
-	
-	 if (count _inventory > 0) then {	
+
+	 if (count _inventory > 0) then {
 		//Add weapons
 		_objWpnTypes = (_inventory select 0) select 0;
 		_objWpnQty = (_inventory select 0) select 1;
-		_countr = 0;					
+		_countr = 0;
 		{
 			_isOK = isClass(configFile >> "CfgWeapons" >> _x);
 			if (_isOK) then {_object addWeaponCargoGlobal [_x,(_objWpnQty select _countr)];};
@@ -139,7 +137,7 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 		_object setVehicleInit "this setObjectTexture [0,"+str _clrinit+"];";
 	};
 
-	if (_colour2 != "0") then {			
+	if (_colour2 != "0") then {
 		_object setVariable ["Colour2",_colour2,true];
 		_clrinit2 = format ["#(argb,8,8,3)color(%1)",_colour2];
 		_object setVehicleInit "this setObjectTexture [1,"+str _clrinit2+"];";
@@ -170,6 +168,6 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 	PVDZE_spawnVehicleResult = _characterID;
 
 	if (!isNull _player) then {_clientID publicVariableClient "PVDZE_spawnVehicleResult";};
-	
+
 	diag_log format["GARAGE: %1 (%2) retrieved %3 @%4 %5",if (alive _player) then {name _player} else {"DeadPlayer"},getPlayerUID _player,_class,mapGridPosition (getPosATL _player),getPosATL _player];
 };
