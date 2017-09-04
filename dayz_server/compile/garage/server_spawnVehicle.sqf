@@ -129,7 +129,7 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 	};
 
 	_object setVariable ["ObjectID", _oid, true];
-	_object setVariable ["lastUpdate",time];
+	_object setVariable ["lastUpdate",diag_tickTime];
 
 	if (_colour != "0") then {
 		_object setVariable ["Colour",_colour,true];
