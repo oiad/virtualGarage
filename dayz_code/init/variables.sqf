@@ -6,6 +6,7 @@ vg_blackListed = []; // List of classnames of vehicles that are blacklisted from
 vg_heliPads = ["HeliH","HeliHCivil","HeliHRescue","MAP_Heli_H_army","MAP_Heli_H_cross","Sr_border"]; // Array of heli pad classnames
 vg_removeKey = true; // Remove the key from the players inventory after storing vehicle?
 vg_requireKey = true; // Require the player to have the key when storing a locked vehicle.
+vg_disableThermal = []; // Array of vehicle class names to disable thermal on when being spawned. i.e: ["AH1Z","AH64D"];
 vg_pricePer = 100; // Price in worth to store a vehicle per gear item, use 0 if you want it to be free.
 vg_price = [["Land",500],["Air",500],["Boat",500]];
 /*

@@ -160,7 +160,8 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 	dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_object];
 
 	_object call fnc_veh_ResetEH;
-	
+	if (_class in vg_disableThermal) then {_object disableTIEquipment true;};
+
 	// for non JIP users this should make sure everyone has eventhandlers for vehicles.
 	PVDZE_veh_Init = _object;
 	publicVariable "PVDZE_veh_Init";
