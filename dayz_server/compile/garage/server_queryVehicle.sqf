@@ -4,7 +4,7 @@ _player = _this;
 _clientID = owner _player;
 _playerUID = getPlayerUID _player;
 
-_query = format["SELECT id, classname, Inventory, CharacterID FROM garage WHERE PlayerUID='%1' ORDER BY DisplayName",_playerUID];
+_query = format["SELECT id, classname, Inventory, CharacterID,DateStored FROM garage WHERE PlayerUID='%1' ORDER BY DisplayName",_playerUID];
 
 _result = [_query,2,true] call fn_asyncCall;
 
