@@ -131,13 +131,13 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 # mysql database update from previous virtual garage:
 
-1. If you are updating from a previous authors version (i.e TheDuke) please remove the comments (/* */) on line 5 and 8 in <code>SQL\virtualGarageUpdate.sql<code> so that it looks like this:
+1. If you are updating from a previous authors version (i.e TheDuke) please remove the comments (/* */) on line 5 and 8 in <code>SQL\virtualGarageUpdate.sql</code> so that it looks like this:
 	```sqf
 	ALTER TABLE `garage` ADD `Name` VARCHAR(50) NOT NULL DEFAULT '' AFTER `PlayerUID`;
 	ALTER TABLE `garage` ADD `displayName` VARCHAR(50) NOT NULL DEFAULT '' AFTER `Name`;
 	```
 
-1. Import the <code>SQL\virtualGarageUpdate.sql</code> file overtop of your garage database, this will update it to the latest version.
+2. Import the <code>SQL\virtualGarageUpdate.sql</code> file overtop of your garage database, this will update it to the latest version.
 
 # Infistar setup:
 
