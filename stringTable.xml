@@ -9,13 +9,13 @@
 		</Key>
 		<Key ID="STR_VG_STOREDATE">
 			<English>Stored Date</English>
-<!--			<German></German> --->
+			<German>Einparkdatum</German>
 <!--			<Russian></Russian> --->
 <!--			<French></French> --->
 		</Key>
 		<Key ID="STR_VG_STOREDATE_INVALID">
 			<English>Store date invalid.</English>
-<!--			<German></German> --->
+			<German>Einparkdatum ungültig</German>
 <!--			<Russian></Russian> --->
 <!--			<French></French> --->
 		</Key>
