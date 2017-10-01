@@ -11,13 +11,13 @@
 			<English>Stored Date</English>
 			<German>Einparkdatum</German>
 <!--			<Russian></Russian> --->
-<!--			<French></French> --->
+			<French>Date enregistrée</French>
 		</Key>
 		<Key ID="STR_VG_STOREDATE_INVALID">
 			<English>Store date invalid.</English>
 			<German>Einparkdatum ungültig</German>
 <!--			<Russian></Russian> --->
-<!--			<French></French> --->
+			<French>Date de stockage invalide</French>
 		</Key>
 		<Key ID="STR_VG_IN_INVENTORY">
 			<English>%1 is already in your inventory!</English>
@@ -53,7 +53,7 @@
 			<English>You can't store any more of this kind of vehicle in your garage.</English>
 			<German>Es ist nicht möglich noch weitere Fahrzeuge dieses Typs in deiner Garage zu parken.</German>
 			<Russian>Вы больше не можете ставить этот тип техники в гараж.</Russian>
-			<French></French>
+			<French>Vous ne pouvez plus stocker ce type de véhicule dans votre garage.</French>
 		</Key>
 		<Key ID="STR_VG_LIMIT_NUMBER">
 			<English>You can't store any more vehicles in your garage.</English>
