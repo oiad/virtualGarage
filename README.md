@@ -18,7 +18,6 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 * Dscha for german translations
 * Snowman for russian translations
 * Ghostis for russian translations
-* Panzer Mad for French translations
 
 # REPORTING ERRORS/PROBLEMS
 
@@ -131,12 +130,6 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 # mysql database update from previous virtual garage:
 
-1. If you are updating from a previous authors version (i.e TheDuke) please remove the comments (/* */) on line 5 and 8 in <code>SQL\virtualGarageUpdate.sql<code> so that it looks like this:
-	```sqf
-	ALTER TABLE `garage` ADD `Name` VARCHAR(50) NOT NULL DEFAULT '' AFTER `PlayerUID`;
-	ALTER TABLE `garage` ADD `displayName` VARCHAR(50) NOT NULL DEFAULT '' AFTER `Name`;
-	```
-
 1. Import the <code>SQL\virtualGarageUpdate.sql</code> file overtop of your garage database, this will update it to the latest version.
 
 # Infistar setup:
@@ -186,18 +179,6 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	```sqf
 	5 createDialog <CUT> !="createDialog \"virtualGarage\";"
 	```
-
-# Changing the date format for stored vehicles when queried:
-
-1. In your <code>dayz_server\compile\garage\server_storeVehicle.sqf</code> on line 17, change the order of the variables, for example:
-	Default (day-month-year):
-	```sqf
-	_dateFormat = format ["%1-%2-%3",_day,_month,_year];
-	```
-	month-day-year:
-	```sqf
-	_dateFormat = format ["%1-%2-%3",_month,_day,_year];
-	```	
 
 # Removing the older version and starting fresh:
 

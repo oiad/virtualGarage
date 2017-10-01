@@ -88,18 +88,6 @@
 			<German>Du benötigst ein Helipad, um Luftfahrzeuge auszuparken.</German>
 			<Russian>Нужна вертолетная площадка для спавна авиатехники</Russian>
 		</Key>
-		<Key ID="STR_VG_STOREDATE">
-			<English>Stored Date</English>
-<!--			<German></German> --->
-<!--			<Russian></Russian> --->
-<!--			<French></French> --->
-		</Key>
-		<Key ID="STR_VG_STOREDATE_INVALID">
-			<English>Store date invalid.</English>
-<!--			<German></German> --->
-<!--			<Russian></Russian> --->
-<!--			<French></French> --->
-		</Key>
 		<Key ID="STR_VG_IN_INVENTORY">
 			<English>%1 is already in your inventory!</English>
 			<French>%1 est déjà dans votre inventaire!</French>
