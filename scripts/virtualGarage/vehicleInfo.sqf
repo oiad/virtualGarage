@@ -1,7 +1,7 @@
 // Developed by [GZA] David for German Zombie Apocalypse Servers (https://zombieapo.eu/)
 // Rewritten by salival (https://github.com/oiad)
 
-private ["_backPackCount","_backPackCount_raw","_backPackSlots","_cargoAmount","_control","_counter","_formattedText","_gearCount","_index","_inventory","_localVehicle","_magazineCount","_magazineCount_raw","_magazineSlots","_name","_picture","_price","_typeOf","_vehicle","_weaponSlots","_weaponsCount","_weaponsCount_raw"];
+private ["_backPackCount","_backPackCount_raw","_backPackSlots","_cargoAmount","_control","_counter","_DateStored","_formattedText","_gearCount","_index","_inventory","_localVehicle","_magazineCount","_magazineCount_raw","_magazineSlots","_name","_picture","_price","_typeOf","_vehicle","_weaponSlots","_weaponsCount","_weaponsCount_raw"];
 
 disableSerialization;
 
@@ -28,6 +28,7 @@ if (_localVehicle) then {
 } else {
 	_vehicle = (vg_vehicleList select _index) select 1;
 	_inventory = (vg_vehicleList select _index) select 2;
+	_DateStored = (vg_vehicleList select _index) select 4;
 	_typeOf = _vehicle;
 	_weaponsCount_raw = _inventory select 0;
 	_magazineCount_raw = _inventory select 1;
@@ -92,6 +93,13 @@ _formattedText = format [
 ];
 
 if (_localVehicle) then {_formattedText = _formattedText + format ["<t color='#33BFFF' size='0.7'>%1: </t><t color='#ffffff' size='0.7'>%2</t><br />",localize "STR_VG_PRICE",_price];};
+if (!_localVehicle) then {
+	if (_DateStored != "old") then {
+		_formattedText = _formattedText + format ["<t color='#33BFFF' size='0.7'>%1: </t><t color='#ffffff' size='0.7'>%2</t><br />",localize "STR_VG_STOREDATE",_DateStored];
+	} else {
+		_formattedText = _formattedText + format ["<t color='#33BFFF' size='0.7'>%1: </t><t color='#ffffff' size='0.7'>%2</t><br />",localize "STR_VG_STOREDATE",localize "STR_VG_STOREDATE_INVALID"];
+	};
+};
 
 ((findDisplay 2800) displayCtrl 2803) ctrlSetStructuredText parseText _formattedText;
 
