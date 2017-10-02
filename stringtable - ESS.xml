@@ -86,18 +86,18 @@
 			<English>You need a helipad to spawn air vehicles.</English>
 			<French>Vous avez besoin d'un héliport pour engendrer des véhicules aériens.</French>
 			<German>Du benötigst ein Helipad, um Luftfahrzeuge auszuparken.</German>
-			<Russian>Нужна вертолетная площадка для спавна авиатехники</Russian>
+			<Russian>Нужна вертолетная площадка чтобы забрать авиатехнику.</Russian>
 		</Key>
 		<Key ID="STR_VG_STOREDATE">
 			<English>Stored Date</English>
 			<German>Einparkdatum</German>
-<!--			<Russian></Russian> --->
+			<Russian>Дата постановки в гараж</Russian>
 			<French>Date enregistrée</French>
 		</Key>
 		<Key ID="STR_VG_STOREDATE_INVALID">
 			<English>Store date invalid.</English>
 			<German>Einparkdatum ungültig</German>
-<!--			<Russian></Russian> --->
+			<Russian>Неверная дата постановки в гараж.</Russian>
 			<French>Date de stockage invalide</French>
 		</Key>
 		<Key ID="STR_VG_IN_INVENTORY">
