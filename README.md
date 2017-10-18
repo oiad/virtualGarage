@@ -96,7 +96,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 # dayz_server folder install:
 
-1. In <code>dayz_server\init\server_functions.sqf</code> find: <code>spawn_vehicles = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\spawn_vehicles.sqf";</code and add directly below:
+1. In <code>dayz_server\init\server_functions.sqf</code> find: <code>spawn_vehicles = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\spawn_vehicles.sqf";</code> and add directly below:
 	```sqf
 	call compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\garage\init.sqf";
 	```
