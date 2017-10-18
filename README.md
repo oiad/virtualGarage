@@ -2,7 +2,7 @@
 Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 * Discussion URL: https://epochmod.com/forum/topic/44280-release-virtual-garage-for-1061/
-	
+
 * Tested as working on a blank Epoch 1.0.6.1
 * This adds support for briefcases, gems and coins.
 * Supports dynamic pricing and vehicle limits
@@ -84,7 +84,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	```sqf
 	["ItemToolbox",[0,9,2],5,0.9,true,true,false,true,true,false,true,["HeliHCivil"],[],[],"true"],
 	```
-	
+
 	You can substitute <code>ItemToolBox</code> for whatever you would like the player to be able to deploy it with, i.e <code>ItemEtool</code>
 	Otherwise if you are using garages at traders, this step is not needed.
 
@@ -96,7 +96,10 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 # dayz_server folder install:
 
-1. Replace or merge the contents of <code>dayz_server\init\server_functions.sqf</code> provided with your original copy.
+1. In <code>dayz_server\init\server_functions.sqf</code> find: <code>spawn_vehicles = compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\spawn_vehicles.sqf";</code and add directly below:
+	```sqf
+	call compile preprocessFileLineNumbers "\z\addons\dayz_server\compile\garage\init.sqf";
+	```
 
 2. Copy the <code>dayz_server\compile\garage</code> folder to your dayz_server directory so it becomes <code>dayz_server\compile\garage</code>
 
@@ -240,7 +243,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	player_storeVehicle = 			compile preprocessFileLineNumbers "scripts\garage\player_storeVehicle.sqf";
 	vehicle_info = compile preprocessFileLineNumbers "scripts\garage\vehicle_info.sqf";
 	```
-	
+
 	Remove this function from your custom <code>compiles.sqf</code>:
 	```sqf
 	vehicle_gear_count = {
@@ -252,7 +255,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 		_counter
 	};
 	```
-	
+
 	(OPTIONAL) And the following functions if no other scripts require them (SC_fnc_removeCoins and SC_fnc_addCoins):
 	```sqf
 	SC_fnc_removeCoins=
