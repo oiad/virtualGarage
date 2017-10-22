@@ -215,7 +215,7 @@ class virtualGarage {
 	idd = 2800;
 	name="virtualGarage";
 	onload = "player setVariable['isBusy',true,true];"; 
-	onUnload = "player setVariable['isBusy',false,true];";
+	onUnload = "player setVariable['isBusy',false,true];dayz_actionInProgress = false;";
 	movingEnabled = 0;
 	enableSimulation = 1;
 

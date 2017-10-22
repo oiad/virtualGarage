@@ -11,6 +11,9 @@ if (isNil "vg_init") then {
 
 private ["_class","_control","_displayName","_heliPad","_localVehicles","_plotCheck","_storedVehicles"];
 
+if (dayz_actionInProgress) exitWith {localize "str_epoch_player_52" call dayz_rollingMessages;};
+dayz_actionInProgress = true;
+
 disableSerialization;
 
 vg_hasRun = false;
