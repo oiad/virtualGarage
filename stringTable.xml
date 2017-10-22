@@ -43,6 +43,9 @@
 			<Russian>Вы забрали технику из гаража.</Russian>
 			<French>Votre véhicule a été engendré.</French>
 		</Key>
+		<Key ID="STR_VG_NOSTOREWITHGEAR">
+			<English>This server doesn't allow storing vehicles with gear in them.</English>
+		</Key>
 		<Key ID="STR_VG_BLACKLISTED">
 			<English>You are unable to store this vehicle in your garage.</English>
 			<German>Es ist nicht möglich dieses Fahrzeug in deiner Garage zu parken.</German>

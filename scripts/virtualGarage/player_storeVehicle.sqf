@@ -61,6 +61,7 @@ vg_vehicleList = nil;
 
 _woGear = _this select 0;
 closeDialog 0;
+if (!vg_storeWithGear && !_woGear) exitWith {systemChat localize "STR_VG_NOSTOREWITHGEAR";};
 
 _charID	= _vehicle getVariable ["CharacterID","0"];
 _vehicleID = _vehicle getVariable ["ObjectID","0"];
