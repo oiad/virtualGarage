@@ -61,7 +61,7 @@ vg_vehicleList = nil;
 
 _woGear = _this select 0;
 closeDialog 0;
-if (!vg_storeWithGear && !_woGear) exitWith {systemChat localize "STR_VG_NOSTOREWITHGEAR";};
+if (!vg_storeWithGear && !_woGear) exitWith {localize "STR_VG_NOSTOREWITHGEAR" call dayz_rollingMessages;};
 
 _charID	= _vehicle getVariable ["CharacterID","0"];
 _vehicleID = _vehicle getVariable ["ObjectID","0"];
@@ -72,7 +72,7 @@ _backPackCount = ((getBackpackCargo _vehicle) select 1) call _gearCount;
 _cargoAmount = (_weaponsCount + _magazineCount + _backPackCount);
 
 if (_vehicleID == "1" || _vehicleUID == "1") exitWith {localize "STR_VG_STORE_MISSION" call dayz_rollingMessages;};
-if (isNull DZE_myVehicle || !local DZE_myVehicle) exitWith {systemChat localize "STR_EPOCH_PLAYER_245";};
+if (isNull DZE_myVehicle || !local DZE_myVehicle) exitWith {localize "STR_EPOCH_PLAYER_245" call dayz_rollingMessages;};
 
 _hasKey = false;
 _keyColor = ["ItemKeyYellow","ItemKeyBlue","ItemKeyRed","ItemKeyGreen","ItemKeyBlack"];
