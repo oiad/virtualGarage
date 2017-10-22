@@ -46,6 +46,12 @@
 		<Key ID="STR_VG_NOSTOREWITHGEAR">
 			<English>This server doesn't allow storing vehicles with gear in them.</English>
 		</Key>
+		<Key ID="STR_VG_PLAYERNEARVEHICLE">
+			<English>You can't store a vehicle when a player within 15m of it.</English>
+		</Key>
+		<Key ID="STR_VG_PLAYERINVEHICLE">
+			<English>You can't store a vehicle with a player inside of it.</English>
+		</Key>
 		<Key ID="STR_VG_BLACKLISTED">
 			<English>You are unable to store this vehicle in your garage.</English>
 			<German>Es ist nicht möglich dieses Fahrzeug in deiner Garage zu parken.</German>

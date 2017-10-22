@@ -1,7 +1,7 @@
 // Developed by [GZA] David for German Zombie Apocalypse Servers (https://zombieapo.eu/)
 // Rewritten by salival (https://github.com/oiad)
 
-private ["_amount","_backPackCount","_backPackGear","_cargoAmount","_charID","_control","_counter","_display","_enoughMoney","_gearCount","_hasKey","_isLimitArray","_itemText","_items","_keyColor","_keyName","_limit","_magazineCount","_matchedCount","_moneyInfo","_name","_overLimit","_storedVehicles","_success","_typeName","_typeOf","_vehicle","_vehicleID","_vehicleUID","_wealth","_weaponsCount","_woGear"];
+private ["_amount","_backPackCount","_backPackGear","_cargoAmount","_charID","_control","_counter","_display","_enoughMoney","_gearCount","_hasKey","_isLimitArray","_itemText","_items","_keyColor","_keyName","_limit","_magazineCount","_matchedCount","_moneyInfo","_name","_overLimit","_storedVehicles","_success","_typeName","_typeOf","_vehicle","_vehicleID","_vehicleUID","_wealth","_weaponsCount","_woGear","_playerNear"];
 
 disableSerialization;
 
@@ -109,6 +109,11 @@ _name = getText(configFile >> "cfgVehicles" >> _typeOf >> "displayName");
 if (_cargoAmount > 0) then {_amount = _amount + (_cargoAmount * vg_pricePer);};
 
 if (!isNil "sk_dualCurrency") then {_amount = if (z_singleCurrency) then {_amount * 10} else {_amount};};
+
+_playerNear = {isPlayer _x && (_x != player)} count (([_vehicle] call FNC_GetPos) nearEntities ["CAManBase", 15]) > 0;
+if (_playerNear) exitWith {localize "STR_VG_PLAYERNEARVEHICLE" call dayz_rollingMessages;};
+
+if (count (crew _vehicle) > 0) exitWith {localize "STR_VG_PLAYERINVEHICLE" call dayz_rollingMessages;};
 
 _enoughMoney = false;
 _moneyInfo = [false,[],[],[],0];
