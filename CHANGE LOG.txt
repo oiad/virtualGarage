@@ -1,0 +1,3 @@
+23-10-17 [ADDED] Add option to toggle allowing storing vehicles with gear @Exobite
+23-10-17 [ADDED] Add French translations @Panzer Mad
+23-10-17 [ADDED] Add checks for players near the vehicle being stored to stop dupes @Exobite @Dietnx
