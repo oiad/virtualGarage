@@ -35,13 +35,11 @@
 			<English>You need VIP class level %1 for this.</English>
 			<French>Vous avez besoin du niveau de VIP %1 pour cela.</French>
 			<German>Du brauchst VIP-Klassen-Level %1 dafür.</German>
-<!--			<Russian>У вас должен быть уровень %1 для VIP-класса.</Russian>	-->
 		</Key>
 		<Key ID="STR_ESS_NEED_SVIP">
 			<English>You need VIP spawn level %1 for this.</English>
 			<French>Vous avez besoin du niveau de VIP %1 pour cela.</French>
 			<German>Du brauchst VIP-Spawn-Level %1 dafür.</German>
-<!--			<Russian>У вас должен быть уровень %1 для VIP-спавна.</Russian>	-->
 		</Key>
 		<Key ID="STR_ESS_NOTHING_SELECTED">
 			<English>Nothing selected!</English>
@@ -51,7 +49,7 @@
 		</Key>
 		<Key ID="STR_ESS_CLASS_SELECT">
 			<English>Class Selection</English>
-			<French> sélection de classe </French>
+			<French>Sélection de classe</French>
 			<German>Klassenauswahl</German>
 			<Russian>Выбор класса</Russian>
 		</Key>
