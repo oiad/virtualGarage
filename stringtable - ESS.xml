@@ -124,14 +124,17 @@
 		</Key>
 		<Key ID="STR_VG_NOSTOREWITHGEAR">
 			<English>This server doesn't allow storing vehicles with gear in them.</English>
+			<German>Auf diesem Server ist das Einparken von Fahrzeugen mit Ausrüstung verboten.</German>
 			<French>Ce serveur ne permet pas de stocker des véhicules avec du matériel.</French>
 		</Key>
 		<Key ID="STR_VG_PLAYERNEARVEHICLE">
 			<English>You can't store a vehicle when a player within 15m of it.</English>
+			<German>Du kannst kein Fahrzeug einparken, in dessen Nähe von 15 Metern sich ein Spieler befindet.</German>
 			<French>Vous ne pouvez pas stocker un véhicule lorsqu'un joueur se trouve à moins de 15 mètres de celui-ci.</French>
 		</Key>
 		<Key ID="STR_VG_PLAYERINVEHICLE">
 			<English>You can't store a vehicle with a player inside of it.</English>
+			<German>Du kannst kein Fahrzeug einparken, in dem sich ein Spieler befindet.</German>
 			<French>Vous ne pouvez pas stocker un véhicule avec un joueur à l'intérieur.</French>
 		</Key>
 		<Key ID="STR_VG_BLACKLISTED">
