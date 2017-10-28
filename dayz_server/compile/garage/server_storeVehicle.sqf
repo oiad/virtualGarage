@@ -4,7 +4,7 @@ _vehicle = _this select 0;
 _player = _this select 1;
 _woGear = _this select 2;
 _clientID = owner _player;
-_playerUID = getPlayerUID _player;
+_playerUID = if (count _this > 3) then {_this select 3} else {getPlayerUID _player};
 
 _key = "CHILD:307:";
 _result = _key call server_hiveReadWrite;

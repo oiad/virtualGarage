@@ -9,7 +9,7 @@ if (isNil "vg_init") then {
 	vg_init = true;
 };
 
-private ["_class","_control","_displayName","_heliPad","_localVehicles","_plotCheck","_storedVehicles"];
+private ["_class","_control","_displayName","_heliPad","_localVehicles","_plotCheck","_storedVehicles","_ownerPUID"];
 
 if (dayz_actionInProgress) exitWith {localize "str_epoch_player_52" call dayz_rollingMessages;};
 dayz_actionInProgress = true;
@@ -22,7 +22,17 @@ createDialog "virtualGarage";
 
 {ctrlShow [_x,false]} count [2803,2830,2850,2851,2852,2853];
 
-PVDZE_queryVehicle = player;
+_plotCheck = [player,false] call FNC_find_plots;
+
+if (vg_tiedToPole) then {
+	_IsNearPlot = _plotCheck select 1;
+	_nearestPole = _plotCheck select 2;
+	_ownerPUID = if (_plotCheck select 1 > 0) then {(_plotCheck select 2) getVariable ["ownerPUID","0"]} else {dayz_playerUID};
+	PVDZE_queryVehicle = [player,_ownerPUID];
+} else {
+	PVDZE_queryVehicle = [player];
+};
+
 publicVariableServer "PVDZE_queryVehicle";
 waitUntil {!isNil "PVDZE_queryVehicleResult"};
 
@@ -33,7 +43,6 @@ PVDZE_queryVehicleResult = nil;
 _localVehicles = ([player] call FNC_getPos) nearEntities [["Air","LandVehicle","Ship"],vg_distance];
 _heliPad = nearestObjects [player,vg_heliPads,vg_distance];
 
-_plotCheck = [player, false] call FNC_find_plots;
 if (count _heliPad > 0 && (_plotCheck select 1) > 0) then {ctrlShow[2853,true];};
 
 _control = ((findDisplay 2800) displayCtrl 2802);

@@ -1,7 +1,7 @@
 // Developed by [GZA] David for German Zombie Apocalypse Servers (https://zombieapo.eu/)
 // Rewritten by salival (https://github.com/oiad)
 
-private ["_amount","_backPackCount","_backPackGear","_cargoAmount","_charID","_control","_counter","_display","_enoughMoney","_gearCount","_hasKey","_isLimitArray","_itemText","_items","_keyColor","_keyName","_limit","_magazineCount","_matchedCount","_moneyInfo","_name","_overLimit","_storedVehicles","_success","_typeName","_typeOf","_vehicle","_vehicleID","_vehicleUID","_wealth","_weaponsCount","_woGear","_playerNear"];
+private ["_amount","_backPackCount","_backPackGear","_cargoAmount","_charID","_control","_counter","_display","_enoughMoney","_gearCount","_hasKey","_isLimitArray","_itemText","_items","_keyColor","_keyName","_limit","_magazineCount","_matchedCount","_moneyInfo","_name","_overLimit","_storedVehicles","_success","_typeName","_typeOf","_vehicle","_vehicleID","_vehicleUID","_wealth","_weaponsCount","_woGear","_playerNear","_ownerPUID","_plotCheck"];
 
 disableSerialization;
 
@@ -140,7 +140,14 @@ if (_enoughMoney) then {
 		[_vehicle,true] call local_lockUnlock;
 		DZE_myVehicle = objNull; // Reset the players last vehicle here so if things lag out, you can't double store a vehicle and dupe it.
 
-		PVDZE_storeVehicle = [_vehicle,player,_woGear];
+		if (vg_tiedToPole) then {
+			_plotCheck = [player,false] call FNC_find_plots;
+			_ownerPUID = if (_plotCheck select 1 > 0) then {(_plotCheck select 2) getVariable ["ownerPUID","0"]} else {dayz_playerUID};
+			PVDZE_storeVehicle = [_vehicle,player,_woGear,_ownerPUID];
+		} else {
+			PVDZE_storeVehicle = [_vehicle,player,_woGear];
+		};
+
 		publicVariableServer "PVDZE_storeVehicle";
 		waitUntil {!isNil "PVDZE_storeVehicleResult"};
 
