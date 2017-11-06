@@ -194,6 +194,17 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	5 createDialog <CUT> !="createDialog \"virtualGarage\";"
 	```
 
+5. On line 51 of <code>config\<yourServerName>\Battleye\scripts.txt</code>: <code>5 toString</code> add this to the end of it:
+	```sqf
+	!"_input = parseNumber (toString (_input));"
+	```
+
+	So it will then look like this for example:
+
+	```sqf
+	5 toString <CUT> !"_input = parseNumber (toString (_input));"
+	```	
+
 # Changing the date format for stored vehicles when queried:
 
 1. In your <code>dayz_server\compile\garage\server_storeVehicle.sqf</code> on line 17, change the order of the variables, for example:
