@@ -1,7 +1,7 @@
 // Developed by [GZA] David for German Zombie Apocalypse Servers (https://zombieapo.eu/)
 // Rewritten by salival (https://github.com/oiad)
 
-private ["_amount","_backPackCount","_backPackGear","_cargoAmount","_charID","_control","_counter","_display","_enoughMoney","_gearCount","_hasKey","_isLimitArray","_itemText","_items","_keyColor","_keyName","_limit","_magazineCount","_matchedCount","_moneyInfo","_name","_overLimit","_storedVehicles","_success","_typeName","_typeOf","_vehicle","_vehicleID","_vehicleUID","_wealth","_weaponsCount","_woGear","_playerNear","_ownerPUID","_plotCheck"];
+private ["_amount","_backPackCount","_backPackGear","_cargoAmount","_charID","_control","_counter","_display","_enoughMoney","_gearCount","_hasKey","_isLimitArray","_itemText","_items","_keyName","_limit","_magazineCount","_matchedCount","_moneyInfo","_name","_overLimit","_storedVehicles","_success","_typeName","_typeOf","_vehicle","_vehicleID","_vehicleUID","_wealth","_weaponsCount","_woGear","_playerNear","_ownerPUID","_plotCheck"];
 
 disableSerialization;
 
@@ -75,7 +75,6 @@ if (_vehicleID == "1" || _vehicleUID == "1") exitWith {localize "STR_VG_STORE_MI
 if (isNull DZE_myVehicle || !local DZE_myVehicle) exitWith {localize "STR_EPOCH_PLAYER_245" call dayz_rollingMessages;};
 
 _hasKey = false;
-_keyColor = ["ItemKeyYellow","ItemKeyBlue","ItemKeyRed","ItemKeyGreen","ItemKeyBlack"];
 
 _items = items player;
 dayz_myBackpack = unitBackpack player;
@@ -87,7 +86,7 @@ if (!isNull dayz_myBackpack) then {
 
 if (_charID != "0") then {
 	{
-		if (configName(inheritsFrom(configFile >> "CfgWeapons" >> _x)) in _keyColor) then {
+		if (configName(inheritsFrom(configFile >> "CfgWeapons" >> _x)) in DZE_itemKeys) then {
 			if (str(getNumber(configFile >> "CfgWeapons" >> _x >> "keyid")) == _charID) then {
 				_keyName = _x;
 				_hasKey = true;
@@ -120,7 +119,7 @@ _moneyInfo = [false,[],[],[],0];
 _wealth = player getVariable[Z_MoneyVariable,0];
 
 if (Z_SingleCurrency) then {
-	_enoughMoney = if (_wealth >= _amount) then {true} else {false};
+	_enoughMoney = (_wealth >= _amount);
 } else {
 	Z_Selling = false;
 	if (Z_AllowTakingMoneyFromVehicle) then {false call Z_checkCloseVehicle};
@@ -130,7 +129,7 @@ if (Z_SingleCurrency) then {
 
 _success = if (Z_SingleCurrency) then {true} else {[player,_amount,_moneyInfo,true,0] call Z_payDefault};
 
-if (!_success && {_enoughMoney}) exitWith {systemChat localize "STR_EPOCH_TRADE_GEAR_AND_BAG_FULL"}; // Not enough room in gear or bag to accept change
+if (!_success && {_enoughMoney}) exitWith {systemChat localize "STR_EPOCH_TRADE_GEAR_AND_BAG_FULL"};
 
 if (_enoughMoney) then {
 	_success = if (Z_SingleCurrency) then {_amount <= _wealth} else {[player,_amount,_moneyInfo,false,0] call Z_payDefault};
@@ -138,7 +137,7 @@ if (_enoughMoney) then {
 		if (Z_SingleCurrency) then {player setVariable[Z_MoneyVariable,(_wealth - _amount),true];};
 
 		[_vehicle,true] call local_lockUnlock;
-		DZE_myVehicle = objNull; // Reset the players last vehicle here so if things lag out, you can't double store a vehicle and dupe it.
+		DZE_myVehicle = objNull;
 
 		if (vg_tiedToPole) then {
 			_plotCheck = [player,false] call FNC_find_plots;
@@ -151,10 +150,8 @@ if (_enoughMoney) then {
 		publicVariableServer "PVDZE_storeVehicle";
 		waitUntil {!isNil "PVDZE_storeVehicleResult"};
 
-		PVDZ_obj_Destroy = [_vehicleID,_vehicleUID,player,_typeOf];
+		PVDZ_obj_Destroy = [_vehicleID,_vehicleUID,player,_vehicle,dayz_authKey];
 		publicVariableServer "PVDZ_obj_Destroy";
-
-		deleteVehicle _vehicle;
 
 		PVDZE_storeVehicle = nil;
 		PVDZE_storeVehicleResult = nil;
