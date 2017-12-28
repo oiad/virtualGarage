@@ -16,7 +16,8 @@ _overLimit = false;
 _matchedCount = 0;
 _storedVehicles = [];
 
-if (_typeOf in vg_blackListed) exitWith {localize "STR_VG_BLACKLISTED" call dayz_rollingMessages;};
+{if (_typeOf isKindOf _x) exitWith {_overLimit = true;}} count vg_blackListed;
+if (_overLimit) exitWith {localize "STR_VG_BLACKLISTED" call dayz_rollingMessages;};
 
 {
 	if (typeName _x == "ARRAY") then {
