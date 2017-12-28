@@ -25,7 +25,6 @@ _worldSpace = [_dir,_location,_colour,_colour2];
 
 _uid = _worldSpace call dayz_objectUID2;
 
-//Send request
 _key = format["CHILD:308:%1:%2:%3:%4:%5:%6:%7:%8:%9:",dayZ_instance,_class,_damage,_characterID,_worldSpace,_inventory,_hitpoints,_fuel,_uid];
 _key call server_hiveWrite;
 
@@ -35,7 +34,7 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 
 // Switched to spawn so we can wait a bit for the ID
 [_uid,_characterID,_class,_dir,_location,_inventory,_hitpoints,_fuel,_damage,_colour,_colour2,_player] spawn {
-   private ["_object","_uid","_characterID","_class","_inventory","_hitpoints","_fuel","_damage","_done","_retry","_key","_result","_outcome","_oid","_selection","_dam","_objWpnTypes","_objWpnQty","_isOK","_countr","_colour","_colour2","_clrinit","_clrinit2","_player","_clientID"];
+   private ["_object","_uid","_characterID","_class","_inventory","_hitpoints","_fuel","_damage","_done","_retry","_key","_result","_outcome","_oid","_selection","_dam","_colour","_colour2","_clrinit","_clrinit2","_player","_clientID"];
 
 	_uid = _this select 0;
 	_characterID = _this select 1;
@@ -79,11 +78,8 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 		};
 	};
 
-	//_object = createVehicle [_class, _location, [], 0, "CAN_COLLIDE"];
-	// Don't use setPos or CAN_COLLIDE here. It will spawn inside other vehicles
 	_object = _class createVehicle _location;
 	if (surfaceIsWater _location && {({_x != _object} count (_location nearEntities ["Ship",8])) == 0}) then {
-		//createVehicle "NONE" is especially inaccurate in water
 		_object setPos _location;
 	};
 
@@ -96,37 +92,7 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 	_object setFuel _fuel;
 	_object setDamage _damage;
 
-	 if (count _inventory > 0) then {
-		//Add weapons
-		_objWpnTypes = (_inventory select 0) select 0;
-		_objWpnQty = (_inventory select 0) select 1;
-		_countr = 0;
-		{
-			_isOK = isClass(configFile >> "CfgWeapons" >> _x);
-			if (_isOK) then {_object addWeaponCargoGlobal [_x,(_objWpnQty select _countr)];};
-			_countr = _countr + 1;
-		} count _objWpnTypes; 
-
-		//Add Magazines
-		_objWpnTypes = (_inventory select 1) select 0;
-		_objWpnQty = (_inventory select 1) select 1;
-		_countr = 0;
-		{
-			_isOK = isClass(configFile >> "CfgMagazines" >> _x);
-			if (_isOK) then {_object addMagazineCargoGlobal [_x,(_objWpnQty select _countr)];};
-			_countr = _countr + 1;
-		} count _objWpnTypes;
-
-		//Add Backpacks
-		_objWpnTypes = (_inventory select 2) select 0;
-		_objWpnQty = (_inventory select 2) select 1;
-		_countr = 0;
-		{
-			_isOK =	isClass(configFile >> "CfgVehicles" >> _x);
-			if (_isOK) then {_object addBackpackCargoGlobal [_x,(_objWpnQty select _countr)];};
-			_countr = _countr + 1;
-		} count _objWpnTypes;
-	};
+	[_inventory select 0,_inventory select 1,_inventory select 2,_object] call fn_addCargo;
 
 	_object setVariable ["ObjectID", _oid, true];
 	_object setVariable ["lastUpdate",diag_tickTime];
@@ -162,7 +128,6 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 	_object call fnc_veh_ResetEH;
 	if (_class in vg_disableThermal) then {_object disableTIEquipment true;};
 
-	// for non JIP users this should make sure everyone has eventhandlers for vehicles.
 	PVDZE_veh_Init = _object;
 	publicVariable "PVDZE_veh_Init";
 
