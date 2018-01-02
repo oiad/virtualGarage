@@ -84,7 +84,7 @@
 			<English>You need a helipad to spawn air vehicles.</English>
 			<French>Vous avez besoin d'un héliport pour engendrer des véhicules aériens.</French>
 			<German>Du benötigst ein Helipad, um Luftfahrzeuge auszuparken.</German>
-			<Russian>Нужна вертолетная площадка для спавна авиатехники</Russian>
+			<Russian>Нужна вертолетная площадка чтобы забрать авиатехнику.</Russian>
 		</Key>
 		<Key ID="STR_VG_STOREDATE">
 			<English>Stored Date</English>
@@ -124,12 +124,21 @@
 		</Key>
 		<Key ID="STR_VG_NOSTOREWITHGEAR">
 			<English>This server doesn't allow storing vehicles with gear in them.</English>
+			<German>Auf diesem Server ist das Einparken von Fahrzeugen mit Ausrüstung verboten.</German>
+			<French>Ce serveur ne permet pas de stocker des véhicules avec du matériel.</French>
+			<Russian>Этот сервер не позволяет хранить технику в гараже с предметами в инвентаре.</Russian>
 		</Key>
 		<Key ID="STR_VG_PLAYERNEARVEHICLE">
 			<English>You can't store a vehicle when a player within 15m of it.</English>
+			<German>Du kannst kein Fahrzeug einparken, in dessen Nähe von 15 Metern sich ein Spieler befindet.</German>
+			<French>Vous ne pouvez pas stocker un véhicule lorsqu'un joueur se trouve à moins de 15 mètres de celui-ci.</French>
+			<Russian>Вы не можете поставить технику в гараж, пока другой игрок ближе 15м от неё.</Russian>
 		</Key>
 		<Key ID="STR_VG_PLAYERINVEHICLE">
-			<English>You can't store a vehicle with a player inside it.</English>
+			<English>You can't store a vehicle with a player inside of it.</English>
+			<German>Du kannst kein Fahrzeug einparken, in dem sich ein Spieler befindet.</German>
+			<French>Vous ne pouvez pas stocker un véhicule avec un joueur à l'intérieur.</French>
+			<Russian>Вы не можете поставить технику в гараж, пока в ней находится игрок.</Russian>
 		</Key>
 		<Key ID="STR_VG_BLACKLISTED">
 			<English>You are unable to store this vehicle in your garage.</English>
@@ -246,186 +255,186 @@
 			<English>%1 is not available for banking.</English>
 			<German>%1 steht nicht zum Banking bereit.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>%1 n'est pas pret pour faire une transaction banquaire.</French>
 		</Key>
 		<Key ID="STR_ZSC_BANKING_IN_USE">
 			<English>%1 is currently being banked with.</English>
 			<German>%1 ist bereits in Banking verwickelt.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>%1 est présentement en banque avec.</French>
 		</Key>
 		<Key ID="STR_ZSC_NO_COINS">
 			<English>%1 has no %2</English>
 			<German>%1 besitzt keine %2.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>%1 n'a pas %2</French>
 		</Key>
 		<Key ID="STR_ZSC_TAKE_COINS">
 			<English>You took %1 %2, ID says %3!</English>
 			<German>Du hast %1 %2 genommen, ID: %3!</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vous avez pris %1 %2, ID dit %3!</French>
 		</Key>
 		<Key ID="STR_ZSC_ALREADY_TRADING">
 			<English>%1 is already trading, please try again.</English>
 			<German>%1 handelt bereits, bitte erneut versuchen.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>%1 est déjà entrain de faire une transaction. Essaye à nouveau.</French>
 		</Key>
 		<Key ID="STR_ZSC_NOT_PLAYER">
 			<English>You are not looking at a player.</English>
 			<German>Du schaust nicht auf einen Spieler.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vous ne regarder pas envers un joueur.</French>
 		</Key>
 		<Key ID="STR_ZSC_VEHICLE_CAPACITY">
 			<English>Unable to get vehicle capacity.</English>
 			<German>Die Fahrzeugkapazität konnte nicht ermittelt werden.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Pas capable de lire la capacité du véhicule.</French>
 		</Key>
 		<Key ID="STR_ZSC_WITHDRAW_FAIL">
 			<English>You can not withdraw more %1 than are in the %2.</English>
 			<German>Du kannst nicht mehr %1 abheben als in %2 sind.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vous ne pouvez pas retirer plus %1 qu'il est dans %2.</French>
 		</Key>
 		<Key ID="STR_ZSC_WITHDRAW_OK">
 			<English>You have withdrawn %1 %2 out of the %3</English>
 			<German>Du hast %1 %2 von %3 abgehoben.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vous avez retiré %1 %2 de votre %3</French>
 		</Key>
 		<Key ID="STR_ZSC_UNABLE">
 			<English>Unable to access Money Storage. Please try again.</English>
 			<German>Auf den Geldvorrat konnte nicht zugegriffen werden, bitte erneut versuchen.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Impossible d'accéder au stockage d'argent. SVP veuillez réessayer.</French>
 		</Key>
 		<Key ID="STR_ZSC_DEPOSIT_FAIL">
 			<English>You can't deposit more %1 than what you have.</English>
 			<German>Du kannst nicht mehr %1 einzahlen als du hast.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vous ne pouvez pas déposer plus %1 que vous avez.</French>
 		</Key>
 		<Key ID="STR_ZSC_STORE_FAIL">
 			<English>You can only store a maximum of %1 %2 in the %3.</English>
 			<German>Du kannst nur ein Maximum von %1 %2 in %3 einzahlen.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vous pouvez seulement déposer un maximum de %1 %2 dans votre %3.</French>
 		</Key>
 		<Key ID="STR_ZSC_DEPOSIT_OK">
 			<English>You have deposited %1 %2 into the %3.</English>
 			<German>Du hast %1 %2 in %3 eingezahlt.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vous avez déposé %1 %2 dans votre %3.</French>
 		</Key>
 		<Key ID="STR_ZSC_GIVE_FAIL">
 			<English>You can not give more than you currently have.</English>
 			<German>Du kannst nicht mehr geben als du gerade hast.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vous ne pouvez pas donner plus que vous avez.</French>
 		</Key>
 		<Key ID="STR_ZSC_GIVE_PLAYER">
 			<English>You can only give %1 to a player.</English>
 			<German>Du kannst nur einem Spieler %1 geben.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vous pouvez seulement donner %1 à un joueur.</French>
 		</Key>
 		<Key ID="STR_ZSC_GIVE_OK">
 			<English>You gave %1 %2 %3.</English>
 			<German>Du hast %1 2% 3% gegeben.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vous avez donné %1 %2 %3.</French>
 		</Key>
 		<Key ID="STR_ZSC_TRANSFER_COINS">
 			<English>Transfer %1</English>
 			<German>%1 senden</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Transférer %1</French>
 		</Key>
 		<Key ID="STR_ZSC_GIVE">
 			<English>Give</English>
 			<German>Geben</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Donner</French>
 		</Key>
 		<Key ID="STR_ZSC_YOU">
 			<English>You</English>
 			<German>Du</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vous</French>
 		</Key>
 		<Key ID="STR_ZSC_DEPOSIT">
 			<English>Deposit</English>
 			<German>Einzahlen</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Déposer</French>
 		</Key>
 		<Key ID="STR_ZSC_WITHDRAW">
 			<English>Withdraw</English>
 			<German>Abheben</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Retirer</French>
 		</Key>
 		<Key ID="STR_ZSC_STORAGE">
 			<English>Storage</English>
 			<German>Lager</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Stocker</French>
 		</Key>
 		<Key ID="STR_ZSC_GLOBAL_WITHDRAW">
 			<English>You have withdrawn %1 %2.</English>
 			<German>Du hast %1 %2 abgehoben.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vous avez retiré %1 %2.</French>
 		</Key>
 		<Key ID="STR_ZSC_GLOBAL_DEPOSIT_FAIL">
 			<English>You can only have a maximum of %1 %2.</English>
 			<German>Du kannst nur %1 %2 haben.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vous pouvez seulement avoir un maximum de %1 %2.</French>
 		</Key>
 		<Key ID="STR_ZSC_GLOBAL_DEPOSIT_OK">
 			<English>You have deposited %1 %2.</English>
 			<German>Du hast %1 %2 eingezahlt.</German>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vous avez déposé %1 %2.</French>
 		</Key>
 		<Key ID="STR_ZSC_GLOBAL_BANK">
 			<English>Bank</English>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Banque</French>
 		</Key>
 		<Key ID="STR_ZSC_GLOBAL_BANKING">
 			<English>Banking</English>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Bancaire</French>
 		</Key>
 		<Key ID="STR_ZSC_CHECK_WALLET">
 			<English>Check Wallet</English>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Vérifier le Portefeuille</French>
 		</Key>
 		<Key ID="STR_ZSC_ACCESS_BANK">
 			<English>Access Bank</English>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Accédez votre banque</French>
 		</Key>
 		<Key ID="STR_ZSC_TRADE_COINS">
 			<English>Trade %1 with %2</English>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Échanger %1 avec %2</French>
 		</Key>
 		<Key ID="STR_ZSC_BANK_TELLER">
 			<English>Bank Teller</English>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Caissier de la banque</French>
 		</Key>
 		<Key ID="STR_ZSC_BANK_ATM">
 			<English>Bank ATM</English>
 			<!-- <Russian></Russian> -->
-			<!-- <French></French> -->
+			<French>Guichet</French>
 		</Key>
 	</Package>
 </Project>
