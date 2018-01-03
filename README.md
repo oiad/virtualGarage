@@ -70,9 +70,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 5. Replace your modified <code>dayz_code\compiles\fn_selfActions.sqf</code> with the one provided or merge the contents if you have modified your own version.
 
-6. If you run ESSv3 spawn script (by [@ebayShopper](https://github.com/ebayShopper/ESSV3)) copy the supplied <code>stringTable - ESS.xml</code> to your mission file directory and rename it to <code>stringTable.xml</code>
-
-7. If you are not running ESSv3 spawn script copy the supplied <code>stringTable.xml</code> to your mission file directory
+6. Copy the supplied <code>stringTable.xml</code> to your mission folder, it is a community based localization file and contains translations for major community mods including this one. See https://github.com/oiad/communityLocalizations for more information.
 
 # Click Actions config install:
 
