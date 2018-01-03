@@ -1,5 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project name="DayZMission">
+	<Package name="ESS">
+		<Key ID="STR_ESS_GROUP">
+			<English>By my group</English>
+			<French>Par mon groupe</French>
+			<German>Von meiner Gruppe</German>
+			<Russian>Около группы</Russian>
+		</Key>
+		<Key ID="STR_ESS_PLOT">
+			<English>By my plot</English>
+			<French>Par mon Plot</French>
+			<German>Von meinem Grundstück</German>
+			<Russian>Около базы</Russian>
+		</Key>
+		<Key ID="STR_ESS_BLOCKED">
+			<English>Note: some spawns were blocked due to a body of yours within %1m</English>
+			<French>Note: certains engins ont été bloqués à cause d'un corps à vous a %1m</French>
+			<German>Anmerkung: Einige Spawnpunkte wurden wegen einer Leiche von dir im Umkreis von %1m blockiert</German>
+			<Russian>Некоторые точки спавна заблокированы, т.к. они ближе %1м от вашего тела.</Russian>
+		</Key>
+		<Key ID="STR_ESS_HUMANITY_TOO_HIGH">
+			<English>Your humanity must be less than %1 for this.</English>
+			<French>Votre humanité doit être inférieure à %1 pour cela.</French>
+			<German>Deine Menschlichkeit muss dafür unter %1 sein.</German>
+			<Russian>Ваша человечность должна быть меньше %1.</Russian>
+		</Key>
+		<Key ID="STR_ESS_HUMANITY_TOO_LOW">
+			<English>Your humanity must be greater than %1 for this.</English>
+			<French>Votre humanité doit être supérieur à %1 pour cela.</French>
+			<German>Deine Menschlichkeit muss dafür über %1 sein.</German>
+			<Russian>Ваша человечность должна быть больше %1.</Russian>
+		</Key>
+		<Key ID="STR_ESS_NEED_CVIP">
+			<English>You need VIP class level %1 for this.</English>
+			<French>Vous avez besoin du niveau de VIP %1 pour cela.</French>
+			<German>Du brauchst VIP-Klassen-Level %1 dafür.</German>
+		</Key>
+		<Key ID="STR_ESS_NEED_SVIP">
+			<English>You need VIP spawn level %1 for this.</English>
+			<French>Vous avez besoin du niveau de VIP %1 pour cela.</French>
+			<German>Du brauchst VIP-Spawn-Level %1 dafür.</German>
+		</Key>
+		<Key ID="STR_ESS_NOTHING_SELECTED">
+			<English>Nothing selected!</English>
+			<French>Rien n'a été sélectionné!</French>
+			<German>Nichts ausgewählt!</German>
+			<Russian>Ничего не выбрано!</Russian>
+		</Key>
+		<Key ID="STR_ESS_CLASS_SELECT">
+			<English>Class Selection</English>
+			<French>Sélection de classe</French>
+			<German>Klassenauswahl</German>
+			<Russian>Выбор класса</Russian>
+		</Key>
+		<Key ID="STR_ESS_HALO_SELECT">
+			<English>Spawn Type Selection</English>
+			<French>Sélection du type</French>
+			<German>Spawntypauwahl</German>
+			<Russian>Выбор типа спавна</Russian>
+		</Key>
+		<Key ID="STR_ESS_SPAWN_SELECT">
+			<English>Spawn Selection</English>
+			<French>Sélectionner un spawn</French>
+			<German>Spawnauswahl</German>
+			<Russian>Выбор точки спавна</Russian>
+		</Key>
+		<Key ID="STR_ESS_GROUND">
+			<English>Ground</English>
+			<French>Térreste</French>
+			<German>Boden</German>
+			<Russian>ЗЕМЛЯ</Russian>
+		</Key>
+		<Key ID="STR_ESS_AIR">
+			<English>HALO</English>
+			<French>Air</French>
+			<German>Fallschirm</German>
+			<Russian>ПАРАШЮТ</Russian>
+		</Key>
+	</Package>
+
 	<Package name="VG">
 		<Key ID="STR_VG_NEED_HELIPAD">
 			<English>You need a helipad to spawn air vehicles.</English>
@@ -168,6 +247,341 @@
 			<German>Helipad entfernen</German>
 			<Russian>Удалить площадку</Russian>
 			<French>Enlever Heliport</French>
+		</Key>
+	</Package>
+
+	<Package name="ZSC">
+		<Key ID="STR_ZSC_BANKING_NOT_AVAIL">
+			<English>%1 is not available for banking.</English>
+			<German>%1 steht nicht zum Banking bereit.</German>
+			<!-- <Russian></Russian> -->
+			<French>%1 n'est pas pret pour faire une transaction banquaire.</French>
+		</Key>
+		<Key ID="STR_ZSC_BANKING_IN_USE">
+			<English>%1 is currently being banked with.</English>
+			<German>%1 ist bereits in Banking verwickelt.</German>
+			<!-- <Russian></Russian> -->
+			<French>%1 est présentement en banque avec.</French>
+		</Key>
+		<Key ID="STR_ZSC_NO_COINS">
+			<English>%1 has no %2</English>
+			<German>%1 besitzt keine %2.</German>
+			<!-- <Russian></Russian> -->
+			<French>%1 n'a pas %2</French>
+		</Key>
+		<Key ID="STR_ZSC_TAKE_COINS">
+			<English>You took %1 %2, ID says %3!</English>
+			<German>Du hast %1 %2 genommen, ID: %3!</German>
+			<!-- <Russian></Russian> -->
+			<French>Vous avez pris %1 %2, ID dit %3!</French>
+		</Key>
+		<Key ID="STR_ZSC_ALREADY_TRADING">
+			<English>%1 is already trading, please try again.</English>
+			<German>%1 handelt bereits, bitte erneut versuchen.</German>
+			<!-- <Russian></Russian> -->
+			<French>%1 est déjà entrain de faire une transaction. Essaye à nouveau.</French>
+		</Key>
+		<Key ID="STR_ZSC_NOT_PLAYER">
+			<English>You are not looking at a player.</English>
+			<German>Du schaust nicht auf einen Spieler.</German>
+			<!-- <Russian></Russian> -->
+			<French>Vous ne regarder pas envers un joueur.</French>
+		</Key>
+		<Key ID="STR_ZSC_VEHICLE_CAPACITY">
+			<English>Unable to get vehicle capacity.</English>
+			<German>Die Fahrzeugkapazität konnte nicht ermittelt werden.</German>
+			<!-- <Russian></Russian> -->
+			<French>Pas capable de lire la capacité du véhicule.</French>
+		</Key>
+		<Key ID="STR_ZSC_WITHDRAW_FAIL">
+			<English>You can't withdraw more %1 than are in the %2.</English>
+			<German>Du kannst nicht mehr %1 abheben als in %2 sind.</German>
+			<!-- <Russian></Russian> -->
+			<French>Vous ne pouvez pas retirer plus %1 qu'il est dans %2.</French>
+		</Key>
+		<Key ID="STR_ZSC_WITHDRAW_OK">
+			<English>You have withdrawn %1 %2 out of the %3</English>
+			<German>Du hast %1 %2 von %3 abgehoben.</German>
+			<!-- <Russian></Russian> -->
+			<French>Vous avez retiré %1 %2 de votre %3</French>
+		</Key>
+		<Key ID="STR_ZSC_UNABLE">
+			<English>Unable to access Money Storage. Please try again.</English>
+			<German>Auf den Geldvorrat konnte nicht zugegriffen werden, bitte erneut versuchen.</German>
+			<!-- <Russian></Russian> -->
+			<French>Impossible d'accéder au stockage d'argent. SVP veuillez réessayer.</French>
+		</Key>
+		<Key ID="STR_ZSC_DEPOSIT_FAIL">
+			<English>You can't deposit more %1 than what you have.</English>
+			<German>Du kannst nicht mehr %1 einzahlen als du hast.</German>
+			<!-- <Russian></Russian> -->
+			<French>Vous ne pouvez pas déposer plus %1 que vous avez.</French>
+		</Key>
+		<Key ID="STR_ZSC_STORE_FAIL">
+			<English>You can only store a maximum of %1 %2 in the %3.</English>
+			<German>Du kannst nur ein Maximum von %1 %2 in %3 einzahlen.</German>
+			<!-- <Russian></Russian> -->
+			<French>Vous pouvez seulement déposer un maximum de %1 %2 dans votre %3.</French>
+		</Key>
+		<Key ID="STR_ZSC_DEPOSIT_OK">
+			<English>You have deposited %1 %2 into the %3.</English>
+			<German>Du hast %1 %2 in %3 eingezahlt.</German>
+			<!-- <Russian></Russian> -->
+			<French>Vous avez déposé %1 %2 dans votre %3.</French>
+		</Key>
+		<Key ID="STR_ZSC_GIVE_FAIL">
+			<English>You can not give more than you currently have.</English>
+			<German>Du kannst nicht mehr geben als du gerade hast.</German>
+			<!-- <Russian></Russian> -->
+			<French>Vous ne pouvez pas donner plus que vous avez.</French>
+		</Key>
+		<Key ID="STR_ZSC_GIVE_PLAYER">
+			<English>You can only give %1 to a player.</English>
+			<German>Du kannst nur einem Spieler %1 geben.</German>
+			<!-- <Russian></Russian> -->
+			<French>Vous pouvez seulement donner %1 à un joueur.</French>
+		</Key>
+		<Key ID="STR_ZSC_GIVE_OK">
+			<English>You gave %1 %2 %3.</English>
+			<German>Du hast %1 2% 3% gegeben.</German>
+			<!-- <Russian></Russian> -->
+			<French>Vous avez donné %1 %2 %3.</French>
+		</Key>
+		<Key ID="STR_ZSC_TRANSFER_COINS">
+			<English>Transfer %1</English>
+			<German>%1 senden</German>
+			<!-- <Russian></Russian> -->
+			<French>Transférer %1</French>
+		</Key>
+		<Key ID="STR_ZSC_GIVE">
+			<English>Give</English>
+			<German>Geben</German>
+			<!-- <Russian></Russian> -->
+			<French>Donner</French>
+		</Key>
+		<Key ID="STR_ZSC_YOU">
+			<English>You</English>
+			<German>Du</German>
+			<!-- <Russian></Russian> -->
+			<French>Vous</French>
+		</Key>
+		<Key ID="STR_ZSC_DEPOSIT">
+			<English>Deposit</English>
+			<German>Einzahlen</German>
+			<!-- <Russian></Russian> -->
+			<French>Déposer</French>
+		</Key>
+		<Key ID="STR_ZSC_WITHDRAW">
+			<English>Withdraw</English>
+			<German>Abheben</German>
+			<!-- <Russian></Russian> -->
+			<French>Retirer</French>
+		</Key>
+		<Key ID="STR_ZSC_STORAGE">
+			<English>Storage</English>
+			<German>Lager</German>
+			<!-- <Russian></Russian> -->
+			<French>Stocker</French>
+		</Key>
+		<Key ID="STR_ZSC_GLOBAL_WITHDRAW">
+			<English>You have withdrawn %1 %2.</English>
+			<German>Du hast %1 %2 abgehoben.</German>
+			<!-- <Russian></Russian> -->
+			<French>Vous avez retiré %1 %2.</French>
+		</Key>
+		<Key ID="STR_ZSC_GLOBAL_DEPOSIT_FAIL">
+			<English>You can only have a maximum of %1 %2.</English>
+			<German>Du kannst nur %1 %2 haben.</German>
+			<!-- <Russian></Russian> -->
+			<French>Vous pouvez seulement avoir un maximum de %1 %2.</French>
+		</Key>
+		<Key ID="STR_ZSC_GLOBAL_DEPOSIT_OK">
+			<English>You have deposited %1 %2.</English>
+			<German>Du hast %1 %2 eingezahlt.</German>
+			<!-- <Russian></Russian> -->
+			<French>Vous avez déposé %1 %2.</French>
+		</Key>
+		<Key ID="STR_ZSC_GLOBAL_BANK">
+			<English>Bank</English>
+			<!-- <Russian></Russian> -->
+			<French>Banque</French>
+		</Key>
+		<Key ID="STR_ZSC_GLOBAL_BANKING">
+			<English>Banking</English>
+			<!-- <Russian></Russian> -->
+			<French>Bancaire</French>
+		</Key>
+		<Key ID="STR_ZSC_CHECK_WALLET">
+			<English>Check Wallet</English>
+			<German>Geldbeutel prüfen</German>
+			<!-- <Russian></Russian> -->
+			<French>Vérifier le Portefeuille</French>
+		</Key>
+		<Key ID="STR_ZSC_ACCESS_BANK">
+			<English>Access Bank</English>
+			<German>Auf Bank zugreifen</German>
+			<!-- <Russian></Russian> -->
+			<French>Accédez votre banque</French>
+		</Key>
+		<Key ID="STR_ZSC_TRADE_COINS">
+			<English>Trade %1 with %2</English>
+			<German>%1 mit %2 handeln</German>
+			<!-- <Russian></Russian> -->
+			<French>Échanger %1 avec %2</French>
+		</Key>
+		<Key ID="STR_ZSC_BANK_TELLER">
+			<English>Bank Teller</English>
+			<German>Bankangestellter</German>
+			<!-- <Russian></Russian> -->
+			<French>Caissier de la banque</French>
+		</Key>
+		<Key ID="STR_ZSC_BANK_ATM">
+			<English>Bank ATM</English>
+			<German>Geldautomat</German>
+			<!-- <Russian></Russian> -->
+			<French>Guichet</French>
+		</Key>
+	</Package>
+
+	<Package name="remoteVehicle">
+		<Key ID="STR_RV_VEHICLE_INFO">
+			<English>Vehicle Info</English>
+			<German>Fahrzeug-Info</German>
+			<French>Informations du véhicule</French>
+			<Spanish>Vehiculo Info</Spanish>
+		</Key>
+		<Key ID="STR_RV_VEHICLE_LIST">
+			<English>Vehicle List</English>
+			<German>Fahrzeugliste</German>
+			<French>List des véhicules</French>
+			<Spanish>Lista de Vehiculos</Spanish>
+		</Key>
+		<Key ID="STR_RV_SELECT_VEHICLE">
+			<English>Select Vehicle</English>
+			<German>Wähle Fahrzeug</German>
+			<French>Sélectionez le véhicule</French>
+			<Spanish>Seleccionar Vehiculo</Spanish>
+		</Key>
+		<Key ID="STR_RV_NO_KEYS">
+			<English>No valid keys in your toolbelt.</English>
+			<German>Es wurden keine geeigneten Schlüssel an deinem Gürtel gefunden.</German>
+			<French>Vous n'avez pas de clés valid sur votre ceinture.</French>
+			<Spanish>No tienes las llaves en tu cinto de herramientas.</Spanish>
+		</Key>
+		<Key ID="STR_RV_TITLE">
+			<English>Remote Vehicle - Vehicles for %1</English>
+			<German>Fahrzeugfernsteuerung - Fahrzeuge für %1</German>
+			<French>Démarreur Véhicule - Véhicules pour %1</French>
+			<Spanish>Vehiculo Remoto - Vehiculos para %1</Spanish>
+		</Key>
+		<Key ID="STR_RV_NO_VEHICLES">
+			<English>Unable to find a valid vehicle for this key.</English>
+			<German>Es konnte kein Fahrzeug für diesen Schlüssel gefunden werden.</German>
+			<French>Pas capable de trouver le véhicule pour cette clé.</French>
+			<Spanish>No se encontro un vehiculo valido para esta llave.</Spanish>
+		</Key>
+		<Key ID="STR_RV_DESTROYED">
+			<English>The vehicle for this key has been destroyed.</English>
+			<German>Das Fahrzeug für diesen Schlüssel wurde zerstört.</German>
+			<French>Le véhicule qui appartient à cette clé est détruit.</French>
+			<Spanish>El vehiculo que pertenecia a esta llave fue destruido.</Spanish>
+		</Key>
+		<Key ID="STR_RV_RANGE_FAIL">
+			<English>The remote is out of range for your %1.</English>
+			<German>Die Fernsteuerung für dein(en) %1 ist außer Reichweite.</German>
+			<French>Le démarreur est a hors distance de votre %1.</French>
+			<Spanish>El Remoto esta fuera de rango para tu %1.</Spanish>
+		</Key>
+		<Key ID="STR_RV_EJECT">
+			<English>Ejecting all players not in your group from: %1</English>
+			<German>Spieler, die nicht in deiner Gruppe sind zum Aussteigen zwingen aus: %1</German>
+			<French>Éjecter tous les jouers qui ne sont pas dans votre groupe de: %1.</French>
+			<Spanish>Expulsando a todos los tripulantes fuera de tu grupo de: %1</Spanish>
+		</Key>
+		<Key ID="STR_RV_EJECT_PLAYER">
+			<English>Ejecting %1, they are NOT in your group.</English>
+			<German>%1 ist ausgestiegen, sie sind nicht in deiner Gruppe.</German>
+			<French>Éjection de %1, ils ne sont PAS dans votre groupe.</French>
+			<Spanish>Expulsando %1, ellos no pertenecen a tu grupo.</Spanish>
+		</Key>
+		<Key ID="STR_RV_ENGINE">
+			<English>Toggling engine %1 in: %2</English>
+			<German>Motor %1 in: %2</German>
+			<French>Activer ou désactiver le moteur %1 dans: %2.</French>
+			<Spanish>Apagando el motor %1 en: %2</Spanish>
+		</Key>
+		<Key ID="STR_RV_LIGHTS">
+			<English>Toggled lights %1: %2</English>
+			<German>Licht %1 in: %2</German>
+			<French>Activer ou désactiver les lumières %1: %2.</French>
+			<Spanish>Apagando Luces %1: %2</Spanish>
+		</Key>
+	</Package>
+
+	<Package name="VKC">
+		<Key ID="STR_VKC_TITLE">
+			<English>Vehicle Key Changer</English>
+			<German>Fahrzeugschlüssel wechseln</German>				
+		</Key>
+		<Key ID="STR_VKC_INFO">
+			<English>Vehicle Info</English>
+			<German>Fahrzeug-Info</German>				
+		</Key>
+		<Key ID="STR_VKC_KEYS">
+			<English>Your keys</English>
+			<German>Deine Schlüssel</German>				
+		</Key>
+		<Key ID="STR_VKC_CLAIM">
+			<English>Claim vehicle</English>
+			<German>Beanspruchen</German>				
+		</Key>
+		<Key ID="STR_VKC_CHANGE">
+			<English>Change key</English>
+			<German>Schlüssel ändern</German>					
+		</Key>
+		<Key ID="STR_VKC_FAIL_CURSOR">
+			<English>cursorTarget is not a vehicle.</English>
+			<German>Du schaust nicht richtig auf das Fahrzeug.</German>				
+		</Key>
+		<Key ID="STR_VKC_FAIL_SUPPORT">
+			<English>Sorry but %1 does not support Keychange/Claiming!</English>
+			<German>Leider unterstützt %1 keinen Schlüsselwechsel oder eine Beanspruchung!</German>				
+		</Key>
+		<Key ID="STR_VKC_CHANGE_MESSAGE_1">
+			<English>%1's key has been changed to %2</English>
+			<German>%1's Schlüssel hat sich zu %2 geändert</German>		
+		</Key>
+		<Key ID="STR_VKC_CHANGE_MESSAGE_2">
+			<English>change the key for</English>
+			<German>ändere den Schlüssel für</German>					
+		</Key>
+		<Key ID="STR_VKC_CHANGE_MESSAGE_3">
+			<English>changed the key for</English>
+			<German>Schlüssel geändert für</German>				
+		</Key>
+		<Key ID="STR_VKC_CLAIM_MESSAGE_1">
+			<English>%1 has been claimed, the new key is: %2</English>
+			<German>%1 wurde beansprucht, der neue Schlüssel ist: %2</German>				
+		</Key>
+		<Key ID="STR_VKC_CLAIM_MESSAGE_2">
+			<English>claim the key for</English>
+			<German>beanspruche den Schlüssel für</German>				
+		</Key>
+		<Key ID="STR_VKC_CLAIM_MESSAGE_3">
+			<English>claimed</English>
+			<German>beansprucht</German>			
+		</Key>
+		<Key ID="STR_VKC_FAIL_KEYS">
+			<English>No valid keys were found in your inventory.</English>
+			<German>Es wurden keine geeigneten Schlüssel in deinem Inventar gefunden.</German>				
+		</Key>
+		<Key ID="STR_VKC_FAIL_UPGRADE">
+			<English>Failed to upgrade %1, you have been refunded the cost. If this continues, contact the admin</English>
+			<German>Upgrade für %1 fehlgeschlagen, dir wurden die Kosten zurückerstattet. Kontaktiere den Admin, falls das Problem weiterhin auftritt.</German>					
+		</Key>
+		<Key ID="STR_VKC_FAIL_MONEY">
+			<English>You need %1 to %2 %3.</English>
+			<German>Du brauchst %1 um %2 %3.</German>				
 		</Key>
 	</Package>
 </Project>
