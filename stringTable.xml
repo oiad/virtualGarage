@@ -6,76 +6,91 @@
 			<French>Par mon groupe</French>
 			<German>Von meiner Gruppe</German>
 			<Russian>Около группы</Russian>
+			<Spanish>Con mi grupo</Spanish>
 		</Key>
 		<Key ID="STR_ESS_PLOT">
 			<English>By my plot</English>
 			<French>Par mon Plot</French>
 			<German>Von meinem Grundstück</German>
 			<Russian>Около базы</Russian>
+			<Spanish>En mi parcela</Spanish>
 		</Key>
 		<Key ID="STR_ESS_BLOCKED">
 			<English>Note: some spawns were blocked due to a body of yours within %1m</English>
 			<French>Note: certains engins ont été bloqués à cause d'un corps à vous a %1m</French>
 			<German>Anmerkung: Einige Spawnpunkte wurden wegen einer Leiche von dir im Umkreis von %1m blockiert</German>
-			<Russian>Некоторые точки спавна заблокированы, т.к. они ближе %1м от вашего тела.</Russian>
+			<Russian>Некоторые точки спавна заблокированы, т.к. они в радиусе %1м от вашего тела.</Russian>
+			<Spanish>algunos spawns fueron bloqueados por que tienes un cuerpo a %1mts</Spanish>
 		</Key>
 		<Key ID="STR_ESS_HUMANITY_TOO_HIGH">
 			<English>Your humanity must be less than %1 for this.</English>
 			<French>Votre humanité doit être inférieure à %1 pour cela.</French>
 			<German>Deine Menschlichkeit muss dafür unter %1 sein.</German>
 			<Russian>Ваша человечность должна быть меньше %1.</Russian>
+			<Spanish>Tu humanidad debe ser menor a %1 para esto.</Spanish>
 		</Key>
 		<Key ID="STR_ESS_HUMANITY_TOO_LOW">
 			<English>Your humanity must be greater than %1 for this.</English>
 			<French>Votre humanité doit être supérieur à %1 pour cela.</French>
 			<German>Deine Menschlichkeit muss dafür über %1 sein.</German>
 			<Russian>Ваша человечность должна быть больше %1.</Russian>
+			<Spanish>Tu humanidad debe ser mayor a %1 para esto.</Spanish>
 		</Key>
 		<Key ID="STR_ESS_NEED_CVIP">
 			<English>You need VIP class level %1 for this.</English>
 			<French>Vous avez besoin du niveau de VIP %1 pour cela.</French>
 			<German>Du brauchst VIP-Klassen-Level %1 dafür.</German>
+			<Russian>Вам нужен VIP-класс %1 уровня для этого.</Russian>
+			<Spanish>Necesitas ser Nivel %1 clase VIP para esto.</Spanish>
 		</Key>
 		<Key ID="STR_ESS_NEED_SVIP">
 			<English>You need VIP spawn level %1 for this.</English>
 			<French>Vous avez besoin du niveau de VIP %1 pour cela.</French>
 			<German>Du brauchst VIP-Spawn-Level %1 dafür.</German>
+			<Russian>Вам нужен VIP-спавн %1 уровня для этого.</Russian>
+			<Spanish>Necesitas un nivel %1 VIP para esto</Spanish>
 		</Key>
 		<Key ID="STR_ESS_NOTHING_SELECTED">
 			<English>Nothing selected!</English>
 			<French>Rien n'a été sélectionné!</French>
 			<German>Nichts ausgewählt!</German>
 			<Russian>Ничего не выбрано!</Russian>
+			<Spanish>Selecciona algo!</Spanish>
 		</Key>
 		<Key ID="STR_ESS_CLASS_SELECT">
 			<English>Class Selection</English>
 			<French>Sélection de classe</French>
 			<German>Klassenauswahl</German>
 			<Russian>Выбор класса</Russian>
+			<Spanish>Selector de Clases</Spanish>
 		</Key>
 		<Key ID="STR_ESS_HALO_SELECT">
 			<English>Spawn Type Selection</English>
 			<French>Sélection du type</French>
 			<German>Spawntypauwahl</German>
 			<Russian>Выбор типа спавна</Russian>
+			<Spanish>Tipo de selector de Spawns</Spanish>
 		</Key>
 		<Key ID="STR_ESS_SPAWN_SELECT">
 			<English>Spawn Selection</English>
 			<French>Sélectionner un spawn</French>
 			<German>Spawnauswahl</German>
 			<Russian>Выбор точки спавна</Russian>
+			<Spanish>Selector de Spawns</Spanish>
 		</Key>
 		<Key ID="STR_ESS_GROUND">
 			<English>Ground</English>
 			<French>Térreste</French>
 			<German>Boden</German>
 			<Russian>ЗЕМЛЯ</Russian>
+			<Spanish>En Tierra</Spanish>
 		</Key>
 		<Key ID="STR_ESS_AIR">
 			<English>HALO</English>
 			<French>Air</French>
 			<German>Fallschirm</German>
 			<Russian>ПАРАШЮТ</Russian>
+			<Spanish>Paracaidas</Spanish>
 		</Key>
 	</Package>
 
@@ -84,169 +99,197 @@
 			<English>You need a helipad to spawn air vehicles.</English>
 			<French>Vous avez besoin d'un héliport pour engendrer des véhicules aériens.</French>
 			<German>Du benötigst ein Helipad, um Luftfahrzeuge auszuparken.</German>
-			<Russian>Нужна вертолетная площадка чтобы забрать авиатехнику.</Russian>
+			<Russian>Вам нужна вертолетная площадка, чтобы забрать авиатехнику.</Russian>
+			<Spanish>Necesitas un Helipad para crear vehiculos aereos.</Spanish>
 		</Key>
 		<Key ID="STR_VG_STOREDATE">
 			<English>Stored Date</English>
 			<German>Einparkdatum</German>
 			<Russian>Дата постановки в гараж</Russian>
 			<French>Date enregistrée</French>
+			<Spanish>Fecha Almacenada</Spanish>
 		</Key>
 		<Key ID="STR_VG_STOREDATE_INVALID">
 			<English>Store date invalid.</English>
 			<German>Einparkdatum ungültig</German>
 			<Russian>Неверная дата постановки в гараж.</Russian>
 			<French>Date de stockage invalide</French>
+			<Spanish>Fecha de Almacenamiento invalida</Spanish>
 		</Key>
 		<Key ID="STR_VG_IN_INVENTORY">
 			<English>%1 is already in your inventory!</English>
 			<French>%1 est déjà dans votre inventaire!</French>
 			<German>%1 ist bereits in deinem Inventar!</German>
 			<Russian>%1 уже у вас в инвентаре!</Russian>
+			<Spanish>ya tienes un/a %1 en tu inventario!</Spanish>
 		</Key>
 		<Key ID="STR_VG_IN_BACKPACK">
 			<English>%1 is already in your backpack!</English>
-			<French>%1 est déjà dans votre Sac-a-dos</French>
+			<French>%1 est déjà dans votre Sac-a-dos!</French>
 			<German>%1 ist bereits in deinem Rucksack!</German>
 			<Russian>%1 уже у вас в рюкзаке!</Russian>
+			<Spanish>Ya tienes un/a %1 en tu inventario!</Spanish>
 		</Key>
 		<Key ID="STR_VG_ADDED_INVENTORY">
 			<English>%1 has been added to your inventory!</English>
 			<German>%1 wurde zu deinem Inventar hinzugefügt!</German>
 			<Russian>%1 был добавлен в ваш инвентарь!</Russian>
 			<French>%1 a été ajouté à votre inventaire!</French>
+			<Spanish>%1 fue añadido a tu inventario!</Spanish>
 		</Key>
 		<Key ID="STR_VG_VEHICLE_SPAWNED">
 			<English>Your vehicle has been spawned.</English>
 			<German>Dein Fahrzeug wurde ausgeparkt.</German>
 			<Russian>Вы забрали технику из гаража.</Russian>
 			<French>Votre véhicule a été engendré.</French>
+			<Spanish>Tu vehiculo fue creado.</Spanish>
 		</Key>
 		<Key ID="STR_VG_NOSTOREWITHGEAR">
 			<English>This server doesn't allow storing vehicles with gear in them.</English>
 			<German>Auf diesem Server ist das Einparken von Fahrzeugen mit Ausrüstung verboten.</German>
 			<French>Ce serveur ne permet pas de stocker des véhicules avec du matériel.</French>
-			<Russian>Этот сервер не позволяет хранить технику в гараже с предметами в инвентаре.</Russian>
+			<Russian>Данный сервер не позволяет хранить технику в гараже с предметами в инвентаре.</Russian>
+			<Spanish>Este servidor no permite guardar vehiculos con items en su interior.</Spanish>
 		</Key>
 		<Key ID="STR_VG_PLAYERNEARVEHICLE">
 			<English>You can't store a vehicle when a player within 15m of it.</English>
-			<German>Du kannst kein Fahrzeug einparken, in dessen Nähe von 15 Metern sich ein Spieler befindet.</German>
+			<German>Du kannst kein Fahrzeug einparken, wenn sich ein Spieler in dessen Nähe von 15 Metern befindet.</German>
 			<French>Vous ne pouvez pas stocker un véhicule lorsqu'un joueur se trouve à moins de 15 mètres de celui-ci.</French>
-			<Russian>Вы не можете поставить технику в гараж, пока другой игрок ближе 15м от неё.</Russian>
+			<Russian>Вы не можете поставить технику в гараж, пока другой игрок находится в радиусе 15м от неё.</Russian>
+			<Spanish>No puedes guardar un vehiculo cuando hay juagadores a menos de 15mts de el.</Spanish>
 		</Key>
 		<Key ID="STR_VG_PLAYERINVEHICLE">
 			<English>You can't store a vehicle with a player inside of it.</English>
 			<German>Du kannst kein Fahrzeug einparken, in dem sich ein Spieler befindet.</German>
 			<French>Vous ne pouvez pas stocker un véhicule avec un joueur à l'intérieur.</French>
 			<Russian>Вы не можете поставить технику в гараж, пока в ней находится игрок.</Russian>
+			<Spanish>No puedes guardar un vehiculo con jugadores dentro.</Spanish>
 		</Key>
 		<Key ID="STR_VG_BLACKLISTED">
 			<English>You are unable to store this vehicle in your garage.</English>
 			<German>Es ist nicht möglich dieses Fahrzeug in deiner Garage zu parken.</German>
-			<Russian>Вы не можете поставить эту технику в ваш гараж.</Russian>
+			<Russian>Вы не можете поставить данную технику в гараж.</Russian>
 			<French>Vous ne pouvez pas stocker ce véhicule dans votre garage.</French>
+			<Spanish>No te fue permitido guardar este vehiculo en tu garage.</Spanish>
 		</Key>
 		<Key ID="STR_VG_LIMIT_ARRAY">
 			<English>You can't store any more of this kind of vehicle in your garage.</English>
 			<German>Es ist nicht möglich noch weitere Fahrzeuge dieses Typs in deiner Garage zu parken.</German>
-			<Russian>Вы больше не можете ставить этот тип техники в гараж.</Russian>
+			<Russian>Вы не можете хранить в гараже больше техники данного типа.</Russian>
 			<French>Vous ne pouvez plus stocker ce type de véhicule dans votre garage.</French>
+			<Spanish>No puedes guardar mas vehiculos de este tipo en tu garage.</Spanish>
 		</Key>
 		<Key ID="STR_VG_LIMIT_NUMBER">
 			<English>You can't store any more vehicles in your garage.</English>
 			<German>Du kannst keine weiteren Fahrzeuge in deiner Garage parken.</German>
-			<Russian>Вы не можете поставить в гараж больше техники.</Russian>
+			<Russian>Вы не можете поставить в гараж больше техники, чем уже есть.</Russian>
 			<French>Vous ne pouvez plus stocker ce type de véhicule dans votre garage.</French>
+			<Spanish>No puedes guardar mas vehiculos en tu garage.</Spanish>
 		</Key>
 		<Key ID="STR_VG_STORE_MISSION">
 			<English>You can't store a mission or deployable vehicle.</English>
-			<German>Du kannst kein temporäres Fahrzeug in deiner Garage parken.</German>
-			<Russian>Вы не можете ставить в гараж технику с миссий или скрафченную технику.</Russian>
+			<German>Du kannst kein Fahrzeug ohne Schlüssel in deiner Garage parken.</German>
+			<Russian>Вы не можете ставить в гараж технику с миссий или скрафченный транспорт.</Russian>
 			<French>Vous ne pouvez pas stocker un véhicule de mission ou déployable.</French>
+			<Spanish>No puedes guardar vehiculos de mision y/o desplegables.</Spanish>
 		</Key>
 		<Key ID="STR_VG_REQUIRE_KEY">
 			<English>You must have the key for the vehicle you're trying to store.</English>
 			<German>Du musst den Schlüssel für das Fahrzeug besitzen, welches du parken möchtest.</German>
 			<Russian>У вас должен быть ключ от техники, которую вы пытаетесь поставить в гараж.</Russian>
 			<French>Vous devez avoir la clé du véhicule que vous essayez de stocker.</French>
+			<Spanish>Necesitas la llave del vehiculo que intentas almacenar.</Spanish>
 		</Key>
 		<Key ID="STR_VG_VEHICLE_STORED">
 			<English>Your %1 has been stored in your garage.</English>
 			<German>Dein %1 wurde in deiner Garage geparkt.</German>
 			<Russian>Ваш %1 поставлен в гараж.</Russian>
 			<French>Votre %1 a été stocké dans votre garage</French>
+			<Spanish>Tu %1 fue almacenado en el garage.</Spanish>
 		</Key>
 		<Key ID="STR_VG_NEED_COINS">
 			<English>You need %1 %2 to store your %3.</English>
 			<German>Du benötigst %1 %2 um dein %3 zu parken.</German>
-			<Russian>Вам нужно %1 %2 что бы поставить в гараж %3</Russian>
+			<Russian>Вам нужно %1 %2, чтобы поставить в гараж %3</Russian>
 			<French>Vous avez besoin de %1 %2 pour stocker votre %3</French>
+			<Spanish>Necesitas %1 %2 para almacenar tu %3.</Spanish>
 		</Key>
 		<Key ID="STR_VG_NEED_BRIEFCASES">
 			<English>You need %1 to store your %2.</English>
 			<German>Du benötigst %1 um dein %2 zu parken.</German>
-			<Russian>Вам нужен %1 что бы поствить в гараж %2</Russian>
+			<Russian>Вам нужен %1, чтобы поставить в гараж %2</Russian>
 			<French>Vous avez besoin de %1 pour stocker votre %2</French>
+			<Spanish>Necesitas %1 para almacenar tu %2.</Spanish>
 		</Key>
 		<Key ID="STR_VG_PRICE">
 			<English>Price to store</English>
 			<German>Parkgebühr</German>
 			<Russian>Стоимость хранения</Russian>
 			<French>Prix pour ranger</French>
+			<Spanish>Precio de Almacenamiento</Spanish>
 		</Key>
 		<Key ID="STR_VG_NO_VEHICLES">
 			<English>There are no vehicles in your garage or nearby.</English>
 			<German>Es befinden sich keine Fahrzeuge in deiner Garage oder der Umgebung.</German>
 			<Russian>В гараже и поблизости отсутствует техника.</Russian>
 			<French>Il n'y a aucun véhicule dans votre garage ou à proximité.</French>
+			<Spanish>No hay vehiculos ni cerca ni en tu garage.</Spanish>
 		</Key>
 		<Key ID="STR_VG_VIRTUAL_GARAGE">
 			<English>Virtual Garage</English>
 			<German>Virtuelle Garage</German>
 			<Russian>Виртуальный гараж</Russian>
 			<French>Garage Virtuelle</French>
+			<Spanish>Garage Virtual</Spanish>
 		</Key>
 		<Key ID="STR_VG_YOUR_VEHICLES">
 			<English>Your Vehicles</English>
 			<German>Deine Fahrzeuge</German>
 			<Russian>Ваша техника</Russian>
 			<French>Vos véhicules</French>
+			<Spanish>Tus Vehiculos</Spanish>
 		</Key>
 		<Key ID="STR_VG_VEHICLE_INFO">
 			<English>Vehicle Info</English>
 			<German>Fahrzeug-Informationen</German>
 			<Russian>Информация</Russian>
 			<French>Information</French>
+			<Spanish>Informacion del Vehiculo</Spanish>
 		</Key>
 		<Key ID="STR_VG_STORE_VEHICLE">
 			<English>Store Vehicle</English>
 			<German>Fahrzeug parken</German>
 			<Russian>Поставить технику</Russian>
 			<French>Ranger le véhicule</French>
+			<Spanish>Almacenar Vehiculo</Spanish>
 		</Key>
 		<Key ID="STR_VG_STORE_VEHICLE_GEAR">
 			<English>Store Vehicle with Gear</English>
 			<German>Fahrzeug mit Ausrüstung parken</German>
 			<Russian>Поставить технику с инвентарем</Russian>
 			<French>Ranger le véhicule avec l'inventaire</French>
+			<Spanish>Almacenar Vehiculo con contenido</Spanish>
 		</Key>
 		<Key ID="STR_VG_GET_VEHICLE">
 			<English>Get Vehicle</English>
 			<German>Fahrzeug ausparken</German>
 			<Russian>Забрать технику</Russian>
 			<French>Sortir le véhicule</French>
+			<Spanish>Obtener Vehiculo</Spanish>
 		</Key>
 		<Key ID="STR_VG_SEARCH_VEHICLES">
 			<English>Searching for vehicles...</English>
 			<German>Suche nach Fahrzeugen...</German>
 			<Russian>Поиск техники...</Russian>
 			<French>Recherche de véhicules...</French>
+			<Spanish>Buscando vehiculos...</Spanish>
 		</Key>
 		<Key ID="STR_VG_REMOVE_PAD">
 			<English>Remove HeliPad</English>
 			<German>Helipad entfernen</German>
 			<Russian>Удалить площадку</Russian>
 			<French>Enlever Heliport</French>
+			<Spanish>Quitar Helipuerto</Spanish>
 		</Key>
 	</Package>
 
@@ -254,192 +297,224 @@
 		<Key ID="STR_ZSC_BANKING_NOT_AVAIL">
 			<English>%1 is not available for banking.</English>
 			<German>%1 steht nicht zum Banking bereit.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Объект %1 не предназначен для банкинга.</Russian>
 			<French>%1 n'est pas pret pour faire une transaction banquaire.</French>
+			<Spanish>%1 no esta disponible para transacciones bancarias.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_BANKING_IN_USE">
 			<English>%1 is currently being banked with.</English>
 			<German>%1 ist bereits in Banking verwickelt.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Объект %1 уже используется.</Russian>
 			<French>%1 est présentement en banque avec.</French>
+			<Spanish>Actualmente se esta bancarizando.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_NO_COINS">
 			<English>%1 has no %2</English>
 			<German>%1 besitzt keine %2.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Вы не нашли %2. Умершего звали %1.</Russian>
 			<French>%1 n'a pas %2</French>
+			<Spanish>%1 no tiene %2</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_TAKE_COINS">
 			<English>You took %1 %2, ID says %3!</English>
 			<German>Du hast %1 %2 genommen, ID: %3!</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Вы нашли %1 %2. Умершего звали %3.</Russian>
 			<French>Vous avez pris %1 %2, ID dit %3!</French>
+			<Spanish>Tomaste %1 %2,La identificacion decia: %3!</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_ALREADY_TRADING">
 			<English>%1 is already trading, please try again.</English>
 			<German>%1 handelt bereits, bitte erneut versuchen.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>%1 уже обменивается с кем-то. Пожалуйста, попробуйте снова.</Russian>
 			<French>%1 est déjà entrain de faire une transaction. Essaye à nouveau.</French>
+			<Spanish>%1 se encuentra en otra transaccion, por favor intenta mas tarde.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_NOT_PLAYER">
 			<English>You are not looking at a player.</English>
 			<German>Du schaust nicht auf einen Spieler.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Вы не смотрите на игрока.</Russian>
 			<French>Vous ne regarder pas envers un joueur.</French>
+			<Spanish>No estas viendo al jugador.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_VEHICLE_CAPACITY">
 			<English>Unable to get vehicle capacity.</English>
 			<German>Die Fahrzeugkapazität konnte nicht ermittelt werden.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Невозможно получить вместительность техники.</Russian>
 			<French>Pas capable de lire la capacité du véhicule.</French>
+			<Spanish>Incapaz de obtener la capacidad del vehiculo.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_WITHDRAW_FAIL">
 			<English>You can't withdraw more %1 than are in the %2.</English>
 			<German>Du kannst nicht mehr %1 abheben als in %2 sind.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Вы не можете снять больше %1, чем есть в %2.</Russian>
 			<French>Vous ne pouvez pas retirer plus %1 qu'il est dans %2.</French>
+			<Spanish>No puedes extraer mas %1 de las que estan en %2.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_WITHDRAW_OK">
-			<English>You have withdrawn %1 %2 out of the %3</English>
+			<English>You have withdrawn %1 %2 out of the %3.</English>
 			<German>Du hast %1 %2 von %3 abgehoben.</German>
-			<!-- <Russian></Russian> -->
-			<French>Vous avez retiré %1 %2 de votre %3</French>
+			<Russian>Вы взяли %1 %2 с %3.</Russian>
+			<French>Vous avez retiré %1 %2 de votre %3.</French>
+			<Spanish>Extrajiste %1 %2 de %3.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_UNABLE">
 			<English>Unable to access Money Storage. Please try again.</English>
 			<German>Auf den Geldvorrat konnte nicht zugegriffen werden, bitte erneut versuchen.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Нельзя получить доступ к хранилищу. Пожалуйста, попробуйте снова.</Russian>
 			<French>Impossible d'accéder au stockage d'argent. SVP veuillez réessayer.</French>
+			<Spanish>Incapaz de acceder al deposito de dinero.Intenta nuevamente.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_DEPOSIT_FAIL">
 			<English>You can't deposit more %1 than what you have.</English>
 			<German>Du kannst nicht mehr %1 einzahlen als du hast.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Вы не можете положить больше %1, чем у вас есть.</Russian>
 			<French>Vous ne pouvez pas déposer plus %1 que vous avez.</French>
+			<Spanish>No puedes depositar mas %1 de las que tienes.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_STORE_FAIL">
 			<English>You can only store a maximum of %1 %2 in the %3.</English>
 			<German>Du kannst nur ein Maximum von %1 %2 in %3 einzahlen.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Вы можете хранить не больше %1 %2 в %3.</Russian>
 			<French>Vous pouvez seulement déposer un maximum de %1 %2 dans votre %3.</French>
+			<Spanish>Solo puedes almacenar un maximo de %1 %2 dentro de %3.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_DEPOSIT_OK">
 			<English>You have deposited %1 %2 into the %3.</English>
 			<German>Du hast %1 %2 in %3 eingezahlt.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Вы положили %1 %2 в %3.</Russian>
 			<French>Vous avez déposé %1 %2 dans votre %3.</French>
+			<Spanish>Depositaste %1 %2 dentro de %3.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_GIVE_FAIL">
-			<English>You can not give more than you currently have.</English>
-			<German>Du kannst nicht mehr geben als du gerade hast.</German>
-			<!-- <Russian></Russian> -->
-			<French>Vous ne pouvez pas donner plus que vous avez.</French>
+			<English>You can not give more %1 than you currently have.</English>
+			<German>Du kannst nicht mehr %1 geben als du gerade hast.</German>
+			<Russian>Вы не можете передать больше, чем у вас есть.</Russian>
+			<French>Vous ne pouvez pas donner %1 plus que vous avez.</French>
+			<Spanish>Cristo! No puedes dar mas lo que tienes.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_GIVE_PLAYER">
 			<English>You can only give %1 to a player.</English>
 			<German>Du kannst nur einem Spieler %1 geben.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Вы можете передать %1 только игроку.</Russian>
 			<French>Vous pouvez seulement donner %1 à un joueur.</French>
+			<Spanish>Solo puedes dar %1 a este jugador.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_GIVE_OK">
 			<English>You gave %1 %2 %3.</English>
 			<German>Du hast %1 2% 3% gegeben.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Вы передали %1 %2 %3</Russian>
 			<French>Vous avez donné %1 %2 %3.</French>
+			<Spanish>Le diste %1 %2 %3.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_TRANSFER_COINS">
 			<English>Transfer %1</English>
 			<German>%1 senden</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Перевести %1</Russian>
 			<French>Transférer %1</French>
+			<Spanish>%1 transferidos</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_GIVE">
 			<English>Give</English>
 			<German>Geben</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Передать</Russian>
 			<French>Donner</French>
+			<Spanish>Dar/Donar</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_YOU">
 			<English>You</English>
 			<German>Du</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Вы</Russian>
 			<French>Vous</French>
+			<Spanish>Tu</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_DEPOSIT">
 			<English>Deposit</English>
 			<German>Einzahlen</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Положить</Russian>
 			<French>Déposer</French>
+			<Spanish>Depositar</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_WITHDRAW">
 			<English>Withdraw</English>
 			<German>Abheben</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Снять</Russian>
 			<French>Retirer</French>
+			<Spanish>Extraer</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_STORAGE">
 			<English>Storage</English>
 			<German>Lager</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Хранилище</Russian>
 			<French>Stocker</French>
+			<Spanish>Almacenamiento</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_GLOBAL_WITHDRAW">
 			<English>You have withdrawn %1 %2.</English>
 			<German>Du hast %1 %2 abgehoben.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Вы сняли %1 %2.</Russian>
 			<French>Vous avez retiré %1 %2.</French>
+			<Spanish>Extrajiste %1 %2.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_GLOBAL_DEPOSIT_FAIL">
 			<English>You can only have a maximum of %1 %2.</English>
-			<German>Du kannst nur %1 %2 haben.</German>
-			<!-- <Russian></Russian> -->
+			<German>Du kannst maximal %1 %2 haben.</German>
+			<Russian>Вы можете иметь максимум %1 %2.</Russian>
 			<French>Vous pouvez seulement avoir un maximum de %1 %2.</French>
+			<Spanish>Solo puedes tener un maximo de %1 %2.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_GLOBAL_DEPOSIT_OK">
 			<English>You have deposited %1 %2.</English>
 			<German>Du hast %1 %2 eingezahlt.</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Вы положили %1 %2.</Russian>
 			<French>Vous avez déposé %1 %2.</French>
+			<Spanish>Has depositado %1 %2.</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_GLOBAL_BANK">
 			<English>Bank</English>
-			<!-- <Russian></Russian> -->
+			<Russian>Банк</Russian>
 			<French>Banque</French>
+			<Spanish>Banco</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_GLOBAL_BANKING">
 			<English>Banking</English>
-			<!-- <Russian></Russian> -->
+			<Russian>Банкинг</Russian>
 			<French>Bancaire</French>
+			<Spanish>Bancario</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_CHECK_WALLET">
 			<English>Check Wallet</English>
 			<German>Geldbeutel prüfen</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Проверить кошелек</Russian>
 			<French>Vérifier le Portefeuille</French>
+			<Spanish>Revisar Cartera</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_ACCESS_BANK">
 			<English>Access Bank</English>
 			<German>Auf Bank zugreifen</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Банкинг</Russian>
 			<French>Accédez votre banque</French>
+			<Spanish>Acceder al Banco</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_TRADE_COINS">
 			<English>Trade %1 with %2</English>
 			<German>%1 mit %2 handeln</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Передать %1 %2</Russian>
 			<French>Échanger %1 avec %2</French>
+			<Spanish>Comerciar %1 con %2</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_BANK_TELLER">
 			<English>Bank Teller</English>
 			<German>Bankangestellter</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Банкир</Russian>
 			<French>Caissier de la banque</French>
+			<Spanish>Cajero</Spanish>
 		</Key>
 		<Key ID="STR_ZSC_BANK_ATM">
 			<English>Bank ATM</English>
 			<German>Geldautomat</German>
-			<!-- <Russian></Russian> -->
+			<Russian>Банкомат</Russian>
 			<French>Guichet</French>
+			<Spanish>Cajero Automatico</Spanish>
 		</Key>
 	</Package>
 
@@ -449,139 +524,183 @@
 			<German>Fahrzeug-Info</German>
 			<French>Informations du véhicule</French>
 			<Spanish>Vehiculo Info</Spanish>
+			<Russian>Информация</Russian>
 		</Key>
 		<Key ID="STR_RV_VEHICLE_LIST">
 			<English>Vehicle List</English>
 			<German>Fahrzeugliste</German>
 			<French>List des véhicules</French>
 			<Spanish>Lista de Vehiculos</Spanish>
+			<Russian>Список техники</Russian>
 		</Key>
 		<Key ID="STR_RV_SELECT_VEHICLE">
 			<English>Select Vehicle</English>
 			<German>Wähle Fahrzeug</German>
 			<French>Sélectionez le véhicule</French>
 			<Spanish>Seleccionar Vehiculo</Spanish>
+			<Russian>Выбрать технику</Russian>
 		</Key>
 		<Key ID="STR_RV_NO_KEYS">
 			<English>No valid keys in your toolbelt.</English>
 			<German>Es wurden keine geeigneten Schlüssel an deinem Gürtel gefunden.</German>
 			<French>Vous n'avez pas de clés valid sur votre ceinture.</French>
 			<Spanish>No tienes las llaves en tu cinto de herramientas.</Spanish>
+			<Russian>Нет подходящих ключей в вашем инвентаре.</Russian>
 		</Key>
 		<Key ID="STR_RV_TITLE">
 			<English>Remote Vehicle - Vehicles for %1</English>
 			<German>Fahrzeugfernsteuerung - Fahrzeuge für %1</German>
 			<French>Démarreur Véhicule - Véhicules pour %1</French>
 			<Spanish>Vehiculo Remoto - Vehiculos para %1</Spanish>
+			<Russian>Удаленное управление - техника для %1</Russian>
 		</Key>
 		<Key ID="STR_RV_NO_VEHICLES">
 			<English>Unable to find a valid vehicle for this key.</English>
 			<German>Es konnte kein Fahrzeug für diesen Schlüssel gefunden werden.</German>
 			<French>Pas capable de trouver le véhicule pour cette clé.</French>
 			<Spanish>No se encontro un vehiculo valido para esta llave.</Spanish>
+			<Russian>Не получается найти подходящую под этот ключ технику.</Russian>
 		</Key>
 		<Key ID="STR_RV_DESTROYED">
 			<English>The vehicle for this key has been destroyed.</English>
 			<German>Das Fahrzeug für diesen Schlüssel wurde zerstört.</German>
 			<French>Le véhicule qui appartient à cette clé est détruit.</French>
 			<Spanish>El vehiculo que pertenecia a esta llave fue destruido.</Spanish>
+			<Russian>Техника, к которой подходит данный ключ, была уничтожена.</Russian>
 		</Key>
 		<Key ID="STR_RV_RANGE_FAIL">
 			<English>The remote is out of range for your %1.</English>
 			<German>Die Fernsteuerung für dein(en) %1 ist außer Reichweite.</German>
 			<French>Le démarreur est a hors distance de votre %1.</French>
 			<Spanish>El Remoto esta fuera de rango para tu %1.</Spanish>
+			<Russian>%1 вне зоны действия удаленного доступа.</Russian>
 		</Key>
 		<Key ID="STR_RV_EJECT">
 			<English>Ejecting all players not in your group from: %1</English>
 			<German>Spieler, die nicht in deiner Gruppe sind zum Aussteigen zwingen aus: %1</German>
 			<French>Éjecter tous les jouers qui ne sont pas dans votre groupe de: %1.</French>
 			<Spanish>Expulsando a todos los tripulantes fuera de tu grupo de: %1</Spanish>
+			<Russian>Высаживаем всех игроков, которые не в вашей группе, из: %1</Russian>
 		</Key>
 		<Key ID="STR_RV_EJECT_PLAYER">
 			<English>Ejecting %1, they are NOT in your group.</English>
 			<German>%1 ist ausgestiegen, sie sind nicht in deiner Gruppe.</German>
 			<French>Éjection de %1, ils ne sont PAS dans votre groupe.</French>
 			<Spanish>Expulsando %1, ellos no pertenecen a tu grupo.</Spanish>
+			<Russian>Высаживаем %1, он НЕ в вашей группе.</Russian>
 		</Key>
 		<Key ID="STR_RV_ENGINE">
 			<English>Toggling engine %1 in: %2</English>
 			<German>Motor %1 in: %2</German>
 			<French>Activer ou désactiver le moteur %1 dans: %2.</French>
 			<Spanish>Apagando el motor %1 en: %2</Spanish>
+			<Russian>Двигатель %1 в: %2.</Russian>
 		</Key>
 		<Key ID="STR_RV_LIGHTS">
 			<English>Toggled lights %1: %2</English>
 			<German>Licht %1 in: %2</German>
 			<French>Activer ou désactiver les lumières %1: %2.</French>
 			<Spanish>Apagando Luces %1: %2</Spanish>
+			<Russian>Фары %1 в: %2.</Russian>
 		</Key>
 	</Package>
 
 	<Package name="VKC">
 		<Key ID="STR_VKC_TITLE">
 			<English>Vehicle Key Changer</English>
-			<German>Fahrzeugschlüssel wechseln</German>				
+			<German>Fahrzeugschlüssel wechseln</German>
+			<Russian>Смена ключа</Russian>
+			<Spanish>Cambiar Llaves</Spanish>
 		</Key>
 		<Key ID="STR_VKC_INFO">
 			<English>Vehicle Info</English>
-			<German>Fahrzeug-Info</German>				
+			<German>Fahrzeug-Info</German>
+			<Russian>Информация</Russian>
+			<Spanish>Info del Vehiculo</Spanish>
 		</Key>
 		<Key ID="STR_VKC_KEYS">
 			<English>Your keys</English>
-			<German>Deine Schlüssel</German>				
+			<German>Deine Schlüssel</German>
+			<Russian>Ваши ключи</Russian>
+			<Spanish>Tus llaves</Spanish>
 		</Key>
 		<Key ID="STR_VKC_CLAIM">
 			<English>Claim vehicle</English>
-			<German>Beanspruchen</German>				
+			<German>Beanspruchen</German>
+			<Russian>Присвоить технику</Russian>
+			<Spanish>Reclamar vehiculo</Spanish>
 		</Key>
 		<Key ID="STR_VKC_CHANGE">
 			<English>Change key</English>
-			<German>Schlüssel ändern</German>					
+			<German>Schlüssel ändern</German>
+			<Russian>Сменить ключ</Russian>
+			<Spanish>Cambiar llave</Spanish>
 		</Key>
 		<Key ID="STR_VKC_FAIL_CURSOR">
 			<English>cursorTarget is not a vehicle.</English>
-			<German>Du schaust nicht richtig auf das Fahrzeug.</German>				
+			<German>Du schaust nicht richtig auf das Fahrzeug.</German>
+			<Russian>Цель не является транспортным средством.</Russian>
+			<Spanish>Lo que el cursor señala no es un vehiculo.</Spanish>
 		</Key>
 		<Key ID="STR_VKC_FAIL_SUPPORT">
 			<English>Sorry but %1 does not support Keychange/Claiming!</English>
-			<German>Leider unterstützt %1 keinen Schlüsselwechsel oder eine Beanspruchung!</German>				
+			<German>Leider unterstützt %1 keinen Schlüsselwechsel oder eine Beanspruchung!</German>
+			<Russian>Извините, но %1 не поддерживает смену ключа/присвоение.</Russian>
+			<Spanish>Disculpas pero %1 no soporta Cambio de llaves/Reclamo</Spanish>
 		</Key>
 		<Key ID="STR_VKC_CHANGE_MESSAGE_1">
 			<English>%1's key has been changed to %2</English>
-			<German>%1's Schlüssel hat sich zu %2 geändert</German>		
+			<German>%1's Schlüssel hat sich zu %2 geändert</German>
+			<Russian>Ключ от %1 больше не поддерживается. Новый ключ: %2.</Russian>
+			<Spanish>La llave %1 fue cambiada por %2</Spanish>
 		</Key>
 		<Key ID="STR_VKC_CHANGE_MESSAGE_2">
 			<English>change the key for</English>
-			<German>ändere den Schlüssel für</German>					
+			<German>ändere den Schlüssel für</German>
+			<Russian>сменить ключ для</Russian>
+			<Spanish>Cambiar la llave por</Spanish>
 		</Key>
 		<Key ID="STR_VKC_CHANGE_MESSAGE_3">
 			<English>changed the key for</English>
-			<German>Schlüssel geändert für</German>				
+			<German>Schlüssel geändert für</German>
+			<Russian>ключ изменен для</Russian>
+			<Spanish>Cambio la llave por</Spanish>
 		</Key>
 		<Key ID="STR_VKC_CLAIM_MESSAGE_1">
 			<English>%1 has been claimed, the new key is: %2</English>
-			<German>%1 wurde beansprucht, der neue Schlüssel ist: %2</German>				
+			<German>%1 wurde beansprucht, der neue Schlüssel ist: %2</German>
+			<Russian>Вы присвоили %1, новый ключ: %2.</Russian>
+			<Spanish>%1 fue reclamado, la nueva llave es: %2</Spanish>
 		</Key>
 		<Key ID="STR_VKC_CLAIM_MESSAGE_2">
 			<English>claim the key for</English>
-			<German>beanspruche den Schlüssel für</German>				
+			<German>beanspruche den Schlüssel für</German>
+			<Russian>присвоиние ключа для</Russian>
+			<Spanish>Reclamar la llave para</Spanish>
 		</Key>
 		<Key ID="STR_VKC_CLAIM_MESSAGE_3">
 			<English>claimed</English>
-			<German>beansprucht</German>			
+			<German>beansprucht</German>
+			<Russian>присвоено</Russian>
+			<Spanish>reclamado</Spanish>
 		</Key>
 		<Key ID="STR_VKC_FAIL_KEYS">
 			<English>No valid keys were found in your inventory.</English>
-			<German>Es wurden keine geeigneten Schlüssel in deinem Inventar gefunden.</German>				
+			<German>Es wurden keine geeigneten Schlüssel in deinem Inventar gefunden.</German>
+			<Russian>Не найдено подходящих ключей в вашем инвентаре.</Russian>
+			<Spanish>Ninguna llave valida encontrada en tu inventario.</Spanish>
 		</Key>
 		<Key ID="STR_VKC_FAIL_UPGRADE">
 			<English>Failed to upgrade %1, you have been refunded the cost. If this continues, contact the admin</English>
-			<German>Upgrade für %1 fehlgeschlagen, dir wurden die Kosten zurückerstattet. Kontaktiere den Admin, falls das Problem weiterhin auftritt.</German>					
+			<German>Upgrade für %1 fehlgeschlagen, dir wurden die Kosten zurückerstattet. Kontaktiere den Admin, falls das Problem weiterhin auftritt.</German>
+			<Russian>Ошибка в апгрейде %1, средства возвращены. Если это продолжится, свяжитесь с админом.</Russian>
+			<Spanish>Fallo al actualizar %1,el costo te fue reintegrado. Si continua, contacta a un administrador.</Spanish>
 		</Key>
 		<Key ID="STR_VKC_FAIL_MONEY">
 			<English>You need %1 to %2 %3.</English>
-			<German>Du brauchst %1 um %2 %3.</German>				
+			<German>Du brauchst %1 um %2 %3.</German>
+			<Russian>Вам нужно %1 для %2 %3.</Russian>
+			<Spanish>Necesitas %1 para %2 %3.</Spanish>
 		</Key>
 	</Package>
 </Project>
