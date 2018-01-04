@@ -1,11 +1,9 @@
-/*
-	Use this sql ONLY if you are creating a NEW database.
-	Use 'SQL\virtualGarageUpdate.sql' if you are updating from the previous version.
+-- Use this sql ONLY if you are creating a NEW database.
+-- Use 'SQL\virtualGarageUpdate.sql' if you are updating from the previous version.
 
-	Uncomment the next 2 lines if you want to use an external database away from your epoch database.
-	i.e you have multiple servers sharing the same virtual garage database.
-	If your hosting provider only allows you access to 1 database (i.e your main epoch one) then leave these commented out as they are.
-*/
+-- Uncomment the next 2 lines if you want to use an external database away from your epoch databas,	i.e you have multiple servers sharing the same virtual garage database.
+-- If your hosting provider only allows you access to 1 database (i.e your main epoch one) then leave these commented out as they are.
+
 -- CREATE DATABASE IF NOT EXISTS `extdb` /*!40100 DEFAULT CHARACTER SET utf8 */;
 -- USE `extdb`;
 
