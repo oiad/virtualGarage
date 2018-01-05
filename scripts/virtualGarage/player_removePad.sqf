@@ -8,7 +8,7 @@ _plotCheck = [player, false] call FNC_find_plots;
 _hasAccess = [player,_plotCheck select 2] call FNC_check_access;
 
 if ((_hasAccess select 0) or (_hasAccess select 2) or (_hasAccess select 3) or (_hasAccess select 4)) then {
-	_heliPad = nearestObjects [player,vg_heliPads,vg_distance];
+	_heliPad = nearestObjects [player,vg_heliPads,Z_VehicleDistance];
 	
 	{
 		_objectID = _x getVariable ["ObjectID","0"];

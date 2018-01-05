@@ -22,7 +22,7 @@ if (!_isOK) exitWith {localize "str_epoch_player_107" call dayz_rollingMessages;
 
 _dir = round(random 360);
 _backPack = [];
-_heliPad = nearestObjects [player,vg_heliPads,vg_distance];
+_heliPad = nearestObjects [player,vg_heliPads,Z_VehicleDistance];
 if ((count _heliPad == 0) && ((_vehicle select 1) isKindOf "Air")) exitWith {localize "STR_VG_NEED_heliPad" call dayz_rollingMessages;};
 if (count _heliPad > 0) then {
 	_location = [(_heliPad select 0)] call FNC_GetPos;

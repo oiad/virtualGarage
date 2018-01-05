@@ -1,7 +1,6 @@
 // Virtual garage stuff
 
 vg_list = ["Plastic_Pole_EP1_DZ"]; // List of objects/traders that are allowed to interact with virtual garage. i.e: ["Plastic_Pole_EP1_DZ","Worker2"];
-vg_distance = 50; // Distance from objects/traders in vg_list to search/spawn vehicles from.
 vg_blackListed = []; // Array of vehicle config classes as well as vehicle classnames that are blacklisted from being stored, i.e ["All","LandVehicles","Air","Boat","StaticWeapon","AH1Z","MTVR"]
 vg_heliPads = ["HeliH","HeliHCivil","HeliHRescue","MAP_Heli_H_army","MAP_Heli_H_cross","Sr_border"]; // Array of heli pad classnames
 vg_removeKey = true; // Remove the key from the players inventory after storing vehicle?
