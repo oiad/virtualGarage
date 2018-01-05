@@ -401,7 +401,7 @@
 		</Key>
 		<Key ID="STR_ZSC_GIVE_OK">
 			<English>You gave %1 %2 %3.</English>
-			<German>Du hast %1 2% 3% gegeben.</German>
+			<German>Du hast %1 %2 %3 gegeben.</German>
 			<Russian>Вы передали %1 %2 %3</Russian>
 			<French>Vous avez donné %1 %2 %3.</French>
 			<Spanish>Le diste %1 %2 %3.</Spanish>
@@ -573,7 +573,7 @@
 			<German>Die Fernsteuerung für dein(en) %1 ist außer Reichweite.</German>
 			<French>Le démarreur est a hors distance de votre %1.</French>
 			<Spanish>El Remoto esta fuera de rango para tu %1.</Spanish>
-			<Russian>%1 вне зоны действия удаленного доступа.</Russian>
+			<Russian>%1 вне зоны действия ключа.</Russian>
 		</Key>
 		<Key ID="STR_RV_EJECT">
 			<English>Ejecting all players not in your group from: %1</English>
@@ -657,7 +657,7 @@
 		<Key ID="STR_VKC_CHANGE_MESSAGE_2">
 			<English>change the key for</English>
 			<German>ändere den Schlüssel für</German>
-			<Russian>сменить ключ для</Russian>
+			<Russian>чтобы сменить ключ для</Russian>
 			<Spanish>Cambiar la llave por</Spanish>
 		</Key>
 		<Key ID="STR_VKC_CHANGE_MESSAGE_3">
@@ -675,7 +675,7 @@
 		<Key ID="STR_VKC_CLAIM_MESSAGE_2">
 			<English>claim the key for</English>
 			<German>beanspruche den Schlüssel für</German>
-			<Russian>присвоиние ключа для</Russian>
+			<Russian>чтобы присвоить ключ для</Russian>
 			<Spanish>Reclamar la llave para</Spanish>
 		</Key>
 		<Key ID="STR_VKC_CLAIM_MESSAGE_3">
@@ -699,7 +699,7 @@
 		<Key ID="STR_VKC_FAIL_MONEY">
 			<English>You need %1 to %2 %3.</English>
 			<German>Du brauchst %1 um %2 %3.</German>
-			<Russian>Вам нужно %1 для %2 %3.</Russian>
+			<Russian>Вам нужно %1 %2 %3.</Russian>
 			<Spanish>Necesitas %1 para %2 %3.</Spanish>
 		</Key>
 	</Package>
