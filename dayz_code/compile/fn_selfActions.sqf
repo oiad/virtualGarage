@@ -921,7 +921,7 @@ if (!isNull _cursorTarget && !_inVehicle && !_isPZombie && (player distance _cur
 
 	// Custom stuff below
 
-	if ((_typeOfCursorTarget in vg_List) && (player distance _cursorTarget < 5)) then {
+	if (_typeOfCursorTarget in vg_List) then {
 		_hasAccess = [player,_cursorTarget] call FNC_check_access;
 		if (s_garage_dialog < 0 && ((_hasAccess select 0) || (_hasAccess select 2) || (_hasAccess select 3) || (_hasAccess select 4) || (!isPlayer _cursorTarget && {_typeOfCursorTarget in vg_list}))) then {
 			s_garage_dialog = player addAction [localize "STR_VG_VIRTUAL_GARAGE","scripts\virtualGarage\virtualGarage.sqf",_cursorTarget,3,false,true];
