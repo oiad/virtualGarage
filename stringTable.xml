@@ -249,6 +249,13 @@
 			<French>Vos véhicules</French>
 			<Spanish>Tus Vehiculos</Spanish>
 		</Key>
+		<Key ID="STR_VG_VEHICLES">
+			<English>Vehicles</English>
+			<German>Fahrzeuge</German>
+			<Russian>техника</Russian>
+		<!--	<French></French>	-->
+			<Spanish>Vehiculos</Spanish>
+		</Key>
 		<Key ID="STR_VG_VEHICLE_INFO">
 			<English>Vehicle Info</English>
 			<German>Fahrzeug-Informationen</German>
