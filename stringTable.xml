@@ -217,8 +217,8 @@
 		<Key ID="STR_VG_NEED_BRIEFCASES">
 			<English>You need %1 to store your %2.</English>
 			<German>Du benötigst %1 um dein %2 zu parken.</German>
-			<Russian>Вам нужен %1, чтобы поставить в гараж %2</Russian>
-			<French>Vous avez besoin de %1 pour stocker votre %2</French>
+			<Russian>Вам нужно %1, чтобы поставить в гараж %2.</Russian>
+			<French>Vous avez besoin de %1 pour stocker votre %2.</French>
 			<Spanish>Necesitas %1 para almacenar tu %2.</Spanish>
 		</Key>
 		<Key ID="STR_VG_PRICE">
