@@ -73,4 +73,4 @@ vg_vehicleList = [];
 ctrlShow[2810,false];
 ctrlShow[2811,false];
 
-ctrlSetText [2804, format ["%1 (%2 %3)",localize "STR_VG_YOUR_VEHICLES",count (_storedVehicles),localize "str_lib_cat_vehicles"]];
+ctrlSetText [2804, format ["%1 (%2 %3)",localize "STR_VG_YOUR_VEHICLES",count (_storedVehicles),localize "STR_VG_VEHICLES"]];
