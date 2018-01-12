@@ -7,6 +7,8 @@ ALTER TABLE `garage` ADD `Name` VARCHAR(50) NOT NULL DEFAULT '' AFTER `PlayerUID
 ALTER TABLE `garage` ADD `displayName` VARCHAR(50) NOT NULL DEFAULT '' AFTER `Name`;
 */
 
-UPDATE `garage` SET Inventory = '[[[],[]],[[],[]],[[],[]]]' WHERE Inventory = '[]';
+--UPDATE `garage` SET Inventory = '[[[],[]],[[],[]],[[],[]]]' WHERE Inventory = '[]';
 
-ALTER TABLE `garage` ADD `DateStored` varchar(10) NOT NULL DEFAULT 'old' AFTER `Datestamp`;
+--ALTER TABLE `garage` ADD `DateStored` varchar(10) NOT NULL DEFAULT 'old' AFTER `Datestamp`;
+
+ALTER TABLE `garage` ADD `serverKey` varchar(10) NOT NULL DEFAULT 'old' AFTER `Colour2`;

@@ -6,6 +6,7 @@ vg_heliPads = ["HeliH","HeliHCivil","HeliHRescue","MAP_Heli_H_army","MAP_Heli_H_
 vg_removeKey = true; // Remove the key from the players inventory after storing vehicle?
 vg_requireKey = true; // Require the player to have the key when storing a locked vehicle.
 vg_storeWithGear = true; // Allow storing vehicles with gear?
+vg_clearAmmo = true; // Clear the ammo of vehicles spawned during the same restart they are stored? (stops users storing a vehicle for a free rearm)
 vg_tiedToPole = true; // Tie the virtual garage to a local plot pole? If no plot pole is present (i.e a communal garage at a trader etc) the players UID will be used.
 vg_disableThermal = []; // Array of vehicle config classes as well as vehicle classnames to disable thermal on when being spawned. i.e: ["All","LandVehicles","Air","Boat","StaticWeapon","AH1Z","MTVR"];
 vg_pricePer = 100; // Price in worth to store a vehicle per gear item, use 0 if you want it to be free.

@@ -58,7 +58,7 @@ _hitpoints = _vehicle call vehicle_getHitpoints;
 
 if (!_woGear) then {_inventory = [getWeaponCargo _vehicle,getMagazineCargo _vehicle,getBackpackCargo _vehicle];};
 
-_query = format["INSERT INTO garage (PlayerUID, Name, DisplayName, Classname, DateStored, CharacterID, Inventory, Hitpoints, Fuel, Damage, Colour, Colour2) VALUES ('%1','%2','%3','%4','%5','%6','%7','%8','%9','%10','%11','%12')",_playerUID,_name,_displayName,_class,_dateFormat,_charID,_inventory,_array,_fuel,_damage,_colour,_colour2];
+_query = format["INSERT INTO garage (PlayerUID, Name, DisplayName, Classname, DateStored, CharacterID, Inventory, Hitpoints, Fuel, Damage, Colour, Colour2, serverKey) VALUES ('%1','%2','%3','%4','%5','%6','%7','%8','%9','%10','%11','%12','%13')",_playerUID,_name,_displayName,_class,_dateFormat,_charID,_inventory,_array,_fuel,_damage,_colour,_colour2,vg_serverKey];
 
 [_query, 1, true] call fn_asyncCall;
 

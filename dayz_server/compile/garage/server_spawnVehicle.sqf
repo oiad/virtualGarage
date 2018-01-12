@@ -1,10 +1,10 @@
-private ["_worldSpace","_player","_id","_query","_return","_class","_characterID","_inventory","_hitpoints","_fuel","_damage","_dir","_location","_uid","_key","_query1","_colour","_colour2","_result"];
+private ["_worldSpace","_player","_id","_query","_return","_class","_characterID","_inventory","_hitpoints","_fuel","_damage","_dir","_location","_uid","_key","_query1","_colour","_colour2","_result","_serverKey"];
 
 _worldSpace = _this select 0;
 _player = _this select 1;
 _id = _this select 2;
 
-_query = format["SELECT classname, CharacterID, Inventory, Hitpoints, Fuel, Damage, Colour, Colour2 FROM garage WHERE ID='%1'",_id];
+_query = format["SELECT classname, CharacterID, Inventory, Hitpoints, Fuel, Damage, Colour, Colour2,serverKey FROM garage WHERE ID='%1'",_id];
 
 _result = [_query,2,true] call fn_asyncCall;
 _return = _result select 0;
@@ -17,6 +17,7 @@ _fuel = _return select 4;
 _damage = _return select 5;
 _colour = _return select 6;
 _colour2 = _return select 7;
+_serverKey = _return select 8;
 
 _dir = _worldSpace select 0;
 _location = _worldSpace select 1;
@@ -33,8 +34,41 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 [_query1,1,true] call fn_asyncCall;
 
 // Switched to spawn so we can wait a bit for the ID
-[_uid,_characterID,_class,_dir,_location,_inventory,_hitpoints,_fuel,_damage,_colour,_colour2,_player] spawn {
-   private ["_object","_uid","_characterID","_class","_inventory","_hitpoints","_fuel","_damage","_done","_retry","_key","_result","_outcome","_oid","_selection","_dam","_colour","_colour2","_clrinit","_clrinit2","_player","_clientID"];
+[_uid,_characterID,_class,_dir,_location,_inventory,_hitpoints,_fuel,_damage,_colour,_colour2,_player,_serverKey] spawn {
+   private ["_object","_uid","_characterID","_class","_inventory","_hitpoints","_fuel","_damage","_done","_retry","_key","_result","_outcome","_oid","_selection","_dam","_colour","_colour2","_clrinit","_clrinit2","_player","_clientID","_serverKey","_clearTurrets"];
+   
+	_clearTurrets = {
+		//By denvdmj (probably, I found it on the biki)
+		private ["_weaponArray","_findRecurse","_class","_obj","_turret","_mags"];
+		_obj = _this;		
+
+		_weaponArray = [];
+		_weaponArray set [count _weaponArray,[-1]];
+
+		_findRecurse = {
+			private ["_root", "_class", "_path", "_currentPath", "_thisThis"];
+			_root = (_this select 0);
+			_path = +(_this select 1);
+			_thisThis = _this select 2;
+			for "_i" from 0 to count _root -1 do {
+			   _class = _root select _i;
+			   if (isClass _class) then {
+				  _currentPath = _path + [_i];
+				  {_weaponArray set [count _weaponArray, _currentPath];} count getArray (_class >> "weapons");
+				  _class = _class >> "turrets";
+				  if (isClass _class) then {[_class, _currentPath, _thisThis] call _findRecurse;};
+			   };
+			};
+		};
+
+		[configFile >> "CfgVehicles" >> typeOf (_obj) >> "turrets", [], _this] call _findRecurse;
+
+		{
+			_turret = _x;
+			_mags = _obj magazinesTurret _turret;
+			{_obj removeMagazinesTurret[_x,_turret];} count _mags;
+		} forEach _weaponArray;
+	};
 
 	_uid = _this select 0;
 	_characterID = _this select 1;
@@ -48,6 +82,7 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 	_colour = _this select 9;
 	_colour2 = _this select 10;
 	_player = _this select 11;
+	_serverKey = _this select 12;
 	_clientID = owner _player;
 
 	_done = false;
@@ -87,7 +122,9 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
-	// _object setVehicleAmmo DZE_vehicleAmmo;
+	if (vg_clearAmmo && {vg_serverKey == _serverKey}) then {
+		_object call _clearTurrets;
+	};
 
 	_object setFuel _fuel;
 	_object setDamage _damage;

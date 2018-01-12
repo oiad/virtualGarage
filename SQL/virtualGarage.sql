@@ -22,5 +22,6 @@ CREATE TABLE IF NOT EXISTS `garage` (
   `Damage` double(13,5) NOT NULL DEFAULT '0.00000',
   `Colour` varchar(50) NOT NULL,
   `Colour2` varchar(50) NOT NULL,
+  `serverKey` varchar(10) NOT NULL DEFAULT 'old',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
