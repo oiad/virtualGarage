@@ -720,4 +720,46 @@
 			<Russian>Сменить ключ</Russian>
 		</Key>
 	</Package>
+	
+	<Package name="servicePoints">
+		<Key ID="STR_SP_MESSAGE">
+			<English>Vehicle Service Point nearby</English>
+		</Key>
+		<Key ID="STR_SP_UNABLE_REARM">
+			<English>%1 is unable to be rearmed.</English>
+		</Key>
+		<Key ID="STR_SP_UNABLE_REPAIR">
+			<English>%1 is unable to be repaired.</English>
+		</Key>
+		<Key ID="STR_SP_UNABLE_REFUEL">
+			<English>%1 is unable to be refueled.</English>
+		</Key>
+		<Key ID="STR_SP_REFUELING">
+			<English>Refueling %1...</English>
+		</Key>
+		<Key ID="STR_SP_REFUELING_STOPPED">
+			<English>Refueling of %1 stopped</English>
+		</Key>
+		<Key ID="STR_SP_REFUEL_OK">
+			<English>%1 Refueled</English>
+		</Key>
+		<Key ID="STR_SP_REPAIRING">
+			<English>Repairing%1...</English>
+		</Key>
+		<Key ID="STR_SP_REPAIRING_STOPPED">
+			<English>Repairing of %1 stopped</English>
+		</Key>
+		<Key ID="STR_SP_REPAIR_OK">
+			<English>%1 Repaired</English>
+		</Key>
+		<Key ID="STR_SP_REARMED">
+			<English>%1 of %2 Rearmed</English>
+		</Key>
+		<Key ID="STR_SP_FAIL_COINS">
+			<English>You need %1 %2 to %3 your %4.</English>
+		</Key>
+		<Key ID="STR_SP_FAIL_BRIEFCASES">
+			<English>You need %1 to %2 your %3.</English>
+		</Key>
+	</Package>
 </Project>
