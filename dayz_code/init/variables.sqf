@@ -1,32 +1,32 @@
 // Virtual garage stuff
 
 vg_list = ["Plastic_Pole_EP1_DZ"]; // List of objects/traders that are allowed to interact with virtual garage. i.e: ["Plastic_Pole_EP1_DZ","Worker2"];
-vg_blackListed = []; // Array of vehicle config classes as well as vehicle classnames that are blacklisted from being stored, i.e ["All","LandVehicles","Air","Boat","StaticWeapon","AH1Z","MTVR"]
+vg_blackListed = []; // Array of vehicle config classes as well as vehicle classnames that are blacklisted from being stored, i.e ["All","LandVehicles","Air","Ship","StaticWeapon","AH1Z","MTVR"]
 vg_heliPads = ["HeliH","HeliHCivil","HeliHRescue","MAP_Heli_H_army","MAP_Heli_H_cross","Sr_border"]; // Array of heli pad classnames
 vg_removeKey = true; // Remove the key from the players inventory after storing vehicle?
 vg_requireKey = true; // Require the player to have the key when storing a locked vehicle.
 vg_storeWithGear = true; // Allow storing vehicles with gear?
 vg_clearAmmo = true; // Clear the ammo of vehicles spawned during the same restart they are stored? (stops users storing a vehicle for a free rearm)
 vg_tiedToPole = true; // Tie the virtual garage to a local plot pole? If no plot pole is present (i.e a communal garage at a trader etc) the players UID will be used.
-vg_disableThermal = []; // Array of vehicle config classes as well as vehicle classnames to disable thermal on when being spawned. i.e: ["All","LandVehicles","Air","Boat","StaticWeapon","AH1Z","MTVR"];
+vg_disableThermal = []; // Array of vehicle config classes as well as vehicle classnames to disable thermal on when being spawned. i.e: ["All","LandVehicles","Air","Ship","StaticWeapon","AH1Z","MTVR"];
 vg_pricePer = 100; // Price in worth to store a vehicle per gear item, use 0 if you want it to be free.
-vg_price = [["Land",500],["Air",500],["Boat",500]];
+vg_price = [["Land",500],["Air",500],["Ship",500]];
 /*
 	vg_price can be an array of vehicle config classes as well as vehicle classnames, you need to put these in order of what you prefer to get checked first.
 	Price is in worth for briefcases or coins for gold based servers (10,000 worth is considered 1 briefcase, 100,000 coins is considered 1 briefcase)
 
 	i.e:
-	vg_price = [["Land",500],["Air",300],["Boat",100]];
-	vg_price = [["350z_red",200],["Land",500],["AH1Z",1000],["Air",300],["Boat",100]];
+	vg_price = [["Land",500],["Air",300],["Ship",100]];
+	vg_price = [["350z_red",200],["Land",500],["AH1Z",1000],["Air",300],["Ship",100]];
 */
-vg_limit = [["Land",5],["Air",5],["Boat",5]];
+vg_limit = [["Land",5],["Air",5],["Ship",5]];
 /*
 	vg_limit can be an array of vehicle config classes and classnames to narrow down what players can store or it can be a numerical value for a total limit.
 	These can be classnames as well as config classnames, you need to put these in order of what you prefer to get checked first.
 
 	i.e:
-	vg_limit = [["Land",5],["Air",3],["Boat",1]];
-	vg_limit = [["350z_red",2],["Land",5],["AH1Z",1],["Air",3],["Boat",1]];
+	vg_limit = [["Land",5],["Air",3],["Ship",1]];
+	vg_limit = [["350z_red",2],["Land",5],["AH1Z",1],["Air",3],["Ship",1]];
 	vg_limit = 5;
 */
 
