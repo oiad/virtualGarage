@@ -40,6 +40,7 @@ _outcome = _result select 0;
 if (_outcome != "PASS") then {
 	diag_log("CUSTOM: failed to get id for : " + str(_uid));
 } else {
+	_VG_ObjID = (toString (18 call VG_RandomizeMyKey)); //new ID
 	vg_alreadySpawned set [(count vg_alreadySpawned), _VG_ObjID];
 	_oid = _result select 1;
 
@@ -67,7 +68,7 @@ if (_outcome != "PASS") then {
 
 	_object setVariable ["ObjectID", _oid, true];
 	_object setVariable ["lastUpdate",diag_tickTime];
-	_object setVariable ["VGObjectID",(toString (18 call VG_RandomizeMyKey)), false];
+	_object setVariable ["VGObjectID",_VG_ObjID, false];
 
 	if (_colour != "0") then {
 		_object setVariable ["Colour",_colour,true];
