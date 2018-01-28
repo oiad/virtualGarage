@@ -110,8 +110,10 @@ if (_cargoAmount > 0) then {_amount = _amount + (_cargoAmount * vg_pricePer);};
 
 if (!isNil "sk_dualCurrency") then {_amount = if (z_singleCurrency) then {_amount * 10} else {_amount};};
 
+/*
 _playerNear = {isPlayer _x && (_x != player)} count (([_vehicle] call FNC_GetPos) nearEntities ["CAManBase", 15]) > 0;
 if (_playerNear) exitWith {localize "STR_VG_PLAYERNEARVEHICLE" call dayz_rollingMessages;};
+*/
 
 if (count (crew _vehicle) > 0) exitWith {localize "STR_VG_PLAYERINVEHICLE" call dayz_rollingMessages;};
 
