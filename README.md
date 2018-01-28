@@ -107,16 +107,14 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 # extDB uninstall:
 
 1. Remove @extDB from your mod line. For example ```"-mod=@extDB;@DayZ_Epoch;@DayZ_Epoch_Server"``` becomes ```"-mod=@DayZ_Epoch;@DayZ_Epoch_Server"```
-1a. Optionally, also delete your @extDB folder (with a backup as needed)
-2. in your DayZ_Server\Compiles\garage folder remove fn_async.sqf, overwrite other files
+2. Optionally, also delete your @extDB folder (with a backup as needed)
+3. in your DayZ_Server\Compiles\garage folder remove fn_async.sqf, overwrite other files
 
 # mysql database setup fresh install:
 
 1. If you are only allowed access to your main epoch database from your hosting provider, you can import the <code>SQL\virtualGarage.sql</code> file without editing it.
 
-2. Virtual Garage includes a custom HiveExt.dll with a customizable table name and stored vehicle cleanup days
-2a. remove the cleanup procedure from your DB ```DROP EVENT IF EXISTS `RemoveOldVG`;```
-2b. open your HiveExt.ini and edit the [Objects] section, add or modify the following code to this section. If needed configure the [ObjectDB] section for external object database settings
+2. open your HiveExt.ini and edit the [Objects] section, add or modify the following code to this section. If needed configure the [ObjectDB] section for external object database settings
 
 ```
 ; Table name for the virtual garage data to be stored in, default table is 'garage'
@@ -134,6 +132,12 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	```
 
 2. Import the <code>SQL\virtualGarageUpdate.sql</code> file overtop of your garage database, this will update it to the latest version.
+
+3. Virtual Garage includes a custom HiveExt.dll with a customizable table name and stored vehicle cleanup days
+
+4. remove the cleanup procedure from your DB ```DROP EVENT IF EXISTS `RemoveOldVG`;```
+
+5. open your HiveExt.ini and edit the [Objects] section, add or modify the following code to this section. If needed configure the [ObjectDB] section for external object database settings
 
 # Infistar setup:
 
