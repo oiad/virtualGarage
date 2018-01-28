@@ -1,117 +1,51 @@
-private ["_worldSpace","_player","_id","_query","_return","_class","_characterID","_inventory","_hitpoints","_fuel","_damage","_dir","_location","_uid","_key","_query1","_colour","_colour2","_result","_serverKey"];
+private ["_worldSpace","_player","_serverKey","_id","_query","_return","_class","_characterID","_inventory","_hitpoints","_fuel","_damage","_dir","_location","_uid","_key","_query1","_colour","_colour2","_result","_VGobjID"];
 
 _worldSpace = _this select 0;
 _player = _this select 1;
 _id = _this select 2;
-
-_query = format["SELECT classname, CharacterID, Inventory, Hitpoints, Fuel, Damage, Colour, Colour2,serverKey FROM garage WHERE ID='%1'",_id];
-
-_result = [_query,2,true] call fn_asyncCall;
-_return = _result select 0;
-
-_class = _return select 0;
-_characterID = _return select 1;
-_inventory = _return select 2;
-_hitpoints = _return select 3;
-_fuel = _return select 4;
-_damage = _return select 5;
-_colour = _return select 6;
-_colour2 = _return select 7;
-_serverKey = _return select 8;
-
 _dir = _worldSpace select 0;
 _location = _worldSpace select 1;
-
-_worldSpace = [_dir,_location,_colour,_colour2];
-
+_worldSpace = [_dir,_location];
 _uid = _worldSpace call dayz_objectUID2;
+_key = str formatText["CHILD:801:%1:%2:%3:",_id,_worldSpace,_uid];
 
-_key = format["CHILD:308:%1:%2:%3:%4:%5:%6:%7:%8:%9:",dayZ_instance,_class,_damage,_characterID,_worldSpace,_inventory,_hitpoints,_fuel,_uid];
-_key call server_hiveWrite;
+_result = _key call server_hiveReadWrite;
+_outcome = _result select 0;
+if (_outcome != "PASS") exitWith {diag_log("HIVE VIRTUAL GARAGE SPAWN VEHICLE FAILED TO EXECUTE: " + _key);};
+_class = _result select 1;
+_characterID = _result select 2;
+_inventory = _result select 3;
+_hitpoints = _result select 4;
+_fuel = _result select 5;
+_damage = _result select 6;
+_colour = _result select 7;
+_colour2 = _result select 8;
+_serverKey = _result select 9;
+_VG_ObjID = _result select 10;
+_clientID = owner _player;
 
-_query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
+if (_VG_ObjID in vg_alreadySpawned) exitWith {
+	diag_log format["VG ERROR: Vehicle with VGObjID = %1 has already been spawned and will not be spawned again. PlayerUID: %2", _VG_ObjID, (getPlayerUID _player)];
+};
 
-[_query1,1,true] call fn_asyncCall;
+_key = format["CHILD:388:%1:",_uid];
 
-// Switched to spawn so we can wait a bit for the ID
-[_uid,_characterID,_class,_dir,_location,_inventory,_hitpoints,_fuel,_damage,_colour,_colour2,_player,_serverKey] spawn {
-   private ["_object","_uid","_characterID","_class","_inventory","_hitpoints","_fuel","_damage","_done","_retry","_key","_result","_outcome","_oid","_selection","_dam","_colour","_colour2","_clrinit","_clrinit2","_player","_clientID","_serverKey","_clearTurrets"];
-   
-	_clearTurrets = {
-		//By denvdmj (probably, I found it on the biki)
-		private ["_weaponArray","_findRecurse","_class","_obj","_turret","_mags"];
-		_obj = _this;		
+#ifdef OBJECT_DEBUG
+diag_log ("HIVE: WRITE: "+ str(_key));
+#endif
 
-		_weaponArray = [];
-		_weaponArray set [count _weaponArray,[-1]];
+_result = _key call server_hiveReadWrite;
+_outcome = _result select 0;
 
-		_findRecurse = {
-			private ["_root", "_class", "_path", "_currentPath", "_thisThis"];
-			_root = (_this select 0);
-			_path = +(_this select 1);
-			_thisThis = _this select 2;
-			for "_i" from 0 to count _root -1 do {
-			   _class = _root select _i;
-			   if (isClass _class) then {
-				  _currentPath = _path + [_i];
-				  {_weaponArray set [count _weaponArray, _currentPath];} count getArray (_class >> "weapons");
-				  _class = _class >> "turrets";
-				  if (isClass _class) then {[_class, _currentPath, _thisThis] call _findRecurse;};
-			   };
-			};
-		};
+if (_outcome != "PASS") then {
+	diag_log("CUSTOM: failed to get id for : " + str(_uid));
+} else {
+	vg_alreadySpawned set [(count vg_alreadySpawned), _VG_ObjID];
+	_oid = _result select 1;
 
-		[configFile >> "CfgVehicles" >> typeOf (_obj) >> "turrets", [], _this] call _findRecurse;
-
-		{
-			_turret = _x;
-			_mags = _obj magazinesTurret _turret;
-			{_obj removeMagazinesTurret[_x,_turret];} count _mags;
-		} forEach _weaponArray;
-	};
-
-	_uid = _this select 0;
-	_characterID = _this select 1;
-	_class = _this select 2;
-	//_dir = _this select 3;
-	_location = _this select 4;
-	_inventory = _this select 5;
-	_hitpoints = _this select 6;
-	_fuel = _this select 7;
-	_damage = _this select 8;
-	_colour = _this select 9;
-	_colour2 = _this select 10;
-	_player = _this select 11;
-	_serverKey = _this select 12;
-	_clientID = owner _player;
-
-	_done = false;
-	_retry = 0;
-	// TODO: Needs major overhaul for 1.1
-	while {_retry < 10} do {
-		uiSleep 1;
-		// GET DB ID
-		_key = format["CHILD:388:%1:",_uid];
-		#ifdef OBJECT_DEBUG
-		diag_log ("HIVE: WRITE: "+ str(_key));
-		#endif
-		_result = _key call server_hiveReadWrite;
-		_outcome = _result select 0;
-		if (_outcome == "PASS") then {
-			_oid = _result select 1;
-			#ifdef OBJECT_DEBUG
-			diag_log("CUSTOM: Selected " + str(_oid));
-			#endif
-			_done = true;
-			_retry = 100;
-		} else {
-			#ifdef OBJECT_DEBUG
-			diag_log("CUSTOM: trying again to get id for: " + str(_uid));
-			#endif
-			_done = false;
-			_retry = _retry + 1;
-		};
-	};
+	#ifdef OBJECT_DEBUG
+	diag_log("CUSTOM: Selected " + str(_oid));
+	#endif
 
 	_object = _class createVehicle _location;
 	if (surfaceIsWater _location && {({_x != _object} count (_location nearEntities ["Ship",8])) == 0}) then {
@@ -123,7 +57,7 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
 	if (vg_clearAmmo && {vg_serverKey == _serverKey}) then {
-		_object call _clearTurrets;
+		_object call VG_ClearTurrets;
 	};
 
 	_object setFuel _fuel;
@@ -133,6 +67,7 @@ _query1 = format["DELETE FROM garage WHERE ID='%1'",_id];
 
 	_object setVariable ["ObjectID", _oid, true];
 	_object setVariable ["lastUpdate",diag_tickTime];
+	_object setVariable ["VGObjectID",(toString (18 call VG_RandomizeMyKey)), false];
 
 	if (_colour != "0") then {
 		_object setVariable ["Colour",_colour,true];

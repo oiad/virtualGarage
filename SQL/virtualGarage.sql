@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS `garage` (
   `Datestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `DateStored` varchar(10) NOT NULL DEFAULT 'old',
   `CharacterID` int(11) unsigned NOT NULL DEFAULT '0',
+  `StorageCounts` varchar(30) NOT NULL DEFAULT '[0,0,0]',
   `Inventory` mediumtext,
   `Hitpoints` mediumtext,
   `Fuel` double(13,5) NOT NULL DEFAULT '1.00000',
@@ -23,5 +24,6 @@ CREATE TABLE IF NOT EXISTS `garage` (
   `Colour` varchar(50) NOT NULL,
   `Colour2` varchar(50) NOT NULL,
   `serverKey` varchar(10) NOT NULL DEFAULT 'old',
+  `ObjUID` varchar(20) NOT NULL DEFAULT 'old',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

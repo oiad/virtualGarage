@@ -3,7 +3,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 * Discussion URL: https://epochmod.com/forum/topic/44280-release-virtual-garage-for-1061/
 
-* Tested as working on a blank Epoch 1.0.6.1
+* Tested as working on a blank Epoch 1.0.6.2
 * This adds support for briefcases, gems and coins.
 * Supports dynamic pricing and vehicle limits
 * More secure than the original scripts
@@ -34,7 +34,6 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 * [Mission folder install](https://github.com/oiad/virtualGarage#mission-folder-install)
 * [click Actions config install](https://github.com/oiad/virtualGarage#click-actions-config-install)
 * [dayz_server folder install](https://github.com/oiad/virtualGarage#dayz_server-folder-install)
-* [extDB install](https://github.com/oiad/virtualGarage#extdb-install)
 * [mysql database setup fresh install](https://github.com/oiad/virtualGarage#mysql-database-setup-fresh-install)
 * [mysql database update from previous virtual garage](https://github.com/oiad/virtualGarage#mysql-database-update-from-previous-virtual-garage)
 * [infistar setup](https://github.com/oiad/virtualGarage#infistar-setup)
@@ -105,34 +104,26 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 2. Copy the <code>dayz_server\compile\garage</code> folder to your dayz_server directory so it becomes <code>dayz_server\compile\garage</code>
 
-# extDB install:
+# extDB uninstall:
 
-1. Copy the <code>@extDB</code> folder to your main <code>Arma 2 Operation Arrowhead</code> folder (or where you host your server)
-
-2. Edit <code>@extDB\extdb-conf.ini</code> to suit your database settings, mainly the database name, username and password.
-
-3. Edit your server batch file or whatever loads your server to include <code>@extDB</code> in the -mod line, i.e for epoch:
-	```sqf
-	"-mod=@extDB;@DayZ_Epoch;@DayZ_Epoch_Server"
-	```
-	for overwatch:
-	```sqf
-	"-mod=@extDB;@DayzOverwatch;@DayZ_Epoch;@DayZ_Epoch_Server"
-	```
+1. Remove @extDB from your mod line. For example ```"-mod=@extDB;@DayZ_Epoch;@DayZ_Epoch_Server"``` becomes ```"-mod=@DayZ_Epoch;@DayZ_Epoch_Server"```
+1a. Optionally, also delete your @extDB folder (with a backup as needed)
+2. in your DayZ_Server\Compiles\garage folder remove fn_async.sqf, overwrite other files
 
 # mysql database setup fresh install:
 
 1. If you are only allowed access to your main epoch database from your hosting provider, you can import the <code>SQL\virtualGarage.sql</code> file without editing it.
 
-2. If you want to have an external virtual garage database you will need to edit <code>SQL\virtualGarage.sql</code> and uncomment the following lines:
-	```sql
-	-- CREATE DATABASE IF NOT EXISTS `extdb` /*!40100 DEFAULT CHARACTER SET latin1 */;
-	-- USE `extdb`;
-	```
+2. Virtual Garage includes a custom HiveExt.dll with a customizable table name and stored vehicle cleanup days
+2a. remove the cleanup procedure from your DB ```DROP EVENT IF EXISTS `RemoveOldVG`;```
+2b. open your HiveExt.ini and edit the [Objects] section, add or modify the following code to this section. If needed configure the [ObjectDB] section for external object database settings
 
-	This will create a seperate database called extDB (useful if you have a couple of servers using the same virtual garage database) FWIW: I had to run this import twice for it to work correctly, it only created the external database the first time, the second time I had to run it to create the table.
-
-3. You will need to edit your <code>@extDB\extdb-conf.ini</code> to suit your database settings!
+```
+; Table name for the virtual garage data to be stored in, default table is 'garage'
+;Table = garage
+; Days for a stored vehicle to be cleaned up after, if set to -1 this feature is disabled. Default 35 days
+;CleanupVehStoredDays = 35
+```
 
 # mysql database update from previous virtual garage:
 

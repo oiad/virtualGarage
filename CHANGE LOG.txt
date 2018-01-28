@@ -1,3 +1,11 @@
+27-10-18 [REMOVED] extDB, replaced with custom HiveExt.dll @icomrade
+27-10-18 [REMOVED] Player near check (since this is superseded by actually checking the DB for duplicates using SQF and SQL queries)
+27-10-18 [ADDED] HiveExt.dll checks for duplicate vehicle fetch and store requests, reported as errors to HiveExt.log if logging is enabled
+27-10-18 [ADDED] Easily change garage table name and cleanup stored vehicle days in HiveExt.ini
+27-10-18 [CHANGED] Greatly improved spawning and storage logic for better performance and less CallExtension executions
+27-10-18 [CHANGED] Inventory count is now returned when the VG menu is populated instead of every vehicles inventory.
+27-10-18 [NOTE] After updating, stored vehicles will return 0 inventory count regardless of actual inventory, until spawned from the VG and stored again (don't panic, the inventory is still there) 
+
 23-10-17 [ADDED] Add option to toggle allowing storing vehicles with gear @Exobite
 23-10-17 [ADDED] Add French translations @Panzer Mad
 23-10-17 [ADDED] Add checks for players near the vehicle being stored to stop dupes @Exobite @Dietnx
