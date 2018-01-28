@@ -1,14 +1,15 @@
 // Developed by [GZA] David for German Zombie Apocalypse Servers (https://zombieapo.eu/)
 // Rewritten by salival (https://github.com/oiad)
 
-private ["_backPackCount","_backPackSlots","_cargoAmount","_control","_counter","_DateStored","_formattedText","_index","_inventory","_localVehicle","_magazineCount","_magazineSlots","_name","_picture","_price","_typeOf","_vehicle","_weaponSlots","_weaponsCount"];
+private ["_backPackCount","_backPackSlots","_cargoAmount","_control","_counter","_DateStored","_formattedText","_index","_inventory","_localVehicle","_magazineCount","_magazineSlots","_name","_picture","_price","_typeOf","_vehicle","_weaponSlots","_weaponsCount","_MaintainDays","_DateMaintained"];
 
 disableSerialization;
 
 _control = (_this select 0) select 0;
 _index = (_this select 0) select 1;
 _localVehicle = typeName (vg_vehicleList select _index) == "OBJECT";
-
+_DateMaintained = "";
+_MaintainDays = -1;
 _gearCount = {
 	private ["_counter"];
 	_counter = 0;
@@ -29,6 +30,8 @@ if (_localVehicle) then {
 	_vehicle = (vg_vehicleList select _index) select 1;
 	_inventory = (vg_vehicleList select _index) select 2;
 	_DateStored = (vg_vehicleList select _index) select 4;
+	_DateMaintained = (vg_vehicleList select _index) select 5;
+	_MaintainDays = (vg_vehicleList select _index) select 6;
 	_typeOf = _vehicle;
 	_weaponsCount = _inventory select 0;
 	_magazineCount = _inventory select 1;
@@ -93,6 +96,9 @@ if (_localVehicle) then {_formattedText = _formattedText + format ["<t color='#3
 if (!_localVehicle) then {
 	if (_DateStored != "old") then {
 		_formattedText = _formattedText + format ["<t color='#33BFFF' size='0.7'>%1: </t><t color='#ffffff' size='0.7'>%2</t><br />",localize "STR_VG_STOREDATE",_DateStored];
+		if (_MaintainDays >= 0) then {
+				_formattedText = _formattedText + format ["<t color='#33BFFF' size='0.7'>%1: </t><t color='#ffffff' size='0.7'>%2</t><br /><t color='#33BFFF' size='0.7'>%3: </t><t color='#ffffff' size='0.7'>%4</t><br />",localize "STR_VG_MAINTAINDATE",_DateMaintained, localize "STR_VG_MAINTAININTERVAL", _MaintainDays];
+		};
 	} else {
 		_formattedText = _formattedText + format ["<t color='#33BFFF' size='0.7'>%1: </t><t color='#ffffff' size='0.7'>%2</t><br />",localize "STR_VG_STOREDATE",localize "STR_VG_STOREDATE_INVALID"];
 	};

@@ -14,4 +14,5 @@ ALTER TABLE `garage` ADD `displayName` VARCHAR(50) NOT NULL DEFAULT '' AFTER `Na
 ALTER TABLE `garage` ADD `serverKey` varchar(10) NOT NULL DEFAULT 'old' AFTER `Colour2`;
 ALTER TABLE `garage` ADD `ObjUID` varchar(20) NOT NULL DEFAULT 'old' AFTER `serverKey`;
 ALTER TABLE `garage` ADD `StorageCounts` varchar(30) NOT NULL DEFAULT '[0,0,0]' AFTER `CharacterID`;
+ALTER TABLE `garage` ADD `DateMaintained` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER `DateStored`;
 DROP EVENT IF EXISTS `RemoveOldVG`;

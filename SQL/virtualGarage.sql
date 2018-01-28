@@ -15,6 +15,7 @@ CREATE TABLE IF NOT EXISTS `garage` (
   `Classname` varchar(50) DEFAULT NULL,
   `Datestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `DateStored` varchar(10) NOT NULL DEFAULT 'old',
+  `DateMaintained` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `CharacterID` int(11) unsigned NOT NULL DEFAULT '0',
   `StorageCounts` varchar(30) NOT NULL DEFAULT '[0,0,0]',
   `Inventory` mediumtext,

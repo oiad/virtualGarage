@@ -10,6 +10,8 @@ vg_clearAmmo = true; // Clear the ammo of vehicles spawned during the same resta
 vg_tiedToPole = true; // Tie the virtual garage to a local plot pole? If no plot pole is present (i.e a communal garage at a trader etc) the players UID will be used.
 vg_disableThermal = []; // Array of vehicle config classes as well as vehicle classnames to disable thermal on when being spawned. i.e: ["All","LandVehicles","Air","Ship","StaticWeapon","AH1Z","MTVR"];
 vg_pricePer = 100; // Price in worth to store a vehicle per gear item, use 0 if you want it to be free.
+vg_sortColumn = 0; //0 or an out of range value sorts by the default column 'DisplayName', otherwise 1 = 'DateStored', 2 = 'id', 3 = 'Name' (of storing player), 4 = 'DateMaintained'
+vg_maintainCost = 10000; //cost is 1000 per 10oz gold, gem cost is as defined in DZE_GemWorthArray; if you use ZSC then this is an amount of coins. This is a flate rate for all vehicles in the garage/per player depending on vg_tiedToPole
 vg_price = [["Land",500],["Air",500],["Ship",500]];
 /*
 	vg_price can be an array of vehicle config classes as well as vehicle classnames, you need to put these in order of what you prefer to get checked first.

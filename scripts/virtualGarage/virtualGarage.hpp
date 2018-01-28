@@ -214,7 +214,7 @@ class vg_RscStructuredText {
 class virtualGarage {
 	idd = 2800;
 	name="virtualGarage";
-	onload = "player setVariable['isBusy',true,true];"; 
+	onload = "player setVariable['isBusy',true,true]; [] spawn vg_maintainSetText;"; 
 	onUnload = "player setVariable['isBusy',false,true];dayz_actionInProgress = false;";
 	movingEnabled = 0;
 	enableSimulation = 1;
@@ -313,7 +313,7 @@ class virtualGarage {
 			onButtonClick = "if (!vg_hasRun) then {vg_hasRun = true;[] spawn player_getVehicle;};";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.9 - (1 / 25);
-			w = (6.25 / 20);
+			w = (6.25 / 15.85);
 			h = (1 / 25);
 		};
 
@@ -324,6 +324,16 @@ class virtualGarage {
 			x = 0.5 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.9 - (1 / 25);
 			w = 0.241;
+			h = (1 / 25);
+		};
+
+		class MaintainGarage : vg_RscButtonMenu {
+			idc = 2854;
+			text = $STR_VG_MAINTAIN_GARAGE;
+			onButtonClick = "if (!vg_hasRun) then {vg_hasRun = true;[] spawn Player_MaintainVG;};";
+			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.903;
+			w = 0.8;
 			h = (1 / 25);
 		};
 

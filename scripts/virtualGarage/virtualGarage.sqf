@@ -2,10 +2,26 @@
 // Rewritten by salival (https://github.com/oiad)
 
 if (isNil "vg_init") then {
-	player_getVehicle = compile preprocessFileLineNumbers "scripts\virtualGarage\player_getVehicle.sqf";
-	player_removePad = compile preprocessFileLineNumbers "scripts\virtualGarage\player_removePad.sqf";
-	player_storeVehicle = compile preprocessFileLineNumbers "scripts\virtualGarage\player_storeVehicle.sqf";
-	vehicleInfo = compile preprocessFileLineNumbers "scripts\virtualGarage\vehicleInfo.sqf";
+	player_getVehicle = compile preprocessFileLineNumbers "custom\virtualGarage\player_getVehicle.sqf";
+	player_removePad = compile preprocessFileLineNumbers "custom\virtualGarage\player_removePad.sqf";
+	player_storeVehicle = compile preprocessFileLineNumbers "custom\virtualGarage\player_storeVehicle.sqf";
+	Player_MaintainVG = compile preprocessFileLineNumbers "custom\virtualGarage\player_MaintainVG.sqf";
+	vehicleInfo = compile preprocessFileLineNumbers "custom\virtualGarage\vehicleInfo.sqf";
+	vg_maintainSetText = {
+		disableSerialization;
+		waituntil {!isNull (findDisplay 2800)};
+		_vgDisplCtl = (findDisplay 2800) displayCtrl 2854;
+		if (vg_maintainCost > 0) then {
+			_itemText = if (Z_SingleCurrency) then { CurrencyName } else { [vg_maintainCost,true] call z_calcCurrency };
+			if (Z_SingleCurrency) then {
+				_vgDisplCtl ctrlSetText format["%1 (%2 %3)", localize "STR_VG_MAINTAIN_GARAGE", vg_maintainCost, _itemText];
+			} else {
+				_vgDisplCtl ctrlSetText format["%1 (%2)", localize "STR_VG_MAINTAIN_GARAGE", _itemText];
+			};
+		} else {
+			_vgDisplCtl ctrlSetText format["%1 (free)", localize "STR_VG_MAINTAIN_GARAGE", vg_maintainCost, _itemText];
+		};
+	};
 	vg_init = true;
 };
 

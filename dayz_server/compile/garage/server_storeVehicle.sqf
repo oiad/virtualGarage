@@ -40,7 +40,7 @@ if (_VGobjID == "0") then {
 	if (_index >= 0) then {
 		vg_alreadySpawned - [_VGobjID];
 	} else {
-		diag_log format["VG Error: Could not find vehicle with VGobjUID = %1 in vg_alreadySpawned array (server_storeVehicle.sqf) - possible duplicate vehicle being stored. PlayerUID: %2", _VGobjID, _playerUID];
+		diag_log format["VG Error: Could not find vehicle with VGobjUID = %1 in vg_alreadySpawned array (server_storeVehicle.sqf) - possible duplicate vehicle being stored. PlayerUID: %2", _VGobjID, (getPlayerUID _player)];
 	};
 };
 _damage = damage _vehicle;
