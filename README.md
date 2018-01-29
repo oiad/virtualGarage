@@ -118,7 +118,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 ```
 ; Table name for the virtual garage data to be stored in, default table is 'garage'
-;Table = garage
+;VGTable = garage
 ; Days for a stored vehicle to be cleaned up after, if set to -1 this feature is disabled. Default 35 days
 ;CleanupVehStoredDays = 35
 ```
