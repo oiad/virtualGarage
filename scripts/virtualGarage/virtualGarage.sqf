@@ -2,11 +2,11 @@
 // Rewritten by salival (https://github.com/oiad)
 
 if (isNil "vg_init") then {
-	player_getVehicle = compile preprocessFileLineNumbers "custom\virtualGarage\player_getVehicle.sqf";
-	player_removePad = compile preprocessFileLineNumbers "custom\virtualGarage\player_removePad.sqf";
-	player_storeVehicle = compile preprocessFileLineNumbers "custom\virtualGarage\player_storeVehicle.sqf";
-	Player_MaintainVG = compile preprocessFileLineNumbers "custom\virtualGarage\player_MaintainVG.sqf";
-	vehicleInfo = compile preprocessFileLineNumbers "custom\virtualGarage\vehicleInfo.sqf";
+	player_getVehicle = compile preprocessFileLineNumbers "scripts\virtualGarage\player_getVehicle.sqf";
+	player_removePad = compile preprocessFileLineNumbers "scripts\virtualGarage\player_removePad.sqf";
+	player_storeVehicle = compile preprocessFileLineNumbers "scripts\virtualGarage\player_storeVehicle.sqf";
+	Player_MaintainVG = compile preprocessFileLineNumbers "scripts\virtualGarage\player_MaintainVG.sqf";
+	vehicleInfo = compile preprocessFileLineNumbers "scripts\virtualGarage\vehicleInfo.sqf";
 	vg_maintainSetText = {
 		disableSerialization;
 		waituntil {!isNull (findDisplay 2800)};
