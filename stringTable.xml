@@ -119,35 +119,35 @@
 		<Key ID="STR_VG_MAINTAINDATE">
 			<English>Maintained Date</English>
 			<German>Wartungsdatum</German>
-			<Russian>дата обслуживания</Russian>
+			<Russian>Дата обслуживания</Russian>
 			<French>date d'entretien</French>
 			<Spanish>fecha de mantenimiento</Spanish>
 		</Key>
 		<Key ID="STR_VG_MAINTAIN_GARAGE">
 			<English>Maintain virtual garage</English>
 			<German>beibehalten virtuelle garage</German>
-			<Russian>поддерживать виртуальный гараж</Russian>
+			<Russian>Обслужить виртуальный гараж</Russian>
 			<French>maintenir garage virtuel</French>
 			<Spanish>mantener garaje virtual</Spanish>
 		</Key>
 		<Key ID="STR_VG_MAINTAINFAIL">
 			<English>Not enough money to maintain vehicles in your virtual garage</English>
 			<German>Nicht genug Geld, um Fahrzeuge in Ihrer virtuellen Garage zu warten</German>
-			<Russian>Недостаточно денег для обслуживания автомобилей в вашем виртуальном гараже</Russian>
+			<Russian>Недостаточно денег для обслуживания техники в вашем виртуальном гараже</Russian>
 			<French>Pas assez d'argent pour entretenir les véhicules dans votre garage virtuel</French>
 			<Spanish>No hay suficiente dinero para mantener los vehículos en su garaje virtual</Spanish>
 		</Key>
 		<Key ID="STR_VG_MAINTAINSUCCESS">
 			<English>Successfully maintained vehicles in your virtual garage</English>
 			<German>Fahrzeuge in Ihrer virtuellen Garage erfolgreich gewartet</German>
-			<Russian>Успешно поддержанные транспортные средства в вашем виртуальном гараже</Russian>
+			<Russian>Техника успешно обслужена</Russian>
 			<French>Véhicules entretenus avec succès dans votre garage virtuel</French>
 			<Spanish>Vehículos con éxito en su garaje virtual</Spanish>
 		</Key>
 		<Key ID="STR_VG_MAINTAININTERVAL">
 			<English>maintenance interval (days)</English>
 			<German>Wartungsintervall (Tage)</German>
-			<Russian>интервал обслуживания (дни)</Russian>
+			<Russian>Интервал обслуживания (дни)</Russian>
 			<French>intervalle d'entretien (jours)</French>
 			<Spanish>intervalo de mantenimiento (días)</Spanish>
 		</Key>
