@@ -8,7 +8,7 @@
 -- USE `extdb`;
 
 CREATE TABLE IF NOT EXISTS `garage` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `PlayerUID` varchar(20) NOT NULL DEFAULT '0',
   `Name` varchar(50) NOT NULL DEFAULT '',
   `DisplayName` varchar(50) NOT NULL DEFAULT '',
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS `garage` (
   `Datestamp` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `DateStored` varchar(10) NOT NULL DEFAULT 'old',
   `DateMaintained` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `CharacterID` int(11) unsigned NOT NULL DEFAULT '0',
+  `CharacterID` bigint(20) unsigned NOT NULL DEFAULT '0',
   `StorageCounts` varchar(30) NOT NULL DEFAULT '[0,0,0]',
   `Inventory` mediumtext,
   `Hitpoints` mediumtext,
