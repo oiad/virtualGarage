@@ -7,5 +7,7 @@
 ;VGTable = garage
 ; Days for a stored vehicle to be cleaned up after, if set to -1 this feature is disabled. Default 35 days
 ;CleanupVehStoredDays = 35
+; Log object cleanup DELETE statements (per object), including virtual garage. Default is false
+;LogObjectCleanup = false
 ```
 2. Uncomment and modify as desired
