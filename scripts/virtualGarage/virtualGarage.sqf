@@ -19,7 +19,7 @@ if (isNil "vg_init") then {
 				_vgDisplCtl ctrlSetText format["%1 (%2)", localize "STR_VG_MAINTAIN_GARAGE", _itemText];
 			};
 		} else {
-			_vgDisplCtl ctrlSetText format["%1 (free)", localize "STR_VG_MAINTAIN_GARAGE", vg_maintainCost, _itemText];
+			_vgDisplCtl ctrlSetText format["%1 (free)", localize "STR_VG_MAINTAIN_GARAGE"];
 		};
 	};
 	vg_init = true;
