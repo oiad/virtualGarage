@@ -119,35 +119,35 @@
 		<Key ID="STR_VG_MAINTAINDATE">
 			<English>Maintained Date</English>
 			<German>Wartungsdatum</German>
-			<Russian>Дата обслуживания</Russian>
+			<Russian>дата обслуживания</Russian>
 			<French>date d'entretien</French>
 			<Spanish>fecha de mantenimiento</Spanish>
 		</Key>
 		<Key ID="STR_VG_MAINTAIN_GARAGE">
 			<English>Maintain virtual garage</English>
 			<German>beibehalten virtuelle garage</German>
-			<Russian>Обслужить виртуальный гараж</Russian>
+			<Russian>поддерживать виртуальный гараж</Russian>
 			<French>maintenir garage virtuel</French>
 			<Spanish>mantener garaje virtual</Spanish>
 		</Key>
 		<Key ID="STR_VG_MAINTAINFAIL">
 			<English>Not enough money to maintain vehicles in your virtual garage</English>
 			<German>Nicht genug Geld, um Fahrzeuge in Ihrer virtuellen Garage zu warten</German>
-			<Russian>Недостаточно денег для обслуживания техники в вашем виртуальном гараже</Russian>
+			<Russian>Недостаточно денег для обслуживания автомобилей в вашем виртуальном гараже</Russian>
 			<French>Pas assez d'argent pour entretenir les véhicules dans votre garage virtuel</French>
 			<Spanish>No hay suficiente dinero para mantener los vehículos en su garaje virtual</Spanish>
 		</Key>
 		<Key ID="STR_VG_MAINTAINSUCCESS">
 			<English>Successfully maintained vehicles in your virtual garage</English>
 			<German>Fahrzeuge in Ihrer virtuellen Garage erfolgreich gewartet</German>
-			<Russian>Техника успешно обслужена</Russian>
+			<Russian>Успешно поддержанные транспортные средства в вашем виртуальном гараже</Russian>
 			<French>Véhicules entretenus avec succès dans votre garage virtuel</French>
 			<Spanish>Vehículos con éxito en su garaje virtual</Spanish>
 		</Key>
 		<Key ID="STR_VG_MAINTAININTERVAL">
 			<English>maintenance interval (days)</English>
 			<German>Wartungsintervall (Tage)</German>
-			<Russian>Интервал обслуживания (дни)</Russian>
+			<Russian>интервал обслуживания (дни)</Russian>
 			<French>intervalle d'entretien (jours)</French>
 			<Spanish>intervalo de mantenimiento (días)</Spanish>
 		</Key>
@@ -288,7 +288,7 @@
 			<English>Vehicles</English>
 			<German>Fahrzeuge</German>
 			<Russian>в гараже</Russian>
-		<!--	<French></French>	-->
+			<French>Véhicules</French>
 			<Spanish>Vehiculos</Spanish>
 		</Key>
 		<Key ID="STR_VG_VEHICLE_INFO">
@@ -759,42 +759,68 @@
 	<Package name="servicePoints">
 		<Key ID="STR_SP_MESSAGE">
 			<English>Vehicle Service Point nearby</English>
+			<German>Nahe einer Fahrzeug-Servicestation</German>
+			<Russian>Пункт тех.обслуживания</Russian>
 		</Key>
 		<Key ID="STR_SP_UNABLE_REARM">
 			<English>%1 is unable to be rearmed.</English>
+			<German>%1 kann nicht aufmunitioniert werden.</German>
+			<Russian>%1 не может быть перезаряжен.</Russian>
 		</Key>
 		<Key ID="STR_SP_UNABLE_REPAIR">
 			<English>%1 is unable to be repaired.</English>
+			<German>%1 kann nicht repariert werden.</German>
+			<Russian>%1 не может быть отремонтирован.</Russian>
 		</Key>
 		<Key ID="STR_SP_UNABLE_REFUEL">
 			<English>%1 is unable to be refueled.</English>
+			<German>%1 kann nicht betankt werden.</German>
+			<Russian>%1 не может быть заправлен топливом.</Russian>
 		</Key>
 		<Key ID="STR_SP_REFUELING">
 			<English>Refueling %1...</English>
+			<German>%1 auftanken...</German>
+			<Russian>Заправка %1...</Russian>
 		</Key>
 		<Key ID="STR_SP_REFUELING_STOPPED">
 			<English>Refueling of %1 stopped</English>
+			<German>Betanken von %1 gestoppt</German>
+			<Russian>Заправка %1 остановлена</Russian>
 		</Key>
 		<Key ID="STR_SP_REFUEL_OK">
 			<English>%1 Refueled</English>
+			<German>%1 betankt</German>
+			<Russian>%1 заправлен</Russian>
 		</Key>
 		<Key ID="STR_SP_REPAIRING">
-			<English>Repairing%1...</English>
+			<English>Repairing %1...</English>
+			<German>%1 reparieren...</German>
+			<Russian>Ремонт %1...</Russian>
 		</Key>
 		<Key ID="STR_SP_REPAIRING_STOPPED">
 			<English>Repairing of %1 stopped</English>
+			<German>Reparieren von %1 gestoppt</German>
+			<Russian>Ремонт %1 остановлен</Russian>
 		</Key>
 		<Key ID="STR_SP_REPAIR_OK">
 			<English>%1 Repaired</English>
+			<German>%1 repariert</German>
+			<Russian>%1 отремонтирован</Russian>
 		</Key>
 		<Key ID="STR_SP_REARMED">
-			<English>%1 of %2 Rearmed</English>
+			<English>%1 of %2 rearmed</English>
+			<German>%1 von %2 aufmunitioniert</German>
+			<Russian>%1 из %2 перезаряжен</Russian>
 		</Key>
 		<Key ID="STR_SP_FAIL_COINS">
 			<English>You need %1 %2 to %3 your %4.</English>
+			<German>Du benötigst %1 %2 um %4 zu %3.</German>
+			<Russian>Вам необходимо %1 %2 для %3 Вашего %4.</Russian>
 		</Key>
 		<Key ID="STR_SP_FAIL_BRIEFCASES">
 			<English>You need %1 to %2 your %3.</English>
+			<German>Du benötigst %1 um %3 zu %2.</German>
+			<Russian>Вам необходимо %1 для %2 Вашего %3.</Russian>
 		</Key>
 	</Package>
 </Project>
