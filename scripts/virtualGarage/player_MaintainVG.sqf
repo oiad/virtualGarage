@@ -1,4 +1,4 @@
-// Written by icomrade (https://github.com/oiad)
+// Written by icomrade (https://github.com/icomrade)
 
 private ["_hasAccess","_heliPad","_objectID","_objectUID","_plotCheck"];
 
