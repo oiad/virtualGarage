@@ -1,5 +1,5 @@
 if (isServer) then {
-	diag_log "Loading custom server compiles";	
+	diag_log "Loading custom server compiles";
 };
 
 if (!isDedicated) then {

@@ -59,14 +59,6 @@ dayz_resetSelfActions = {
 	s_player_attach_bomb = -1;
 	s_player_upgradestorage = -1;
 	s_player_Drinkfromhands = -1;
-	/*s_player_lockhouse = -1; //Vanilla base building currently not used in Epoch
-	s_player_unlockhouse = -1;
-	s_player_openGate = -1;
-	s_player_CloseGate = -1;
-	s_player_breakinhouse = -1;
-	s_player_setCode = -1;
-	s_player_BuildUnLock = -1;
-	s_player_BuildLock = -1;*/
 	
 	// EPOCH ADDITIONS
 	s_player_packvault = -1;
@@ -120,7 +112,7 @@ dayz_resetSelfActions = {
 	s_player_toggleVectors=[];
 	vectorActions = -1;
 	s_player_manageDoor = -1;
-	
+
 	// Custom below
 	s_garage_dialog = -1;
 };
