@@ -240,7 +240,7 @@ class virtualGarage {
 
 		class Title : vg_RscTitle {
 			idc = 2801;
-			text = $STR_VG_VIRTUAL_GARAGE;
+			text = $STR_CL_VG_VIRTUAL_GARAGE;
 			x = 0.1;
 			y = 0.2;
 			w = 0.8;
@@ -249,7 +249,7 @@ class virtualGarage {
 
 		class VehicleInfoHeader : vg_RscText {
 			idc = 2830;
-			text = $STR_VG_VEHICLE_INFO;
+			text = $STR_CL_VG_VEHICLE_INFO;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 			x = 0.47; y = 0.26;
 			w = 0.42;
@@ -289,7 +289,7 @@ class virtualGarage {
 
 		class storeVehicle : vg_RscButtonMenu {
 			idc = 2850;
-			text = $STR_VG_STORE_VEHICLE;
+			text = $STR_CL_VG_STORE_VEHICLE;
 			onButtonClick = "if (!vg_hasRun) then {vg_hasRun = true;[true] spawn player_storeVehicle;};";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.9 - (1 / 25);
@@ -299,7 +299,7 @@ class virtualGarage {
 
 		class storeVehicleGear : vg_RscButtonMenu {
 			idc = 2851;
-			text = $STR_VG_STORE_VEHICLE_GEAR;
+			text = $STR_CL_VG_STORE_VEHICLE_GEAR;
 			onButtonClick = "if (!vg_hasRun) then {vg_hasRun = true;[false] spawn player_storeVehicle;};";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.9 - (1 / 25);
@@ -309,7 +309,7 @@ class virtualGarage {
 
 		class getVehicle : vg_RscButtonMenu {
 			idc = 2852;
-			text = $STR_VG_GET_VEHICLE;
+			text = $STR_CL_VG_GET_VEHICLE;
 			onButtonClick = "if (!vg_hasRun) then {vg_hasRun = true;[] spawn player_getVehicle;};";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.9 - (1 / 25);
@@ -319,7 +319,7 @@ class virtualGarage {
 
 		class removePad : vg_RscButtonMenu {
 			idc = 2853;
-			text = $STR_VG_REMOVE_PAD;
+			text = $STR_CL_VG_REMOVE_PAD;
 			onButtonClick = "call player_removePad;";
 			x = 0.5 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.9 - (1 / 25);
@@ -329,7 +329,7 @@ class virtualGarage {
 
 		class MaintainGarage : vg_RscButtonMenu {
 			idc = 2854;
-			text = $STR_VG_MAINTAIN_GARAGE;
+			text = $STR_CL_VG_MAINTAIN_GARAGE;
 			onButtonClick = "if (!vg_hasRun) then {vg_hasRun = true;[] spawn Player_MaintainVG;};";
 			x = -0.06 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.903;
@@ -356,7 +356,7 @@ class virtualGarage {
 
 		class MainHideText : vg_RscText {
 			idc = 2811;
-			text = $STR_VG_SEARCH_VEHICLES;
+			text = $STR_CL_VG_SEARCH_VEHICLES;
 			sizeEx = 0.06;
 			x = 0.10;
 			y = 0.5;

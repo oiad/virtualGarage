@@ -18,7 +18,7 @@ if ((_hasAccess select 0) or (_hasAccess select 2) or (_hasAccess select 3) or (
 		publicVariableServer "PVDZ_obj_Destroy";
 
 		deleteVehicle _x;
-		systemChat format ["Removed heliPad: %1",typeOf _x];
+		systemChat format[localize "STR_CL_VG_HELIPAD_REMOVED",typeOf _x];
 	} count _heliPad;
 } else {
 	systemChat localize "STR_EPOCH_PLAYER_134";

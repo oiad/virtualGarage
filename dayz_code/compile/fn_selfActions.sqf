@@ -367,10 +367,10 @@ if (!isNull _cursorTarget && !_inVehicle && !_isPZombie && (player distance _cur
 			s_player_boil = -1;
 		};
 	};
-
+	
 	if (_isAlive) then {
 		_restrict = _typeOfCursorTarget in DZE_restrictRemoval;
-	
+
 		//Allow player to remove objects with no ownership or access required
 		if (!_restrict && (_isDestructable || _typeOfCursorTarget in DZE_isWreck || _typeOfCursorTarget in DZE_isWreckBuilding || _typeOfCursorTarget in DZE_isRemovable)) then {
 			if (_hasToolbox && _hasCrowbar) then {
@@ -811,7 +811,7 @@ if (!isNull _cursorTarget && !_inVehicle && !_isPZombie && (player distance _cur
 		_isNearPlot = ((_plotCheck select 1) > 0);
 
 		if (s_garage_dialog < 0 && {_isNearPlot && ((_hasAccess select 0) || (_hasAccess select 2) || (_hasAccess select 3) || (_hasAccess select 4))} || {!_isNearPlot}) then {
-			s_garage_dialog = player addAction [localize "STR_VG_VIRTUAL_GARAGE","scripts\virtualGarage\virtualGarage.sqf",_cursorTarget,3,false,true];
+			s_garage_dialog = player addAction [format["<t color='#0059FF'>%1</t>",localize "STR_CL_VG_VIRTUAL_GARAGE"],"scripts\virtualGarage\virtualGarage.sqf",_cursorTarget,3,false,true];
 		};
 	} else {
 		player removeAction s_garage_dialog;

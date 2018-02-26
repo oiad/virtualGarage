@@ -23,7 +23,7 @@ if (!_isOK) exitWith {localize "str_epoch_player_107" call dayz_rollingMessages;
 _dir = round(random 360);
 _backPack = [];
 _heliPad = nearestObjects [player,vg_heliPads,Z_VehicleDistance];
-if ((count _heliPad == 0) && ((_vehicle select 1) isKindOf "Air")) exitWith {localize "STR_VG_NEED_heliPad" call dayz_rollingMessages;};
+if ((count _heliPad == 0) && ((_vehicle select 1) isKindOf "Air")) exitWith {localize "STR_CL_VG_NEED_HELIPAD" call dayz_rollingMessages;};
 if (count _heliPad > 0) then {
 	_location = [(_heliPad select 0)] call FNC_GetPos;
 } else {
@@ -62,11 +62,11 @@ if (PVDZE_spawnVehicleResult != "0") then {
 		dayz_myBackpack = unitBackpack player;
 		if (!isNull dayz_myBackpack) then {_backPack = (getWeaponCargo dayz_myBackpack) select 0;};
 		if (_keyID in (_inventory+_backPack)) then {
-			if (_keyID in _inventory) then {format[localize "STR_VG_IN_INVENTORY",_keyName] call dayz_rollingMessages;};
-			if (_keyID in _backPack) then {format[localize "STR_VG_IN_BACKPACK",_keyName] call dayz_rollingMessages;};
+			if (_keyID in _inventory) then {format[localize "STR_CL_VG_IN_INVENTORY",_keyName] call dayz_rollingMessages;};
+			if (_keyID in _backPack) then {format[localize "STR_CL_VG_IN_BACKPACK",_keyName] call dayz_rollingMessages;};
 		} else {
 			player addWeapon _keyID;
-			format[localize "STR_VG_ADDED_INVENTORY",_keyName] call dayz_rollingMessages;
+			format[localize "STR_CL_VG_ADDED_INVENTORY",_keyName] call dayz_rollingMessages;
 		};
 	};
 };
@@ -75,4 +75,4 @@ PVDZE_spawnVehicle = nil;
 PVDZE_spawnVehicleResult = nil;
 vg_vehicleList = nil;
 
-localize "STR_VG_VEHICLE_SPAWNED" call dayz_rollingMessages;
+localize "STR_CL_VG_VEHICLE_SPAWNED" call dayz_rollingMessages;

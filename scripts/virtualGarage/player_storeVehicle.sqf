@@ -17,7 +17,7 @@ _matchedCount = 0;
 _storedVehicles = [];
 
 {if (_typeOf isKindOf _x) exitWith {_overLimit = true;}} count vg_blackListed;
-if (_overLimit) exitWith {localize "STR_VG_BLACKLISTED" call dayz_rollingMessages;};
+if (_overLimit) exitWith {localize "STR_CL_VG_BLACKLISTED" call dayz_rollingMessages;};
 
 {
 	if (typeName _x == "ARRAY") then {
@@ -52,9 +52,9 @@ if (_isLimitArray) then {
 
 if (_overLimit) exitWith {
 	if (_isLimitArray) then {
-		systemChat localize "STR_VG_LIMIT_ARRAY";
+		systemChat localize "STR_CL_VG_LIMIT_ARRAY";
 	} else {
-		systemChat localize "STR_VG_LIMIT_NUMBER";
+		systemChat localize "STR_CL_VG_LIMIT_NUMBER";
 	};
 };
 
@@ -62,7 +62,7 @@ vg_vehicleList = nil;
 
 _woGear = _this select 0;
 closeDialog 0;
-if (!vg_storeWithGear && !_woGear) exitWith {localize "STR_VG_NOSTOREWITHGEAR" call dayz_rollingMessages;};
+if (!vg_storeWithGear && !_woGear) exitWith {localize "STR_CL_VG_NOSTOREWITHGEAR" call dayz_rollingMessages;};
 
 _charID	= _vehicle getVariable ["CharacterID","0"];
 _vehicleID = _vehicle getVariable ["ObjectID","0"];
@@ -72,7 +72,7 @@ _magazineCount = ((getMagazineCargo _vehicle) select 1) call _gearCount;
 _backPackCount = ((getBackpackCargo _vehicle) select 1) call _gearCount;
 _cargoAmount = (_weaponsCount + _magazineCount + _backPackCount);
 
-if (_vehicleID == "1" || _vehicleUID == "1") exitWith {localize "STR_VG_STORE_MISSION" call dayz_rollingMessages;};
+if (_vehicleID == "1" || _vehicleUID == "1") exitWith {localize "STR_CL_VG_STORE_MISSION" call dayz_rollingMessages;};
 if (isNull DZE_myVehicle || !local DZE_myVehicle) exitWith {localize "STR_EPOCH_PLAYER_245" call dayz_rollingMessages;};
 
 _hasKey = false;
@@ -98,7 +98,7 @@ if (_charID != "0") then {
 	_hasKey = true;
 };
 
-if (vg_requireKey && {!_hasKey}) exitWith {localize "STR_VG_REQUIRE_KEY" call dayz_rollingMessages;};
+if (vg_requireKey && {!_hasKey}) exitWith {localize "STR_CL_VG_REQUIRE_KEY" call dayz_rollingMessages;};
 
 _name = getText(configFile >> "cfgVehicles" >> _typeOf >> "displayName");
 
@@ -112,10 +112,10 @@ if (!isNil "sk_dualCurrency") then {_amount = if (z_singleCurrency) then {_amoun
 
 /*
 _playerNear = {isPlayer _x && (_x != player)} count (([_vehicle] call FNC_GetPos) nearEntities ["CAManBase", 15]) > 0;
-if (_playerNear) exitWith {localize "STR_VG_PLAYERNEARVEHICLE" call dayz_rollingMessages;};
+if (_playerNear) exitWith {localize "STR_CL_VG_PLAYERNEARVEHICLE" call dayz_rollingMessages;};
 */
 
-if (count (crew _vehicle) > 0) exitWith {localize "STR_VG_PLAYERINVEHICLE" call dayz_rollingMessages;};
+if (count (crew _vehicle) > 0) exitWith {localize "STR_CL_VG_PLAYERINVEHICLE" call dayz_rollingMessages;};
 
 _enoughMoney = false;
 _moneyInfo = [false,[],[],[],0];
@@ -142,12 +142,12 @@ if (_enoughMoney) then {
 		[_vehicle,true] call local_lockUnlock;
 		DZE_myVehicle = objNull;
 
-		if (vg_tiedToPole) then {
+		PVDZE_storeVehicle = if (vg_tiedToPole) then {
 			_plotCheck = [player,false] call FNC_find_plots;
 			_ownerPUID = if (_plotCheck select 1 > 0) then {(_plotCheck select 2) getVariable ["ownerPUID","0"]} else {dayz_playerUID};
-			PVDZE_storeVehicle = [_vehicle,player,_woGear,_ownerPUID];
+			[_vehicle,player,_woGear,_ownerPUID]
 		} else {
-			PVDZE_storeVehicle = [_vehicle,player,_woGear];
+			[_vehicle,player,_woGear]
 		};
 
 		publicVariableServer "PVDZE_storeVehicle";
@@ -159,7 +159,7 @@ if (_enoughMoney) then {
 		PVDZE_storeVehicle = nil;
 		PVDZE_storeVehicleResult = nil;
 
-		format [localize "STR_VG_VEHICLE_STORED",_name] call dayz_rollingMessages;
+		format[localize "STR_CL_VG_VEHICLE_STORED",_name] call dayz_rollingMessages;
 		if (vg_removeKey && {_charID != "0"}) then {[player,_keyName,1] call BIS_fnc_invRemove;};
 	} else {
 		systemChat localize "STR_EPOCH_TRADE_DEBUG";
@@ -167,8 +167,8 @@ if (_enoughMoney) then {
 } else {
 	_itemText = if (Z_SingleCurrency) then {CurrencyName} else {[_amount,true] call z_calcCurrency};
 	if (Z_SingleCurrency) then {
-		systemChat format [localize "STR_VG_NEED_COINS",[_amount] call BIS_fnc_numberText,_itemText,_name];
+		systemChat format[localize "STR_CL_VG_NEED_COINS",[_amount] call BIS_fnc_numberText,_itemText,_name];
 	} else {
-		systemChat format [localize "STR_VG_NEED_BRIEFCASES",_itemText,_name];
+		systemChat format[localize "STR_CL_VG_NEED_BRIEFCASES",_itemText,_name];
 	};
 };
