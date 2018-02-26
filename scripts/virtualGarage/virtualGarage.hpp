@@ -313,7 +313,7 @@ class virtualGarage {
 			onButtonClick = "if (!vg_hasRun) then {vg_hasRun = true;[] spawn player_getVehicle;};";
 			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.9 - (1 / 25);
-			w = (6.25 / 15.85);
+			w = (6.25 / 20);
 			h = (1 / 25);
 		};
 

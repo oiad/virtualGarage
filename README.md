@@ -69,7 +69,9 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 5. Replace your modified <code>dayz_code\compiles\fn_selfActions.sqf</code> with the one provided or merge the contents if you have modified your own version.
 
-6. Copy the supplied <code>stringTable.xml</code> to your mission folder, it is a community based localization file and contains translations for major community mods including this one. See https://github.com/oiad/communityLocalizations for more information.
+6. Download the <code>stringTable.xml</code> file linked below from the [Community Localization GitHub](https://github.com/oiad/communityLocalizations) and copy it to your mission folder, it is a community based localization file and contains translations for major community mods including this one.
+
+**[>> Download stringTable.xml <<](https://github.com/oiad/communityLocalizations/blob/master/stringtable.xml)**
 
 # Click Actions config install:
 
