@@ -99,7 +99,7 @@ if (_outcome != "PASS") then {
 	dayz_serverObjectMonitor set [count dayz_serverObjectMonitor,_object];
 
 	_object call fnc_veh_ResetEH;
-	{if (_class isKindOf _x) exitWith {_object disableTIEquipment true;}} count vg_disableThermal;
+	{if (_object isKindOf _x) exitWith {_object disableTIEquipment true;}} count vg_disableThermal;
 
 	PVDZE_veh_Init = _object;
 	publicVariable "PVDZE_veh_Init";

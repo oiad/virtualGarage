@@ -805,13 +805,15 @@ if (!isNull _cursorTarget && !_inVehicle && !_isPZombie && (player distance _cur
 	// Custom stuff below
 
 	if (_typeOfCursorTarget in vg_List) then {
-		private ["_plotCheck","_isNearPlot"];
-		_hasAccess = [player,_cursorTarget] call FNC_check_access;
-		_plotCheck = [player, false] call FNC_find_plots;
-		_isNearPlot = ((_plotCheck select 1) > 0);
+		if (s_garage_dialog < 0) then {
+			private ["_plotCheck","_isNearPlot"];
+			_hasAccess = [player,_cursorTarget] call FNC_check_access;
+			_plotCheck = [player, false] call FNC_find_plots;
+			_isNearPlot = ((_plotCheck select 1) > 0);
 
-		if (s_garage_dialog < 0 && {_isNearPlot && ((_hasAccess select 0) || (_hasAccess select 2) || (_hasAccess select 3) || (_hasAccess select 4))} || {!_isNearPlot}) then {
-			s_garage_dialog = player addAction [format["<t color='#0059FF'>%1</t>",localize "STR_CL_VG_VIRTUAL_GARAGE"],"scripts\virtualGarage\virtualGarage.sqf",_cursorTarget,3,false,true];
+			if ((_isNearPlot && ((_hasAccess select 0) || (_hasAccess select 2) || (_hasAccess select 3) || (_hasAccess select 4))) || {!_isNearPlot}) then {
+				s_garage_dialog = player addAction [format["<t color='#0059FF'>%1</t>",localize "STR_CL_VG_VIRTUAL_GARAGE"],"scripts\virtualGarage\virtualGarage.sqf",_cursorTarget,3,false,true];
+			};
 		};
 	} else {
 		player removeAction s_garage_dialog;

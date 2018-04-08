@@ -59,7 +59,7 @@ _hitpoints = _vehicle call vehicle_getHitpoints;
 
 {
 	_hit = [_vehicle,_x] call object_getHit;
-	_selection = getText (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "HitPoints" >> _x >> "name");
+	_selection = getText (configFile >> "CfgVehicles" >> _class >> "HitPoints" >> _x >> "name");
 	if (_hit > 0) then {_array set [count _array,[_selection,_hit]]};
 } count _hitpoints;
 
@@ -81,4 +81,4 @@ PVDZE_storeVehicleResult = true;
 
 if (!isNull _player) then {_clientID publicVariableClient "PVDZE_storeVehicleResult";};
 
-diag_log format["GARAGE: %1 (%2) stored %3 @%4 %5",_name,_playerUID,_class,mapGridPosition (getPosATL _player),getPosATL _player];
+diag_log format["GARAGE: %1 (%2) stored %3 @%4 %5",_name,_playerUID,_class,mapGridPosition _player,getPosATL _player];
