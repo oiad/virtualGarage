@@ -202,18 +202,6 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	5 toString <CUT> !"_input = parseNumber (toString (_input));"
 	```	
 
-# Changing the date format for stored vehicles when queried:
-
-1. In your <code>dayz_server\compile\garage\server_storeVehicle.sqf</code> on line 17, change the order of the variables, for example:
-	Default (day-month-year):
-	```sqf
-	_dateFormat = format ["%1-%2-%3",_day,_month,_year];
-	```
-	month-day-year:
-	```sqf
-	_dateFormat = format ["%1-%2-%3",_month,_day,_year];
-	```	
-
 # Removing the older version and starting fresh:
 
 1. Remove the following lines from your <code>description.ext</code>:
