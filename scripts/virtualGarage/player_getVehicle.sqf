@@ -1,39 +1,30 @@
 // Developed by [GZA] David for German Zombie Apocalypse Servers (https://zombieapo.eu/)
 // Rewritten by salival (https://github.com/oiad)
 
-private ["_backPack","_charID","_dir","_heliPad","_inventory","_isOK","_keyID","_keyName","_location","_sign","_totalTools","_vehicle"];
+private ["_backPack","_charID","_dir","_heliPad","_inventory","_isNearPlot","_keyID","_keyName","_location","_plotCheck","_sign","_vehicle"];
 
 closeDialog 0;
-_vehicle = lbData[2802,(lbCurSel 2802)];
-_vehicle = (call compile format["%1",_vehicle]);
-_isOK = true;
+_vehicle = (call compile format["%1",lbData[2802,(lbCurSel 2802)]]);
 
-if (vg_removeKey) then {
-	if (_vehicle select 3 != 0) then {
-		_totalTools = 0;
-		{
-			if (getNumber (configFile >> "CfgWeapons" >> _x >> "type") == 131072) then {_totalTools = _totalTools + 1;};
-		} count (weapons player);
-		if (_totalTools == 12) then {_isOK = false};
-	};
-};
-
-if (!_isOK) exitWith {localize "str_epoch_player_107" call dayz_rollingMessages;};
+if (vg_removeKey && {_vehicle select 3 != 0} && {({getNumber (configFile >> "CfgWeapons" >> _x >> "type") == 131072} count (weapons player)) == 12}) exitWith {localize "str_epoch_player_107" call dayz_rollingMessages;};
 
 _dir = round(random 360);
 _backPack = [];
-_heliPad = nearestObjects [player,vg_heliPads,Z_VehicleDistance];
+
+_plotCheck = [player,false] call FNC_find_plots;
+_isNearPlot = (_plotCheck select 1) > 0;
+
+_heliPad = nearestObjects [if (_isNearPlot) then {_plotCheck select 2} else {player},vg_heliPads,if (_isNearPlot) then {DZE_maintainRange} else {Z_VehicleDistance}];
 if ((count _heliPad == 0) && ((_vehicle select 1) isKindOf "Air")) exitWith {localize "STR_CL_VG_NEED_HELIPAD" call dayz_rollingMessages;};
 if (count _heliPad > 0) then {
 	_location = [(_heliPad select 0)] call FNC_GetPos;
 } else {
-	_location = [(position player),0,20,1,0,2000,0] call BIS_fnc_findSafePos;
-	_location set [2,(position player) select 2];
+	_location = [(position player),0,400,10,0,2000,0] call BIS_fnc_findSafePos;
+	_location set [2,0]; 
 };
 
 _sign = "Sign_arrow_down_large_EP1" createVehicleLocal [0,0,0];
 _sign setPos _location;
-_location = [_sign] call FNC_GetPos;
 
 if (surfaceIsWater _location && {count (_location nearEntities ["Ship",8]) > 0}) then {
 	deleteVehicle _sign;

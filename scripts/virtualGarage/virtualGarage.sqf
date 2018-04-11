@@ -1,6 +1,8 @@
 // Developed by [GZA] David for German Zombie Apocalypse Servers (https://zombieapo.eu/)
 // Rewritten by salival (https://github.com/oiad)
 
+private ["_class","_control","_displayName","_heliPad","_isNearPlot","_itemText","_localVehicles","_ownerPUID","_plotCheck","_storedVehicles","_vgDisplCtl"];
+
 if (isNil "vg_init") then {
 	player_getVehicle = compile preprocessFileLineNumbers "scripts\virtualGarage\player_getVehicle.sqf";
 	player_removePad = compile preprocessFileLineNumbers "scripts\virtualGarage\player_removePad.sqf";
@@ -25,8 +27,6 @@ if (isNil "vg_init") then {
 	vg_init = true;
 };
 
-private ["_class","_control","_displayName","_heliPad","_localVehicles","_plotCheck","_storedVehicles","_ownerPUID"];
-
 if (dayz_actionInProgress) exitWith {localize "str_player_actionslimit" call dayz_rollingMessages;};
 dayz_actionInProgress = true;
 
@@ -41,11 +41,11 @@ createDialog "virtualGarage";
 _plotCheck = [player,false] call FNC_find_plots;
 
 PVDZE_queryVehicle = if (vg_tiedToPole) then {
-	_IsNearPlot = _plotCheck select 1;
-	_nearestPole = _plotCheck select 2;
-	_ownerPUID = if (_plotCheck select 1 > 0) then {(_plotCheck select 2) getVariable ["ownerPUID","0"]} else {dayz_playerUID};
+	_isNearPlot = (_plotCheck select 1) > 0;
+	_ownerPUID = if (_isNearPlot) then {(_plotCheck select 2) getVariable ["ownerPUID","0"]} else {dayz_playerUID};
 	[player,_ownerPUID]
 } else {
+	_isNearPlot = false;
 	[player]
 };
 
@@ -57,9 +57,9 @@ PVDZE_queryVehicle = nil;
 PVDZE_queryVehicleResult = nil;
 
 _localVehicles = ([player] call FNC_getPos) nearEntities [["Air","LandVehicle","Ship"],Z_VehicleDistance];
-_heliPad = nearestObjects [player,vg_heliPads,Z_VehicleDistance];
+_heliPad = nearestObjects [if (_isNearPlot) then {_plotCheck select 2} else {player},vg_heliPads,if (_isNearPlot) then {DZE_maintainRange} else {Z_VehicleDistance}];
 
-if (count _heliPad > 0 && (_plotCheck select 1) > 0) then {ctrlShow[2853,true];};
+if (count _heliPad > 0 && {_isNearPlot}) then {ctrlShow[2853,true];};
 
 _control = ((findDisplay 2800) displayCtrl 2802);
 lbClear _control;
