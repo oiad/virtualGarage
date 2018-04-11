@@ -1,4 +1,4 @@
-private ["_vehicle","_player","_clientID","_playerUID","_VGobjID","_name","_fnc_sanitizeInput","_class","_charID","_damage","_fuel","_hit","_inventory","_array","_hit","_selection","_colour","_colour2","_displayName","_key","_result","_outcome","_date","_year","_month","_day","_dateFormat"];
+private ["_vehicle","_player","_clientID","_playerUID","_VGobjID","_name","_fnc_sanitizeInput","_class","_charID","_damage","_fuel","_hit","_inventory","_array","_hit","_selection","_colour","_colour2","_displayName","_key","_result","_outcome","_date","_year","_month","_day","_dateFormat","_message"];
 _vehicle = _this select 0;
 _player = _this select 1;
 _woGear = _this select 2;
@@ -81,4 +81,5 @@ PVDZE_storeVehicleResult = true;
 
 if (!isNull _player) then {_clientID publicVariableClient "PVDZE_storeVehicleResult";};
 
-diag_log format["GARAGE: %1 (%2) stored %3 @%4 %5",_name,_playerUID,_class,mapGridPosition _player,getPosATL _player];
+_message = format["GARAGE: %1 (%2) stored %3 @%4 %5",_name,_playerUID,_class,mapGridPosition _player,getPosATL _player];
+diag_log _message;

@@ -1,4 +1,4 @@
-private ["_worldSpace","_player","_serverKey","_id","_query","_return","_class","_characterID","_inventory","_hitpoints","_fuel","_damage","_dir","_location","_uid","_key","_query1","_colour","_colour2","_result","_VGobjID"];
+private ["_worldSpace","_player","_serverKey","_id","_query","_return","_class","_characterID","_inventory","_hitpoints","_fuel","_damage","_dir","_location","_uid","_key","_query1","_colour","_colour2","_result","_VGobjID","_message"];
 
 _worldSpace = _this select 0;
 _player = _this select 1;
@@ -107,6 +107,7 @@ if (_outcome != "PASS") then {
 	PVDZE_spawnVehicleResult = _characterID;
 
 	if (!isNull _player) then {_clientID publicVariableClient "PVDZE_spawnVehicleResult";};
-
-	diag_log format["GARAGE: %1 (%2) retrieved %3 @%4 %5",if (alive _player) then {name _player} else {"DeadPlayer"},getPlayerUID _player,_class,mapGridPosition (getPosATL _player),getPosATL _player];
+	
+	_message = format["GARAGE: %1 (%2) retrieved %3 @%4 %5",if (alive _player) then {name _player} else {"DeadPlayer"},getPlayerUID _player,_class,mapGridPosition _player,getPosATL _player];
+	diag_log _message;
 };
