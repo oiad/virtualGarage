@@ -39,7 +39,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 * [infistar setup](https://github.com/oiad/virtualGarage#infistar-setup)
 * [Adding HeliPad to maintaining array](https://github.com/oiad/virtualGarage#adding-helipad-to-maintaining-array)
 * [Battleye filter install](https://github.com/oiad/virtualGarage#battleye-filter-install)
-* [Remove old version](https://github.com/oiad/virtualGarage/blob/master/uninstall%20old%20version.txt)
+* [Remove old version](https://github.com/oiad/virtualGarage/blob/master/uninstall%20old%20version.md)
 
 # Install:
 
