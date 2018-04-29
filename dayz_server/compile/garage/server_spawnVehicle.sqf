@@ -57,9 +57,7 @@ if (_outcome != "PASS") then {
 
 	clearWeaponCargoGlobal _object;
 	clearMagazineCargoGlobal _object;
-	if (vg_clearAmmo && {vg_serverKey == _serverKey}) then {
-		_object call VG_ClearTurrets;
-	};
+	if (vg_clearAmmo && {vg_serverKey == _serverKey}) then {_object call VG_ClearTurrets;};
 
 	_object setFuel _fuel;
 	_object setDamage _damage;

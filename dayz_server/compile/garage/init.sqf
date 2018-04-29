@@ -23,7 +23,7 @@ vg_alreadySpawned = [];
 VG_ClearTurrets = {
 	//By denvdmj (probably, I found it on the biki)
 	private ["_weaponArray","_findRecurse","_class","_obj","_turret","_mags"];
-	_obj = _this;		
+	_obj = _this;
 
 	_weaponArray = [];
 	_weaponArray set [count _weaponArray,[-1]];
