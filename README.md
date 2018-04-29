@@ -116,7 +116,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 1. If you are only allowed access to your main epoch database from your hosting provider, you can import the <code>SQL\virtualGarage.sql</code> file without editing it.
 
-2. open your HiveExt.ini and edit the [Objects] section, add or modify the following code to this section. If needed configure the [ObjectDB] section for external object database settings
+2. Open your HiveExt.ini and edit the [Objects] section, add or modify the following code to this section. If needed configure the [ObjectDB] section for external object database settings
 
 ```
 ; Table name for the virtual garage data to be stored in, default table is 'garage'
