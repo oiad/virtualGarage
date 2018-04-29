@@ -13,6 +13,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 * [GZA] David for the original version of the script
 * Torndeco for extDB
 * Epoch Mod for code relating to Advanced Trading
+* @icomrade for supplying the HiveExt changes
 * TheDuke for updating this script to 1.0.6+
 * DAmNRelentless for german translations
 * Dscha for german translations
@@ -27,7 +28,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	```sqf
 	C:\users\<YOUR WINDOWS USERNAME>\AppData\Local\Arma 2 OA\ArmA2OA.RPT
 	```
-	
+
 # Index:
 
 * [Remove old version](https://github.com/oiad/virtualGarage#removing-the-older-version-and-starting-fresh)
@@ -116,7 +117,9 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 1. If you are only allowed access to your main epoch database from your hosting provider, you can import the <code>SQL\virtualGarage.sql</code> file without editing it.
 
-2. Open your HiveExt.ini and edit the [Objects] section, add or modify the following code to this section. If needed configure the [ObjectDB] section for external object database settings
+2. Virtual Garage includes a custom<code>HiveExt.dll</code> with a customizable table name and stored vehicle cleanup days, this needs to replace your current/official Epoch <code>HiveExt.dll</code> copy the supplied <code>HiveExt.dll</code> from <code>@DayZ_Epoch_Server</code> to your <code>Arma2 OA\@DayZ_Epoch_Server</code> folder.
+
+3. Open your HiveExt.ini and edit the [Objects] section, add or modify the following code to this section. If needed configure the [ObjectDB] section for external object database settings
 
 ```
 ; Table name for the virtual garage data to be stored in, default table is 'garage'
@@ -137,11 +140,19 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 
 2. Import the <code>SQL\virtualGarageUpdate.sql</code> file overtop of your garage database, this will update it to the latest version.
 
-3. Virtual Garage includes a custom HiveExt.dll with a customizable table name and stored vehicle cleanup days
+3. Virtual Garage includes a custom<code>HiveExt.dll</code> with a customizable table name and stored vehicle cleanup days, this needs to replace your current/official Epoch <code>HiveExt.dll</code> copy the supplied <code>HiveExt.dll</code> from <code>@DayZ_Epoch_Server</code> to your <code>Arma2 OA\@DayZ_Epoch_Server</code> folder.
 
-4. remove the cleanup procedure from your DB ```DROP EVENT IF EXISTS `RemoveOldVG`;```
+4. Remove the cleanup procedure from your DB by executing this SQL statement: ```DROP EVENT IF EXISTS `RemoveOldVG`;```
 
-5. open your HiveExt.ini and edit the [Objects] section, add or modify the following code to this section. If needed configure the [ObjectDB] section for external object database settings
+5. Open your HiveExt.ini and edit the [Objects] section, add or modify the following code to this section. If needed configure the [ObjectDB] section for external object database settings
+	```
+	; Table name for the virtual garage data to be stored in, default table is 'garage'
+	;VGTable = garage
+	; Days for a stored vehicle to be cleaned up after, if set to -1 this feature is disabled. Default 35 days
+	;CleanupVehStoredDays = 35
+	; Log object cleanup DELETE statements (per object), including virtual garage. Default is false
+	;LogObjectCleanup = false
+	```
 
 # Infistar setup:
 
