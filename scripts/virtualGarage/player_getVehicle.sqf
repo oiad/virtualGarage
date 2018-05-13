@@ -20,7 +20,7 @@ if (count _heliPad > 0) then {
 	_location = [(_heliPad select 0)] call FNC_GetPos;
 } else {
 	_location = [(position player),0,400,10,0,2000,0] call BIS_fnc_findSafePos;
-	_location set [2,0]; 
+	_location set [2,0];
 };
 
 _sign = "Sign_arrow_down_large_EP1" createVehicleLocal [0,0,0];

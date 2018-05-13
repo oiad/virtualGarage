@@ -1,7 +1,7 @@
 // Developed by [GZA] David for German Zombie Apocalypse Servers (https://zombieapo.eu/)
 // Rewritten by salival (https://github.com/oiad)
 
-private ["_class","_control","_displayName","_heliPad","_isNearPlot","_itemText","_localVehicles","_ownerPUID","_plotCheck","_storedVehicles","_vgDisplCtl"];
+private ["_class","_control","_displayName","_heliPad","_isNearPlot","_itemText","_localVehicles","_plotCheck","_storedVehicles","_vgDisplCtl"];
 
 if (isNil "vg_init") then {
 	player_getVehicle = compile preprocessFileLineNumbers "scripts\virtualGarage\player_getVehicle.sqf";
@@ -39,13 +39,11 @@ createDialog "virtualGarage";
 {ctrlShow [_x,false]} count [2803,2830,2850,2851,2852,2853];
 
 _plotCheck = [player,false] call FNC_find_plots;
+_isNearPlot = (_plotCheck select 1) > 0;
 
 PVDZE_queryVehicle = if (vg_tiedToPole) then {
-	_isNearPlot = (_plotCheck select 1) > 0;
-	_ownerPUID = if (_isNearPlot) then {(_plotCheck select 2) getVariable ["ownerPUID","0"]} else {dayz_playerUID};
-	[player,_ownerPUID]
+	[player,if (_isNearPlot) then {(_plotCheck select 2) getVariable ["ownerPUID","0"]} else {dayz_playerUID}]
 } else {
-	_isNearPlot = false;
 	[player]
 };
 

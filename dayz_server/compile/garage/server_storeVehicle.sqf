@@ -1,4 +1,5 @@
 private ["_vehicle","_player","_clientID","_playerUID","_VGobjID","_name","_fnc_sanitizeInput","_class","_charID","_damage","_fuel","_hit","_inventory","_array","_hit","_selection","_colour","_colour2","_displayName","_key","_result","_outcome","_date","_year","_month","_day","_dateFormat","_message"];
+
 _vehicle = _this select 0;
 _player = _this select 1;
 _woGear = _this select 2;
