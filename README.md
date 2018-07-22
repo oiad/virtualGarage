@@ -35,8 +35,8 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 * [Mission folder install](https://github.com/oiad/virtualGarage#mission-folder-install)
 * [click Actions config install](https://github.com/oiad/virtualGarage#click-actions-config-install)
 * [dayz_server folder install](https://github.com/oiad/virtualGarage#dayz_server-folder-install)
-* [mysql database setup fresh install](https://github.com/oiad/virtualGarage#mysql-database-setup-fresh-install)
-* [mysql database update from previous virtual garage](https://github.com/oiad/virtualGarage#mysql-database-update-from-previous-virtual-garage)
+* [mySQL database setup fresh install](https://github.com/oiad/virtualGarage#mySQL-database-setup-fresh-install)
+* [mySQL database update from previous virtual garage](https://github.com/oiad/virtualGarage#mySQL-database-update-from-previous-virtual-garage)
 * [infistar setup](https://github.com/oiad/virtualGarage#infistar-setup)
 * [Adding HeliPad to maintaining array](https://github.com/oiad/virtualGarage#adding-helipad-to-maintaining-array)
 * [Battleye filter install](https://github.com/oiad/virtualGarage#battleye-filter-install)
@@ -113,7 +113,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 2. Optionally, also delete your @extDB folder (with a backup as needed)
 3. in your DayZ_Server\Compiles\garage folder remove fn_async.sqf, overwrite other files
 
-# mysql database setup fresh install:
+# mySQL database setup fresh install:
 
 1. If you are only allowed access to your main epoch database from your hosting provider, you can import the <code>SQL\virtualGarage.sql</code> file without editing it.
 
@@ -130,7 +130,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 ;LogObjectCleanup = false
 ```
 
-# mysql database update from previous virtual garage:
+# mySQL database update from previous virtual garage:
 
 1. If you are updating from a previous authors version (i.e TheDuke) please remove the comments (/* */) on line 5 and 8 in <code>SQL\virtualGarageUpdate.sql</code> so that it looks like this:
 	```sqf
@@ -174,7 +174,7 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	```
 	Add this line before it:
 	```sqf
-	DZE_maintainClasses = DZE_maintainClasses + ["HeliHCivil"];
+	DZE_maintainClasses = DZE_maintainClasses + ["HeliH","HeliHCivil","HeliHRescue","MAP_Heli_H_army","MAP_Heli_H_cross","Sr_border"];
 	```
 	
 # Battleye filter install:

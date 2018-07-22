@@ -32,6 +32,8 @@ vg_limit = [["Land",5],["Air",5],["Ship",5]];
 	vg_limit = 5;
 */
 
+DZE_maintainClasses = DZE_maintainClasses + ["HeliH","HeliHCivil","HeliHRescue","MAP_Heli_H_army","MAP_Heli_H_cross","Sr_border"];
+
 //Player self-action handles
 dayz_resetSelfActions = {
 	s_player_equip_carry = -1;
