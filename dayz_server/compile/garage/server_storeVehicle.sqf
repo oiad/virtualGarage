@@ -1,4 +1,4 @@
-private ["_vehicle","_player","_clientID","_playerUID","_VGobjID","_name","_fnc_sanitizeInput","_class","_charID","_damage","_fuel","_hit","_inventory","_array","_hit","_selection","_colour","_colour2","_displayName","_key","_result","_outcome","_date","_year","_month","_day","_dateFormat","_message"];
+private ["_VGobjID","_array","_backPack","_backPackCount","_charID","_class","_clientID","_colour","_colour2","_damage","_displayName","_fnc_sanitizeInput","_fuel","_gearCount","_hit","_hitpoints","_index","_inventory","_inventoryCount","_key","_magazine","_magazineCount","_message","_name","_objectID","_objectUID","_player","_playerUID","_selection","_vehicle","_weapons","_weaponsCount","_woGear"];
 
 _vehicle = _this select 0;
 _player = _this select 1;
@@ -33,6 +33,8 @@ _displayName = (getText(configFile >> "cfgVehicles" >> _class >> "displayName"))
 _name = if (alive _player) then {(name _player) call _fnc_sanitizeInput;} else {"unknown player";};
 
 _charID = _vehicle getVariable ["CharacterID","0"];
+_objectID = _vehicle getVariable ["ObjectID","0"];
+_objectUID = _vehicle getVariable ["ObjectUID","0"];
 _VGobjID = _vehicle getVariable ["VGObjectID","0"];
 if (_VGobjID == "0") then {
 	_VGobjID = (toString (18 call VG_RandomizeMyKey)); //normally spawned vehicle
@@ -79,6 +81,9 @@ _key = format["CHILD:802:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:",_playe
 _key call server_hiveWrite;
 
 PVDZE_storeVehicleResult = true;
+
+deleteVehicle _vehicle;
+[_objectID,_objectUID,_player,_class] call server_deleteObjDirect;
 
 if (!isNull _player) then {_clientID publicVariableClient "PVDZE_storeVehicleResult";};
 

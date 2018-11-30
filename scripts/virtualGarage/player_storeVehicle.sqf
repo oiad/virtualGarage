@@ -153,9 +153,6 @@ if (_enoughMoney) then {
 		publicVariableServer "PVDZE_storeVehicle";
 		waitUntil {!isNil "PVDZE_storeVehicleResult"};
 
-		PVDZ_obj_Destroy = [_vehicleID,_vehicleUID,player,_vehicle,dayz_authKey];
-		publicVariableServer "PVDZ_obj_Destroy";
-
 		PVDZE_storeVehicle = nil;
 		PVDZE_storeVehicleResult = nil;
 
