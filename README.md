@@ -186,9 +186,9 @@ Virtual Garage script rewritten by salival (https://github.com/oiad)
 	5 !(^DZ_|^z_|^pz_|^WeaponHolder|Box|dog|PZombie_VB|^Smoke|^Chem|^._40mm|_DZ$|^Trap) <REMOVED SOME FILTERS TO MAKE SMALLER> !="Fin" !="Pastor" !="HeliHCivil"
 	```
 
-3. On line 2 of <code>config\<yourServerName>\Battleye\publicVariable.txt</code> add <code>!="PVDZE_(query|store|spawn)Vehicle"</code> to the end of the line so it looks like this:
+3. On line 2 of <code>config\<yourServerName>\Battleye\publicVariable.txt</code> add <code>!=PVDZE_(query|store|spawn)Vehicle</code> to the end of the line so it looks like this:
 	```sqf
-	5 !=(remExField|remExFP) <REMOVED SOME FILTERS TO MAKE SMALLER> !="PVDZE_(query|store|spawn)Vehicle"
+	5 !=(remExField|remExFP) <REMOVED SOME FILTERS TO MAKE SMALLER> !=PVDZE_(query|store|spawn)Vehicle
 	```
 
 4. On line 12 of <code>config\<yourServerName>\Battleye\scripts.txt</code>: <code>5 createDialog</code> add this to the end of it:
