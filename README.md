@@ -37,11 +37,15 @@ Virtual Garage script rewritten by salival updated for Epoch 1.0.7 by Airwaves M
 * [Battleye Filter Install](https://github.com/oiad/virtualGarage#battleye-filter-install)
 * [Old Releases](https://github.com/oiad/virtualGarage#old-releases)
 
+**[>> Download <<](https://github.com/oiad/virtualGarage/archive/master.zip)**
+
 # Install:
 
 * This install basically assumes you have a custom variables.sqf, compiles.sqf and fn_selfActions.sqf.
 
-**[>> Download <<](https://github.com/oiad/virtualGarage/archive/master.zip)**
+** If not, visit this repo and follow the steps there**
+https://github.com/AirwavesMan/custom-epoch-functions
+
 
 # Mission folder install:
 
@@ -200,7 +204,7 @@ Virtual Garage script rewritten by salival updated for Epoch 1.0.7 by Airwaves M
 helipad_civil_kit, helipad_rescue_kit, helipad_army_kit, helipad_cross_kit, helipad_parkborder_kit
 ```
 
-# Battleye Filter Install
+# Battleye Filter Install:
 	
 **Battleye script.txt:**
 
@@ -390,3 +394,6 @@ helipad_civil_kit, helipad_rescue_kit, helipad_army_kit, helipad_cross_kit, heli
 
 **** *Epoch 1.0.6.2* ****
 **[>> Download <<](https://github.com/oiad/virtualGarage/archive/refs/tags/Epoch_1.0.6.2.zip)**
+
+
+
