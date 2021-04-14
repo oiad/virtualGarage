@@ -7,7 +7,7 @@ closeDialog 0;
 _itemText = if (Z_SingleCurrency) then {CurrencyName} else {[vg_maintainCost,true] call z_calcCurrency};
 _enoughMoney = false;
 _moneyInfo = [false, [], [], [], 0];
-_wealth = player getVariable[Z_MoneyVariable,0];
+_wealth = player getVariable [(["cashMoney","globalMoney"] select Z_persistentMoney),0];
 
 if (Z_SingleCurrency) then {
 	_enoughMoney = (_wealth >= vg_maintainCost);
@@ -26,7 +26,7 @@ if (!_success && _enoughMoney) exitWith {systemChat localize "STR_EPOCH_TRADE_GE
 
 if (_enoughMoney || vg_maintainCost < 1) then {
 	if (Z_SingleCurrency) then {
-		player setVariable[Z_MoneyVariable,(_wealth - vg_maintainCost),true];
+		player setVariable [(["cashMoney","globalMoney"] select Z_persistentMoney),(_wealth - vg_maintainCost),true];
 	};
 	localize "STR_CL_VG_MAINTAINSUCCESS" call dayz_rollingMessages;
 	PVDZE_maintainGarage = if (vg_tiedToPole) then {

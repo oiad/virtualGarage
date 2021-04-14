@@ -119,7 +119,7 @@ if (count (crew _vehicle) > 0) exitWith {localize "STR_CL_VG_PLAYERINVEHICLE" ca
 
 _enoughMoney = false;
 _moneyInfo = [false,[],[],[],0];
-_wealth = player getVariable[Z_MoneyVariable,0];
+_wealth = player getVariable [(["cashMoney","globalMoney"] select Z_persistentMoney),0];
 
 if (Z_SingleCurrency) then {
 	_enoughMoney = (_wealth >= _amount);
@@ -137,7 +137,7 @@ if (!_success && {_enoughMoney}) exitWith {systemChat localize "STR_EPOCH_TRADE_
 if (_enoughMoney) then {
 	_success = if (Z_SingleCurrency) then {_amount <= _wealth} else {[player,_amount,_moneyInfo,false,0] call Z_payDefault};
 	if (_success) then {
-		if (Z_SingleCurrency) then {player setVariable[Z_MoneyVariable,(_wealth - _amount),true];};
+		if (Z_SingleCurrency) then {player setVariable [(["cashMoney","globalMoney"] select Z_persistentMoney),(_wealth - _amount),true];};
 
 		[_vehicle,true] call local_lockUnlock;
 		DZE_myVehicle = objNull;

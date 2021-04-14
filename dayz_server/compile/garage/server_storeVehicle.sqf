@@ -1,4 +1,4 @@
-private ["_VGobjID","_array","_backPack","_backPackCount","_charID","_class","_clientID","_colour","_colour2","_damage","_displayName","_fnc_sanitizeInput","_fuel","_gearCount","_hit","_hitpoints","_index","_inventory","_inventoryCount","_key","_magazine","_magazineCount","_message","_name","_objectID","_objectUID","_player","_playerUID","_selection","_vehicle","_weapons","_weaponsCount","_woGear"];
+private ["_damage","_VGobjID","_array","_backPack","_backPackCount","_charID","_class","_clientID","_colour","_colour2","_damage","_displayName","_fnc_sanitizeInput","_fuel","_gearCount","_hit","_hitpoints","_index","_inventory","_inventoryCount","_key","_magazine","_magazineCount","_message","_name","_objectID","_objectUID","_player","_playerUID","_selection","_vehicle","_weapons","_weaponsCount","_woGear"];
 
 _vehicle = _this select 0;
 _player = _this select 1;
@@ -62,8 +62,9 @@ _hitpoints = _vehicle call vehicle_getHitpoints;
 
 {
 	_hit = [_vehicle,_x] call object_getHit;
+	_damage = _hit select 0;
 	_selection = getText (configFile >> "CfgVehicles" >> _class >> "HitPoints" >> _x >> "name");
-	if (_hit > 0) then {_array set [count _array,[_selection,_hit]]};
+	if (_damage > 0) then {_array set [count _array,[_selection,_damage]]};
 } count _hitpoints;
 
 if (!_woGear) then {
@@ -82,8 +83,8 @@ _key call server_hiveWrite;
 
 PVDZE_storeVehicleResult = true;
 
+[_objectID,_objectUID,_vehicle] call server_deleteObjDirect;
 deleteVehicle _vehicle;
-[_objectID,_objectUID,_player,_class] call server_deleteObjDirect;
 
 if (!isNull _player) then {_clientID publicVariableClient "PVDZE_storeVehicleResult";};
 

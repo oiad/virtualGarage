@@ -1,4 +1,4 @@
-private ["_VG_ObjID","_characterID","_class","_clientID","_clrinit","_clrinit2","_colour","_colour2","_dam","_damage","_dir","_fuel","_hitpoints","_id","_inventory","_key","_location","_message","_object","_oid","_outcome","_player","_result","_selection","_serverKey","_uid","_worldSpace"];
+private ["_isAir","_VG_ObjID","_characterID","_class","_clientID","_clrinit","_clrinit2","_colour","_colour2","_dam","_damage","_dir","_fuel","_hitpoints","_id","_inventory","_key","_location","_message","_object","_oid","_outcome","_player","_result","_selection","_serverKey","_uid","_worldSpace"];
 
 _worldSpace = _this select 0;
 _player = _this select 1;
@@ -86,11 +86,12 @@ if (_outcome != "PASS") then {
 	_object setVariable ["CharacterID", _characterID, true];
 
 	if (_characterID != "0" && !(_object isKindOf "Bicycle")) then {_object setVehicleLock "LOCKED";};
+	_isAir = _object isKindOf "Air";
 
 	{
 		_selection = _x select 0;
 		_dam = _x select 1;
-		if (_selection in dayZ_explosiveParts && _dam > 0.8) then {_dam = 0.8};
+		_dam = [_x select 1,(_x select 1) min 0.8] select (!_isAir && {_selection in dayZ_explosiveParts});
 		[_object,_selection,_dam] call fnc_veh_setFixServer;
 	} forEach _hitpoints;
 
