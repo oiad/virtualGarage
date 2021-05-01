@@ -79,7 +79,7 @@ class vg_RscShortcutButton {
 		font = "Zeppelin32";
 		color = "#E5E5E5";
 		align = "left";
-		shadow = "true";
+		shadow = 1;
 	};
 	class AttributesImage {
 		font = "Zeppelin32";
@@ -135,7 +135,7 @@ class vg_RscButtonMenu : vg_RscShortcutButton {
 		font = "Zeppelin32";
 		color = "#E5E5E5";
 		align = "center";
-		shadow = "false";
+		shadow = 0;
 	};
 	class ShortcutPos {
 		left = "(6.25 * (((safezoneW / safezoneH) min 1.2) / 40)) - 0.0225 - 0.005";
