@@ -78,7 +78,7 @@ if (!_woGear) then {
 	_inventoryCount = [_weaponsCount, _magazineCount, _backPackCount];
 };
 
-_key = format["CHILD:802:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:",_playerUID,_name,_displayName,_class,_charID,_inventory,_array,_fuel,_damage,_colour,_colour2,vg_serverKey,_VGobjID,_inventoryCount];
+_key = str formatText["CHILD:802:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:",_playerUID,_name,_displayName,_class,_charID,_inventory,_array,_fuel,_damage,_colour,_colour2,vg_serverKey,_VGobjID,_inventoryCount];
 _key call server_hiveWrite;
 
 PVDZE_storeVehicleResult = true;
