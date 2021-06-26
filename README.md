@@ -381,7 +381,7 @@ helipad_civil_kit, helipad_rescue_kit, helipad_army_kit, helipad_cross_kit, heli
 1. In your config<yourServerName>\Battleye\publicVariable.txt on line 2: <code>5 !=remEx(Field|FP)</code> add this to the end of it:
 
 	```sqf
-	!=PVDZE_(query|store|spawn)Vehicle
+	!=PVDZE_(query|store|spawn|maintainGarage)Vehicle
 	```
 
 	So it will then look like this for example:
