@@ -1,4 +1,4 @@
-private ["_damage","_VGobjID","_array","_backPack","_backPackCount","_charID","_class","_clientID","_colour","_colour2","_damage","_displayName","_fnc_sanitizeInput","_fuel","_gearCount","_hit","_hitpoints","_index","_inventory","_inventoryCount","_key","_magazine","_magazineCount","_message","_name","_objectID","_objectUID","_player","_playerUID","_selection","_vehicle","_weapons","_weaponsCount","_woGear"];
+private ["_damageVeh","_VGobjID","_array","_backPack","_backPackCount","_charID","_class","_clientID","_colour","_colour2","_damage","_displayName","_fnc_sanitizeInput","_fuel","_gearCount","_hit","_hitpoints","_index","_inventory","_inventoryCount","_key","_magazine","_magazineCount","_message","_name","_objectID","_objectUID","_player","_playerUID","_selection","_vehicle","_weapons","_weaponsCount","_woGear"];
 
 _vehicle = _this select 0;
 _player = _this select 1;
@@ -46,7 +46,7 @@ if (_VGobjID == "0") then {
 		diag_log format["VG Error: Could not find vehicle with VGobjUID = %1 in vg_alreadySpawned array (server_storeVehicle.sqf) - possible duplicate vehicle being stored. PlayerUID: %2", _VGobjID, (getPlayerUID _player)];
 	};
 };
-_damage = damage _vehicle;
+_damageVeh = damage _vehicle;
 _fuel = fuel _vehicle;
 _colour = _vehicle getVariable ["Colour","0"];
 _colour2 = _vehicle getVariable ["Colour2","0"];
@@ -78,7 +78,7 @@ if (!_woGear) then {
 	_inventoryCount = [_weaponsCount, _magazineCount, _backPackCount];
 };
 
-_key = str formatText["CHILD:802:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:",_playerUID,_name,_displayName,_class,_charID,_inventory,_array,_fuel,_damage,_colour,_colour2,vg_serverKey,_VGobjID,_inventoryCount];
+_key = str formatText["CHILD:802:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:",_playerUID,_name,_displayName,_class,_charID,_inventory,_array,_fuel,_damageVeh,_colour,_colour2,vg_serverKey,_VGobjID,_inventoryCount];
 _key call server_hiveWrite;
 
 PVDZE_storeVehicleResult = true;
